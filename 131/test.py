@@ -29,11 +29,9 @@ for i in duda:
 
 g1=[]
 
-for i in range(0,11,1):
-    g2=[1,2]
-    g1.append(g2)
+for i in range(0,3,1):
 
+    g1.append(i)
 
-print(g1[0])
-
-print(g1[g2[1]])
+for i in g1:
+    print(g1,i+1)
