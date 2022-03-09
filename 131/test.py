@@ -2,7 +2,7 @@
 
 print("R$"+str(val))'''
 
-print("Garoa")
+print("===")
 
 duda=[]
 x='S'
