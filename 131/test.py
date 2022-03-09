@@ -1,6 +1,4 @@
-'''val=299.99
 
-print("R$"+str(val))'''
 
 print("===")
 
@@ -29,3 +27,10 @@ for i in duda:
     print(i[2])'''
 
 
+g1=[]
+
+for i in range(0,11,1):
+    g1.append(1)
+
+
+print(g1)
