@@ -1,11 +1,5 @@
 
 '''
-se a pessoa joga lol
-zenit
-polar
-
-ghz_WbhVNhOLLo1omDJDauktkXt2l5jVtB0rifzf
-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
   0    1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18  19
 ['z', 'e', 'n', 'i', 't', 'p', 'o', 'l', 'a', 'r', 'Z', 'E', 'N', 'I', 'T', 'P', 'O', 'L', 'A', 'R']
 0 = 5
@@ -16,15 +10,13 @@ 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
 '''
 
 z=[
-    'g','h','z','_','W','b','h','V','N',
-    'h','O','L','L','o','1','o','m','D',
-    'J','D','a','u','k','t','k','X','t',
-    '2','l','5','j','V','t','B','0','r',
-    'i','f','z','f'
+    'g','h','z','_','H','I','i','k',
+    '0','v','n','k','w','B','u','U',
+    'U','Z','n','y','6','e','k','S',
+    '3','G','U','V','V','Z','2','k',
+    'N','k','3','X','F','k','C','z',
 ]
 x=[]
-z2=z
-print(*z)
 
 for i in range(0,10,1):
    x.append(input())
@@ -45,7 +37,6 @@ for i in range(0,len(z)):
                     z[i]=x[l+5]
                 else:
                     z[i]=x[l-5]
-print(*z2)
 print(*z)
 
 
