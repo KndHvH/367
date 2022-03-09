@@ -1,6 +1,6 @@
 
 '''
-
+se a pessoa joga lol
 zenit
 polar
 
@@ -23,6 +23,7 @@ z=[
     'i','f','z','f'
 ]
 x=[]
+z2=z
 print(*z)
 
 for i in range(0,10,1):
@@ -44,7 +45,7 @@ for i in range(0,len(z)):
                     z[i]=x[l+5]
                 else:
                     z[i]=x[l-5]
-
+print(*z2)
 print(*z)
 
 
