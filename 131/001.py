@@ -1,5 +1,6 @@
 
 '''
+
   0    1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   16   17   18  19
 ['z', 'e', 'n', 'i', 't', 'p', 'o', 'l', 'a', 'r', 'Z', 'E', 'N', 'I', 'T', 'P', 'O', 'L', 'A', 'R']
 0 = 5
@@ -42,3 +43,4 @@ print(*z)
 
 
 
+#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
