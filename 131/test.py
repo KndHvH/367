@@ -4,7 +4,7 @@ print("R$"+str(val))'''
 
 print("===")
 
-duda=[]
+'''duda=[]
 x='S'
 
 while x == 'S':
@@ -26,4 +26,6 @@ print("\n\nfor i in nome")
 for i in duda:
     print(i[0])
     print(i[1])
-    print(i[2])
+    print(i[2])'''
+
+
