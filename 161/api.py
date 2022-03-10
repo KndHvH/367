@@ -1,6 +1,7 @@
 import pandas as pd
 from flask import Flask, jsonify
 
+
 app = Flask(__name__)
 
 #funcionalidades
@@ -21,7 +22,7 @@ def tabela():
 
     resposta={'total_vendas': total_vendas}
 
-    return resposta
+    return jsonify(resposta)
 
 
 #rodar api
