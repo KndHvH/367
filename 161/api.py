@@ -1,29 +1,32 @@
-'''
--pandas
--flask
-
-'''
-import gcloud
 import pandas as pd
-from flask import Flask
-
-gcloud.init
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
 #funcionalidades
 @app.route('/')
-def homepage():
-    return 'Essa é a home page do site'
+def main():
+    return 'home'
 
-@app.route('/contatos')
-def contatos():
-    return 'Essa é a page de contatos do site'
+@app.route('/lista')
+def lista():
+    return ''
+
+@app.route('/tabela')
+def tabela():
+
+    tabela=pd.read_csv('list.csv')
+
+    total_vendas=tabela['Vendas'].sum()
+
+    resposta={'total_vendas': total_vendas}
+
+    return resposta
 
 
 #rodar api
-#app.run()
-gcloud.app.deploy
+app.run()
+
 
 
 
