@@ -33,3 +33,4 @@ while busca_verif=='N':
 depreciacao=input("Digite \'S\' para editar o valor do produto selecionado: ").upper()
 
 while depreciacao=='S':
+4567899000000
