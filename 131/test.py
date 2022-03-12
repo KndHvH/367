@@ -63,6 +63,10 @@ for i in range(0,3,1):
 print(a[0]+a[1+1])'''
 
 
-a=6/3+1
+'''a=6/3+1
 
-print(a)
+print(a)'''
+
+a=int(input())
+b=10
+print(b+a)
