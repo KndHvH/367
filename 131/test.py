@@ -58,6 +58,11 @@ for i in range(0,3,1):
     print(i)
 #print(nomes)'''
 
-a=[10,20,30,40]
+'''a=[10,20,30,40]
 
-print(a[0]+a[1+1])
+print(a[0]+a[1+1])'''
+
+
+a=6/3+1
+
+print(a)

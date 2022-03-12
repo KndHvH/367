@@ -21,3 +21,19 @@ for i in variaveis:
     soma += i
 
 print(soma)
+
+#!= diferente
+#>= maior ou igual
+#<= menor ou igual
+
+a = "Hello World"
+b = 33
+
+
+
+x = type(a)
+y = type(b)
+
+print(x,y)
+
+
