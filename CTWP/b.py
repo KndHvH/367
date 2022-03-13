@@ -11,7 +11,7 @@ print("_______________________")
 #2
 
 metro=float(input("Digite em Metro: "))
-mm=float(metro/1000)
+mm=float(metro*1000)
 print(f"{metro} Metros = {mm} Milimetros")
 
 print("_______________________")
@@ -33,7 +33,7 @@ print("_______________________")
 sal=int(input("Digite o seu salario: "))
 porc=int(input("Digite a porcentagem do aumento (sem %): "))
 
-porc2=float(porc/100+1)
+porc2=float(1+porc/100)
 nsal=sal*porc2
 diff=nsal-sal
 
@@ -44,4 +44,10 @@ print("Diferenca em reais: R$",diff)
 
 print("_______________________")
 #5
+valor=int(input("Digite o valor do produto: "))
+porc=int(input("Digite a porcentagem de desconto sem o %: "))
+porc=porc*-1
+n_valor=valor*(1+porc/100)
+print("Valor desconto:",(valor*(porc/100)))
+print("Novo valor: ",n_valor)
 
