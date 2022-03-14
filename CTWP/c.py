@@ -30,3 +30,5 @@ val_dias=dias*60
 total=val_km+val_dias
 
 print("Total gasto: R$",total)
+
+=teste
