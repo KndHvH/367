@@ -9,22 +9,7 @@ app = Flask(__name__)
 #funcionalidades
 @app.route('/')
 def main():
-    dados = []
-    link = 'http://127.0.0.1:5000/lista'
-    conta=[]
-    conta=[
-        input("Digite seu nome:"),
-        input("Digite seu email"),
-    ]
-    dados.append(conta)
-
-    print("Dados:")
-    print(link)
-
-    return (
-        input("Digite seu nome:"),
-
-    )
+    return ()
 
 
 
