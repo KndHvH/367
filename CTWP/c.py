@@ -31,4 +31,4 @@ total=val_km+val_dias
 
 print("Total gasto: R$",total)
 
-=teste
+#=2222
