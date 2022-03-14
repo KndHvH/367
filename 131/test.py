@@ -70,3 +70,11 @@ print(a)'''
 a=int(input())
 b=10
 print(b+a)
+
+pi=float(3.14159)
+
+raio=float(input())
+
+area=float(pi*(raio*raio))
+
+print("A=%.4f" %area)
