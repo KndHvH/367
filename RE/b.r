@@ -33,3 +33,7 @@ vendas2 <- scan()
 
 vendas[c(1,4)] <-c(0,90)
 vendas
+
+> vendas[5:7] <-c(23,43,15)
+> vendas
+[1]  0 15 13 70 23 43 15
