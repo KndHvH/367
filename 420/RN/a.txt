@@ -1,0 +1,6 @@
+x1  -->
+    w1
+x2  -->     SOM    -->  f(u+b) --> Out          f(x) = { 1 if x*w + b >= 0
+    w2              U                                  { 0 else
+xN  -->                   ^ b = vies(#filtro)
+    wN
