@@ -20,7 +20,7 @@ def exibirinventario(lista):
 def depreciacaonome(lista, porc):
     depreciacao=input("Digite o nome do produto depreciado: ")
     for i in lista:
-        if i[0]==depreciacao
+        if i[0]==depreciacao:
             print("Valor antigo:",i[1])
             i[1] = i[1]*(1-porc/100)
             print("Valor novo:",i[1])
