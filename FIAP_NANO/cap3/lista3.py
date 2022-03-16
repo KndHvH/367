@@ -10,6 +10,8 @@ while resposta == "S":
   inventario.append(equipamento)
   resposta = input("Digite \"S\" para continuar: ").upper()
 
+
+
 #exibir dados do inventário
 for elemento in inventario:
   print("Nome.........: ", elemento[0])
