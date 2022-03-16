@@ -1,4 +1,4 @@
-o que um pc precisa para ser uma ia
+O QUE UM PC PRECISA PARA SER UMA IA pag.7
 
 processamento de linguagem natural
     -> se comunicar na lingua nativa do usuario
@@ -11,3 +11,21 @@ raciocinio automatizado
 
 aprendizagem de maquina
     -> se adaptar a novas circunstancias e detectar e extrapolar padroes
+#########################################################################################################
+ALAN TURING - 1950
+
+Alan Turing dizia que alem dos itens da pag.7, uma ia deveria ter:
+-computação visual
+-braço robotico
+
+isso resultaria em -> AÇÃO HUMANIZADA
+
+#########################################################################################################
+ALLAN NEWELL e HERBERT SIMON - 1961
+
+pensar humanamente. como a mente humana trabalha internamente de duas formas:
+    -> por meio da introspecção - tentando captar nossos proprios pensamentos como eles passam
+    -> por meio de experimentos psicologicos - observar como as pessoas reagem em determinadas situacoes
+       observando imagens do cerebro, em busca de padroes
+
+e assim definir um codigo capaz de fazer o mesmo
