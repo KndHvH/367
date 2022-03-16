@@ -8,29 +8,32 @@ def inputinventario(lista):
             input("Departamento: ").upper()
         ]
         lista.append(equipamento)
-        resposta=input("Digite \'S\' para continuar").upper()
+        resposta=input("Digite \'S\' para continuar cadastrando: ").upper()
 
 def exibirinventario(lista):
+    print("####################")
     for i in lista:
-        print("Nome........:"),i[0]
-        print("Valor.......:"),i[1]
-        print("NSerial.....:"),i[2]
-        print("Dpto........:"),i[3]
+        print("Nome........:",i[0])
+        print("Valor.......: %.2f"%i[1])
+        print("NSerial.....:",i[2])
+        print("Dpto........:",i[3])
+        print("####################")
+
 
 def localizarnome(lista):
-  busca=input("Digite o nome do equipamento que deseja buscar: ")
+  busca=input("Digite o nome do equipamento que deseja buscar: ").upper()
   for i in lista:
     if busca==i[0]:
-      print("Valor..: ", i[1])
+      print("Valor..: %.2f"% i[1])
       print("Serial.:", i[2])
 
 def depreciacaonome(lista, porc):
-    depreciacao=input("Digite o nome do produto depreciado: ")
+    depreciacao=input("Digite o nome do produto depreciado: ").upper()
     for i in lista:
         if i[0]==depreciacao:
-            print("Valor antigo:",i[1])
+            print("Valor antigo: %.2f"%i[1])
             i[1] = i[1]*(1-porc/100)
-            print("Valor novo:",i[1])
+            print("Valor novo: %.2f"%i[1])
 
 
 def excluirserial(lista):
@@ -45,7 +48,7 @@ def resumovalores(lista):
     valores=[]
     for i in lista:
         valores.append(i[1])
-    if len(valores>0):
-        print("Equipamento mais caro",max(valores))
-        print("Equipamento mais barato",min(valores))
-        print("Total de equipamentos",sum(valores))
+    if len(valores)>0:
+        print("Equipamento mais caro %.2f"%max(valores))
+        print("Equipamento mais barato %.2f"%min(valores))
+        print("Ativo total %.2f"%sum(valores))

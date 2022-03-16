@@ -9,7 +9,7 @@ exibirinventario(lista12)
 print("Pesquisando")
 localizarnome(lista12)
 print("Alterando")
-depreciacaonome(lista12)
+depreciacaonome(lista12,20)
 
 print("Excluindo")
 print(excluirserial(lista12))
