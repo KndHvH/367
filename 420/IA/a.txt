@@ -29,3 +29,24 @@ pensar humanamente. como a mente humana trabalha internamente de duas formas:
        observando imagens do cerebro, em busca de padroes
 
 e assim definir um codigo capaz de fazer o mesmo
+
+Newell e Herbert diziam que uma ia precisa ter cognição(forma que o humano aprende)
+
+isso resultaria em -> PENSAMENTO HUMANIZADO
+
+#########################################################################################################
+ARISTOTELES
+
+definiu pensamento racional, a logica dos humanos
+
+O SILOGISMO sao processos de raciocinio irrefutaveis
+é um raciocinio dedutivo estruturado formalmente a partir de duas preposições (premissas)
+das quais se obtem por interferencia uma terceira (conclusao)
+
+"Sócrates é um homem. Todos os homens são mortais. Logo, Sócrates é mortal."
+socrates = homem     ->      homem = mortal       ->     socrates = mortal
+preposição 1                 preposição 2               preposição3 - CONCLUSAO
+
+Aristoteles afirma que um pensamento so e logico, quando sua decisao final é irrefutavel
+
+#########################################################################################################
