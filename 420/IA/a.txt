@@ -1,0 +1,13 @@
+o que um pc precisa para ser uma ia
+
+processamento de linguagem natural
+    -> se comunicar na lingua nativa do usuario
+
+representação do conhecimento
+    -> armazenar o que sabe e ouve
+
+raciocinio automatizado
+    -> usar informacoes armazenadas para responder perguntas e desenhar novas conclusoes
+
+aprendizagem de maquina
+    -> se adaptar a novas circunstancias e detectar e extrapolar padroes
