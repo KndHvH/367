@@ -1,4 +1,4 @@
-from cap3.ident import*
+from fanta.FIAP_NANO.cap3.pack.ident import*
 lista12=[]
 
 print("Preechendo")

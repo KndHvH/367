@@ -1,11 +1,11 @@
 def inputinventario(lista):
     resposta='S'
     while resposta=='S':
-        esquipamento=[
-            input("Equipamento: "),
-            float(input("Valor")),
+        equipamento=[
+            input("Equipamento: ").upper(),
+            float(input("Valor: ")),
             int(input("N serial: ")),
-            input("Departamento: ")
+            input("Departamento: ").upper()
         ]
         lista.append(equipamento)
         resposta=input("Digite \'S\' para continuar").upper()
