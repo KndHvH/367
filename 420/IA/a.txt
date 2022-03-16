@@ -52,4 +52,6 @@ Aristoteles afirma que um pensamento so e logico, quando sua decisao final é ir
 ele defendia o pensamento nao contraditorio (pensamento binario)
     -> 2 afirmações sendo  uma oposta a outra, nao podem ser TRUE ou FALSE ao mesmo tempo
 
+isso resultaria em -> PENSAMENTO RACIONAL
+
 #########################################################################################################
