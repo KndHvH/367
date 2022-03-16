@@ -1,3 +1,4 @@
+#########################################################################################################
 O QUE UM PC PRECISA PARA SER UMA IA pag.7
 
 processamento de linguagem natural
@@ -48,5 +49,7 @@ socrates = homem     ->      homem = mortal       ->     socrates = mortal
 preposição 1                 preposição 2               preposição3 - CONCLUSAO
 
 Aristoteles afirma que um pensamento so e logico, quando sua decisao final é irrefutavel
+ele defendia o pensamento nao contraditorio (pensamento binario)
+    -> 2 afirmações sendo  uma oposta a outra, nao podem ser TRUE ou FALSE ao mesmo tempo
 
 #########################################################################################################
