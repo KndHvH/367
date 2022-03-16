@@ -67,7 +67,7 @@ print(a[0]+a[1+1])'''
 
 print(a)'''
 
-a=int(input())
+'''a=int(input())
 b=10
 print(b+a)
 
@@ -77,4 +77,19 @@ raio=float(input())
 
 area=float(pi*(raio*raio))
 
-print("A=%.4f" %area)
+print("A=%.4f" %area)'''
+
+
+
+
+
+'''lista=["a","b"]
+
+lol='(?i)'
+
+for i in lista:
+    lol += f"({i})|"
+
+lol = lol[:-1]
+
+print(lol)'''
