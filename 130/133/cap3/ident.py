@@ -17,6 +17,13 @@ def exibirinventario(lista):
         print("NSerial.....:"),i[2]
         print("Dpto........:"),i[3]
 
+def localizarnome(lista):
+  busca=input("Digite o nome do equipamento que deseja buscar: ")
+  for i in lista:
+    if busca==i[0]:
+      print("Valor..: ", i[1])
+      print("Serial.:", i[2])
+
 def depreciacaonome(lista, porc):
     depreciacao=input("Digite o nome do produto depreciado: ")
     for i in lista:
@@ -26,7 +33,7 @@ def depreciacaonome(lista, porc):
             print("Valor novo:",i[1])
 
 
-def excluirseral(lista):
+def excluirserial(lista):
     excluir=int(input("Digite o serial do produto a ser excluido: "))
     for i in lista:
         if i[2]==excluir:
