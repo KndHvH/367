@@ -1,4 +1,4 @@
-from  import*
+from cap3.ident import*
 lista12=[]
 
 print("Preechendo")
