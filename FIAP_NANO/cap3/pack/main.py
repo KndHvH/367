@@ -1,5 +1,9 @@
 from fanta.FIAP_NANO.cap3.pack.ident import*
 lista12=[]
+teste=[]
+print(teste)
+testtt(teste)
+print(teste)
 
 print("Preechendo")
 inputinventario(lista12)

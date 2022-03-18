@@ -11,3 +11,11 @@ usuarios={
 }
 
 print(usuarios)
+
+usuarios["florinda"] = ["Dona Florinda","24/12/2017","Raiox_01"]
+
+print(usuarios)
+
+print("####____####")
+
+print(usuarios.get("quico"))

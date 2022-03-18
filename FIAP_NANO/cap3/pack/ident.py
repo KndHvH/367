@@ -1,3 +1,9 @@
+def testtt(a):
+    b='b'
+    a.append(b)
+    b='c'
+    a.append(b)
+
 def inputinventario(lista):
     resposta='S'
     while resposta=='S':
