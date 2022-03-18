@@ -7,13 +7,21 @@ def pergunta():
           "<L> - Para Listar um usuario\n" +
           "<S> - Para Sair do programa: ").upper()
 
-def data_input():
-    return
+def data_input(x):
     login = input("Digite o login: ").lower()
-    usuarios[login] = [input("Digite o seu nome: "),
-                 input("Digite a ultima data de acesso: "),
-                 input("Digite a ultima estação acessada: ").lower()]
+    x[login] = [input("Digite o seu nome: "),
+                input("Digite a ultima data de acesso: "),
+                input("Digite a ultima estação acessada: ").lower()]
 
-def busca():
-    return
+def busca(x):
     busca = input("Digite o login: ").lower()
+    for i in x:
+        if busca==i:
+            print(
+                "Login:.....................:",i,
+                "Nome:......................:",i[0],
+                "Ultima data de acesso:.....:",i[1],
+                "Nome:......................:",i[2],
+            )
+        else:
+            print("Usuario não encontrado!")
