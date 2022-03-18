@@ -21,9 +21,9 @@ horas=int(input("Digite o numero de horas: "))
 minutos=int(input("Digite o numero de minutos: "))
 segundos=int(input("Digite o numero de segundos: "))
 
-horas+=(dias*24)
-minutos+=(horas*60)
-total_seg=minutos*60+segundos
+horas += dias * 24
+minutos += horas * 60
+total_seg = minutos * 60 + segundos
 
 print("Total segundos = ",total_seg)
 
@@ -33,9 +33,9 @@ print("_______________________")
 sal=int(input("Digite o seu salario: "))
 porc=int(input("Digite a porcentagem do aumento (sem %): "))
 
-porc2=float(1+porc/100)
-nsal=sal*porc2
-diff=nsal-sal
+x=float(1+porc/100)
+novo_sal=sal*x
+diff=novo_sal-sal
 
 print("Antigo salario: R$",sal)
 print(f"Porcentagem de aumento: {porc}%")
