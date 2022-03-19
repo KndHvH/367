@@ -1,4 +1,4 @@
-#9
+'''#9
 
 loop=1
 while loop==1:
@@ -22,4 +22,20 @@ salario=float(input("Digite o valor do salario: "))
 
 salario=salario*1.35
 
-print("Novo salario =",salario)
+print("Novo salario =",salario)'''
+
+
+'''a=int(input("Digite um numero: "))
+b=int(input("Digite um numero: "))
+c=int(input("Digite um numero: "))
+
+if a > b:
+    if c > a:
+        print("Maior numero:",c)
+    if c < a:
+        print("Maior numero:", a)
+if a < b:
+    if c > b:
+        print("Maior numero:",c)
+    if c < b:
+        print("Maior numero:", b)'''
