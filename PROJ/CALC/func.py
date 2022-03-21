@@ -14,7 +14,7 @@ def verif():
         if ope == 'S' or ope == 'U' or ope == 'D' or ope == 'M' or ope == 'E':
             x = 0
         else:
-            print("Operação invalida!")
+            print("Operação invalida!\n")
             x = 1
 
 
