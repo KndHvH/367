@@ -8,3 +8,6 @@ print(letra1('matias','duda'))
 
 print(inboth('banana','bateria'))
 
+a = gmail_gen('jooo')
+
+print(a)

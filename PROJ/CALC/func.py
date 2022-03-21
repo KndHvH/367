@@ -3,35 +3,29 @@ def operacao():
         "<S> - Para Somar 2 numeros\n" +
         "<U> - Para Subtrair 2 numeros\n" +
         "<D> - Para Dividir 2 numeros\n" +
-        "<M> - Para Multiplicar 2 numeros\n" +
-        "<E> - Para Sair do programa: "\
+        "<M> - Para Multiplicar 2 numeros: "\
          ).upper()
 
-def verif():
-    x = 1
-    opera = 'x'
-    while x == 1:
-        opera = operacao()
-        print(opera)
-        if opera == 'S' or opera == 'U' or opera == 'D' or opera == 'M' or opera == 'E':
-            x = 0
+def verif(letra):
+
+        if letra == 'S' or letra == 'U' or letra == 'D' or letra == 'M':
+            return 0
         else:
             print("Operação invalida!\n")
-            x = 1
+            return 1
 
 
-def conta():
-    if opera == 'S':
+def conta(l):
+    if l == 'S':
         resultado = n1 + n2
-        simb='+'
-    elif opera == 'U':
+        return '+'
+    elif l == 'U':
         resultado = n1 - n2
-        simb='-'
-    elif opera == 'D':
+        return '-'
+    elif l == 'D':
         resultado = n1 / n2
-        simb='/'
-    elif opera == 'M':
-        resultado = n1 * n2
-        simb='*'
+        return '/'
     else:
-        return 0
+        resultado = n1 * n2
+        return '*'
+
