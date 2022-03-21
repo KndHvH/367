@@ -15,17 +15,23 @@ def verif(letra):
             return 1
 
 
-def conta(l):
+def conta(l,n1,n2):
     if l == 'S':
-        resultado = n1 + n2
+        return n1 + n2
+    elif l == 'U':
+        return n1 - n2
+    elif l == 'D':
+        return n1 / n2
+    else:
+        return n1 * n2
+
+
+def simbolo(l):
+    if l == 'S':
         return '+'
     elif l == 'U':
-        resultado = n1 - n2
         return '-'
     elif l == 'D':
-        resultado = n1 / n2
         return '/'
     else:
-        resultado = n1 * n2
         return '*'
-
