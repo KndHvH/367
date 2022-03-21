@@ -9,9 +9,11 @@ def operacao():
 
 def verif():
     x = 1
+    opera = 'x'
     while x == 1:
-        ope = operacao()
-        if ope == 'S' or ope == 'U' or ope == 'D' or ope == 'M' or ope == 'E':
+        opera = operacao()
+        print(opera)
+        if opera == 'S' or opera == 'U' or opera == 'D' or opera == 'M' or opera == 'E':
             x = 0
         else:
             print("Operação invalida!\n")
@@ -19,6 +21,17 @@ def verif():
 
 
 def conta():
-    if ope == 'S':
+    if opera == 'S':
         resultado = n1 + n2
-    elif ope == 'U'
+        simb='+'
+    elif opera == 'U':
+        resultado = n1 - n2
+        simb='-'
+    elif opera == 'D':
+        resultado = n1 / n2
+        simb='/'
+    elif opera == 'M':
+        resultado = n1 * n2
+        simb='*'
+    else:
+        return 0
