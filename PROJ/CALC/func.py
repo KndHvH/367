@@ -15,6 +15,13 @@ def verif(letra):
             return 1
 
 
+def verif2(letra):
+    if letra == 'C' or letra == 'N' or letra == 'S':
+        return 0
+    else:
+        print("Decisão invalida!\n")
+        return 1
+
 def conta(l,n1,n2):
     if l == 'S':
         return n1 + n2
@@ -35,3 +42,12 @@ def simbolo(l):
         return '/'
     else:
         return '*'
+
+def decisao():
+    return input("o que deseja realizar?\n" +
+        "<C> - Para Continuar a conta\n" +
+        "<N> - Para Fazer uma nova conta\n" +
+        "<S> - Para Sair: ").upper()
+
+'''def decisao2(i):
+    if i=='C'''
