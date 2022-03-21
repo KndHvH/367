@@ -1,18 +1,18 @@
 def operacao():
-    return input("o que deseja realizar?\n" +
-        "<S> - Para Somar 2 numeros\n" +
-        "<U> - Para Subtrair 2 numeros\n" +
-        "<D> - Para Dividir 2 numeros\n" +
-        "<M> - Para Multiplicar 2 numeros: "\
+    return input("\no que deseja realizar?\n" +
+        "<S> - Para Somar\n" +
+        "<U> - Para Subtrair\n" +
+        "<D> - Para Dividir\n" +
+        "<M> - Para Multiplicar: "\
          ).upper()
 
 def verif(letra):
 
-        if letra == 'S' or letra == 'U' or letra == 'D' or letra == 'M':
-            return 0
-        else:
-            print("Operação invalida!\n")
-            return 1
+    if letra == 'S' or letra == 'U' or letra == 'D' or letra == 'M':
+        return 0
+    else:
+        print("Operação invalida!\n")
+        return 1
 
 
 def verif2(letra):
@@ -49,5 +49,5 @@ def decisao():
         "<N> - Para Fazer uma nova conta\n" +
         "<S> - Para Sair: ").upper()
 
-'''def decisao2(i):
-    if i=='C'''
+
+

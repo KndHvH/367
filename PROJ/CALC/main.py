@@ -1,26 +1,40 @@
 from func import *
 
-n1=int(input("Digite o primeiro numero: "))
 
-j=1
-while j==1:
-    i = 1
-    while i == 1:
-        letra = operacao()
-        i = verif(letra)
+l=1
+while l==1:
 
-    n2=int(input("Digite o proximo numero: "))
+    n1=int(input("Digite o primeiro numero: "))
 
-    resultado=conta(letra,n1,n2)
-    simb=simbolo(letra)
+    j = 1
+    while j==1:
+        i = 1
+        while i == 1:
+            letra = operacao()
+            i = verif(letra)
 
-    print(f"Resultado de:\n {n1} {simb} {n2} = {resultado}")
+        n2=int(input("\nDigite o proximo numero: "))
 
-    i = 1
-    while i == 1:
-        letra2=decisao()
-        i = verif2(letra2)
+        resultado=conta(letra,n1,n2)
+        simb=simbolo(letra)
+
+        print(f"Resultado de:\n {n1} {simb} {n2} = {resultado}")
+
+        i = 1
+        while i == 1:
+            letra2=decisao()
+            i = verif2(letra2)
+
+        j=0
+        if letra2 == 'C':
+            j=1
+            n1=resultado
+    l=0
+    if letra2 == 'N':
+        l=1
+print(f"Resultado : {resultado:.2f}")
 
 
-'''    j='''
+
+
 

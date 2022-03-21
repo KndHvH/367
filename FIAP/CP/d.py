@@ -25,7 +25,7 @@ salario=salario*1.35
 print("Novo salario =",salario)'''
 
 
-'''a=int(input("Digite um numero: "))
+a=int(input("Digite um numero: "))
 b=int(input("Digite um numero: "))
 c=int(input("Digite um numero: "))
 
@@ -38,4 +38,15 @@ if a < b:
     if c > b:
         print("Maior numero:",c)
     if c < b:
-        print("Maior numero:", b)'''
+        print("Maior numero:", b)
+
+if a < b:
+    if c < a:
+        print("Menor numero:",c)
+    if c > a:
+        print("Menor numero:", a)
+if a > b:
+    if c < b:
+        print("Menor numero:",c)
+    if c > b:
+        print("Menor numero:", b)
