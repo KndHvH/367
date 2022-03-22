@@ -47,6 +47,7 @@ numeric(0)
 [1] 100.00000  66.66667 -25.00000 200.00000 -42.85714 -75.00000  40.00000 -16.66667
 >
 > sum(prova1)/length(prova1)
+> mean(prova1)
 [1] 5.125
 >
 > length(prova1[prova1<prova2])
