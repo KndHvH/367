@@ -1,10 +1,6 @@
 import re
 
 lista = [
-         'r',
-         'e',
-         'w',
-         'q',
          'gg',
          'ff',
          'tp',
@@ -39,6 +35,21 @@ lista = [
          'sucumba',
          'nerdola',
          'esquisito',
+         'mid',
+         'top',
+         'minions',
+         'cs',
+         'farm',
+         'gold',
+         'xp',
+         'yasuo',
+         'riven',
+         'shaco',
+         'zed',
+         'lee',
+         'gank',
+         'sup',
+         'bot',
          ]
 
 

@@ -2,7 +2,7 @@ import re
 
 
 def ident(field):
-     match = re.search('(?i)(gank)|(elo)|(troll)|(sucumba)|(esquisito)|(nerd)|(nerdola)| (intando)| (gg)| (smurf)| (jungle)| (adc)| (elojob)| (ff)| (ff15)| (ult)| (q)| (w)| (e)| (r)| (flash)| (tp)| (ignite)| (prata)| (gold)| (lowelo)| (urf)| (aram)| (tft)| (ranked)| (duo)| (solo)| (flex)| (skin)', field.lower())
+     match = re.search('(?i)(gg)|(ff)|(tp)|(elo)|(tft)|(urf)|(adc)|(duo)|(ult)|(solo)|(skin)|(nerd)|(main)|(aram)|(item)|(flex)|(mono)|(gank)|(gold)|(ff15)|(troll)|(prata)|(smurf)|(flash)|(build)|(ignite)|(ranked)|(elojob)|(lowelo)|(jungle)|(intando)|(sucumba)|(nerdola)|(esquisito)|(mid)|(top)|(minions)|(cs)|(farm)|(gold)|(xp)|(yasuo)|(riven)|(shaco)|(zed)|(lee)|(gank)|(sup)|(bot)', field.lower())
 
      if match:
          print("PROIBIDO")
