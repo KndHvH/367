@@ -40,6 +40,8 @@
 ## F1-Score
 ### O que é
 - Essa métrica une precisao e recall a fim de trazer um numero unico que determine a qualidade geral do nosso modelo.
+  
+### Quando usar
 - Quando temos classes desbalanceadas e precisamos analisar os dados no geral.
 
 
