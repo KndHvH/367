@@ -24,12 +24,12 @@
 - Busca quais regras para se chegar numa conclusao valida?
 - O que pode ser calculado?
 - Como raciocinamos com informacoes incertas?
----
-## Logica
+
+### Logica
 - logica booleana -> criado em 1847 por george boole
-### Algebra de boole p/ soma (Or):
+#### Algebra de boole p/ soma (Or):
 ``
-1 = verdadeiro
+1 = verdadeiro;
 0 = falso
 ``
 ``
@@ -47,7 +47,7 @@ A + A = A
 
 A + Â = 1
 ```
-### Algebra de boole p/ Multiplicao (And):
+#### Algebra de boole p/ Multiplicao (And):
 
 ``
 1 = verdadeiro

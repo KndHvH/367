@@ -1,3 +1,8 @@
 import pandas as pd
 
-tabela = pd.read_excel("lista_facul.xlsx")
+dados = pd.read_excel("lista_facul.xlsx", index_col="ID")
+
+print(dados)
+escolas = dados.T
+
+print(escolas)
