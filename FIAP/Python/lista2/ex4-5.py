@@ -16,4 +16,5 @@ if media<6:
 if media<4:
     resultado = f"Reprovado com média {media:.1f}!!"
 
+
 print(resultado)
