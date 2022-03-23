@@ -1,3 +1,5 @@
+
+#https://notepad.pw/aylacyber23
 import re
 
 lista = [
