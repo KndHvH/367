@@ -1,4 +1,4 @@
-# Fundamentos da inteligencia artificial - FILOSOFIA
+# Fundamentos da inteligencia artificial
 
 ---
 ## Filosofia
@@ -73,7 +73,7 @@ A * Â = 0
                |            or  |
   _____________|_____/ B _______| ______
 _|___                                   |               
-___                                     |   
+___                                    [X]   
  |                                      |               
  |                      And             |
  |_______________/ C  ______ / D _______|
@@ -81,8 +81,22 @@ ___                                     |
 ```
 ---
 
-## Computacao 
+### Computacao 
 - criado pelo algoritimo de euclides, usado para encontrar Maximo Divisor Comun
 
-## Probabilidade
+### Probabilidade
 - james bernoulli, pierre laplace e thomas bayes criaram metodos estatisticos hoje usados em IA
+---
+## Economia
+- como devemos tomar decisoes para maximizar o retorno?
+- como devemos fazer isso quando outros podem nao concordar?
+- como devemos fazer isso quando a recompensa pode estar longe no futuro?
+
+### Adam Smith
+A economia se tornou uma ciencia em 1776, a partir dessa epoca, a ciencai economica comecou a estudar as acoes que um indiviuo adota para maximizar seu bem estar economico
+
+---
+## Neurociencia
+-Como o cerebro processa?
+
+    
