@@ -26,7 +26,7 @@
 
 ## Logica
 - logica booleana -> criado em 1847 por george boole
-### Algebra de boole p/ soma:
+### Algebra de boole p/ soma (OR):
 ``
 1 = verdadeiro
 0 = falso
@@ -39,12 +39,34 @@ A =  1 ou 0
 ``
 ```
 A + 1 = 1
+
 A + 0 = A
+
 A + A = A
+
 A + Â = 1
 ```
-### Algebra de boole p/ Multiplicao:
+### Algebra de boole p/ Multiplicao (E):
 
+``
+1 = verdadeiro
+0 = falso
+``
+``
+A =  1 ou 0
+``
+``
+Â = Oposto de A (A barrado)
+``
+```
+A * 1 = A
+
+A * 0 = 0
+
+A * A = A
+
+A * Â = 0
+```
 ## computacao 
 - criado pelo algoritimo de euclides, usado para encontrar Maximo Divisor Comun
 
