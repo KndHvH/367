@@ -18,7 +18,7 @@ while l==1:
         resultado=conta(letra,n1,n2)
         simb=simbolo(letra)
 
-        print(f"Resultado de:\n {n1} {simb} {n2} = {resultado}")
+        print(f"\nResultado de:\n {n1} {simb} {n2} = {resultado}\n")
 
         i = 1
         while i == 1:
