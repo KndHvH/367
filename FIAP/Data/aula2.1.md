@@ -27,4 +27,4 @@ Funcionario ------------ Participa ------------- Projeto
 ```
 
 - Um funcionario pode participar de um ou mais projetos
-- Um projeto pode ter um ou mais funcionarios
+- Um projeto pode ter um ou mais funcionariosg
