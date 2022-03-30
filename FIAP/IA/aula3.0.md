@@ -1,6 +1,6 @@
 # Maquina de Turing
 
-- Fita suficientemente grande (infinita) organizada em célular.
+- Fita suficientemente grande (infinita) organizada em células.
 Essa fita representa a memoria.
 
 - Tem um cabecalho que indica o inicio da fita, que fica a esquerda.
