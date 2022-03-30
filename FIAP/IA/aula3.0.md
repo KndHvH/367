@@ -27,4 +27,5 @@ Faça um automato que transforme aabb para AABB:
 ![img.png](img.png)
 
 ![img_2.png](img_2.png)
-
+ 
+-
