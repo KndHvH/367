@@ -10,8 +10,19 @@ essa fita representa a memoria
 - pode ler, escrever um caractere e se move para direita ou esquerda
 
 ## Em cada interacao:
-1. Ler o caracter da fita
-   
+1. Ler o caracter da fit
 2. Escrever o caracter (pode ser o mesmo ou diferente do atual)
 3. Se mover para a direita ou esquerda 
 4. Quando encontra condicao satistfatoria (aceitacao/rejeicao), encerra os calculos
+
+## Elementos
+
+Q -> Quantidades de circulos
+Σ -> É o al
+Γ
+δ -> Funcao de transição Q;Γ;{D,E}
+
+## Como fazer
+
+| a | a | b | b |
+|---|---|---|---|
