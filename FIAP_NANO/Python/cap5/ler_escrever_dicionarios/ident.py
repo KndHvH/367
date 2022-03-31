@@ -11,11 +11,10 @@ def pergunta():
 def data_input(x):
     login = input("Digite o login: ").lower()
     nome = input("Digite o seu nome: ")
-    data = input("Digite a ultima data de acesso: ")
-    estacao = input("Digite a ultima estação acessada: ").lower()
+    idade = input("Digite a sua idade: ")
 
-    x[login] = [nome,data,estacao]
-    salvar(x)
+    x[login] = [nome,idade]
+
 def busca(x):
     busca = input("Digite o login: ").lower()
     achou=0
@@ -25,8 +24,7 @@ def busca(x):
             print(
                 "\nLogin:.....................:",i,
                 "\nNome:......................:",x[i][0],
-                "\nUltima data de acesso:.....:",x[i][1],
-                "\nUltma estacao acessada:....:",x[i][2],
+                "\nIdade:.....................:",x[i][1],
             )
     if achou!=1:
         print("Usuario não encontrado!")
@@ -49,40 +47,24 @@ def listar(x):
             print(
                 "\nLogin:.....................:",i,
                 "\nNome:......................:",x[i][0],
-                "\nUltima data de acesso:.....:",x[i][1],
-                "\nUltma estacao acessada:....:",x[i][2],
+                "\nIdade:.....................:",x[i][1],
             )
 
 
 
 def salvar(dicionario):
-    import pickle
+    with open ("bd.txt", "a") as arquivo:
+        txt = []
+        for i, j in dicionario.items():
+            txt.append(f"{i} : {j}")
 
-    with open("bd.pkl", "ab") as tf:
-        pickle.dump(dicionario, tf)
+        arquivo.write(str(txt))
 
+def importar(dicionario):
+    with open ("bd.txt", "r") as arquivo:
+        txt = list(arquivo.read())
+        for i in range(len(txt)):
+            dicionario
 
-
-
-'''    with open ("bd.txt","a") as arquivo:
-        for chave,valor in dicionario.items():
-            arquivo.write(chave + ":" + str(valor) + "\n")'''
-
-'''def importar(dicionario):
-    with open("bd.txt", "r") as arquivo:
-        for i in arquivo.readlines():
-            string = i
-            l = string.split(':')
-            login = l[0]
-
-            j = l[1]
-            j = j.replace("[", "")
-            j = j.replace("]", "")
-            j = j.replace(" ", "")
-            j = j.replace("'", "")
-
-            items = j.split(',')
-
-            dicionario[login] = [items[0],items[1],items[2]]'''
 
 
