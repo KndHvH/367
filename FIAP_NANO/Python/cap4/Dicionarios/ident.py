@@ -56,12 +56,33 @@ def listar(x):
 
 
 def salvar(dicionario):
-    with open ("bd.txt","a") as arquivo:
-        for chave,valor in dicionario.items():
-            arquivo.write(chave + ":" + str(valor) + "\n")
+    import pickle
 
-def importar(dicionario):
-    with open ("bd.txt", "r") as arquivo:
+    with open("bd.pkl", "ab") as tf:
+        pickle.dump(dicionario, tf)
+
+
+
+
+'''    with open ("bd.txt","a") as arquivo:
+        for chave,valor in dicionario.items():
+            arquivo.write(chave + ":" + str(valor) + "\n")'''
+
+'''def importar(dicionario):
+    with open("bd.txt", "r") as arquivo:
         for i in arquivo.readlines():
-            dicionario [i] = i
+            string = i
+            l = string.split(':')
+            login = l[0]
+
+            j = l[1]
+            j = j.replace("[", "")
+            j = j.replace("]", "")
+            j = j.replace(" ", "")
+            j = j.replace("'", "")
+
+            items = j.split(',')
+
+            dicionario[login] = [items[0],items[1],items[2]]'''
+
 

@@ -1,8 +1,9 @@
+import pickle
 from ident import *
 
 usuarios = {}
 
-importar(usuarios)
+'importar(usuarios)'
 
 opcao=pergunta()
 

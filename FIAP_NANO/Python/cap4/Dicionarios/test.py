@@ -1,13 +1,10 @@
-dici = {}
+import pickle
 
+my_dict = { 'Apple': 4, 'Banana': 2, 'Orange': 6, 'Grapes': 11}
 
-login = 'matias'
+with open("myDictionary.txt", "w") as tf:
+    pickle.dump(my_dict,tf)
 
-dici[login]=['Matias Herklotz', '22', '22']
-
-
-with open("bd.txt", "r") as arquivo:
-    for i in arquivo.readlines():
-        print(i)
-
-print(dici.items())
+with open('bd.pkl', 'rb') as f:
+    data = pickle.load(f)
+print(data)
