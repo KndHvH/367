@@ -56,15 +56,20 @@ def salvar(dicionario):
     with open ("bd.txt", "a") as arquivo:
         txt = []
         for i, j in dicionario.items():
-            txt.append(f"{i} : {j}")
-
+            dic = [i,j]
+            txt.append(dic)
         arquivo.write(str(txt))
 
 def importar(dicionario):
     with open ("bd.txt", "r") as arquivo:
         txt = list(arquivo.read())
         for i in range(len(txt)):
-            dicionario
+            print(txt[0])
+            dic = list(txt[i])
+            i = dic[0]
+            j = dic[1]
+            dicionario = dict(i,j)
+
 
 
 
