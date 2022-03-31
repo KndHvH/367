@@ -1,5 +1,8 @@
 from ident import *
+
 usuarios = {}
+
+importar(usuarios)
 
 opcao=pergunta()
 

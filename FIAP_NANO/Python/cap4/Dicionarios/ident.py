@@ -15,6 +15,7 @@ def data_input(x):
     estacao = input("Digite a ultima estação acessada: ").lower()
 
     x[login] = [nome,data,estacao]
+    salvar(x)
 def busca(x):
     busca = input("Digite o login: ").lower()
     achou=0
@@ -53,7 +54,14 @@ def listar(x):
             )
 
 
-def salvar(x):
+
+def salvar(dicionario):
     with open ("bd.txt","a") as arquivo:
-        for chave,valor in dicionario.itens():
-            arquivo.write(chave + ":" + valor)
+        for chave,valor in dicionario.items():
+            arquivo.write(chave + ":" + str(valor) + "\n")
+
+def importar(dicionario):
+    with open ("bd.txt", "r") as arquivo:
+        for i in arquivo.readlines():
+            dicionario [i] = i
+

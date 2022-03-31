@@ -1,7 +1,13 @@
 dici = {}
 
-nome = 'nabanana'
 
-dici[nome]=[1,2,3]
+login = 'matias'
 
-print(dici[nome][1])
+dici[login]=['Matias Herklotz', '22', '22']
+
+
+with open("bd.txt", "r") as arquivo:
+    for i in arquivo.readlines():
+        print(i)
+
+print(dici.items())
