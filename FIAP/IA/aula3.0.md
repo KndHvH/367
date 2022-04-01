@@ -20,12 +20,12 @@ Essa fita representa a memoria.
 
 Seja um fita com os seguintes caracteres:
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 
 Faça um automato que transforme aabb para AABB:
 
-![img.png](img.png)
+![img.png](img/img.png)
 
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
  
 -
