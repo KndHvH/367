@@ -2,7 +2,7 @@
 
 ####DDL:
 - Data Definition Language – Linguagem de Definição de Dados
-  - Comandos para a definição,modificação e remoção de estruturas e relacionamentos de tabelas.
+  - Comandos para a definw 55w 57 ição,modificação e remoção de estruturas e relacionamentos de tabelas.
 
 ####DML:
 - Data Modification Language – Linguagem de Manipulação de Dados
