@@ -26,3 +26,4 @@ emprestimo[,2] <- round(as.numeric(emprestimo[,2]) * 0.7, digits=2)
 media_salario <- mean(as.numeric(emprestimo[,2]))
 
 #9 -
+colnames(emprestimo) <- c("Nome", "Salario", "Idade") ##??
