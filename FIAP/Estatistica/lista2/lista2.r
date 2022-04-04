@@ -27,3 +27,4 @@ media_salario <- mean(as.numeric(emprestimo[,2]))
 
 #9 -
 colnames(emprestimo) <- c("Nome", "Salario", "Idade") ##??
+
