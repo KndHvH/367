@@ -36,6 +36,13 @@ carregar uma imagem entre outros, esses dados foram carregados através da nuvem
 **3. Explique, com suas palavras, para que serve o serviço AWS EC2? Apresente uma cotação para uma instância que usa o
 Linux na região de São Paulo, com uma máquina com 4 CPUs, 32 GB de Memória e 30GB SSD de uso geral (gp2). (2 pontos)**
 
+a) O Amazon EC2, conhecido como Amazon Elastic Compute Cloud, apresenta uma capacidade de computação escalável no serviço 
+de Nuvem da Amazon, conhecido como Amazon Web Services (AWS). A utilização do serviço da Amazon, EC2, substitui a necessidade 
+de investimento a curto prazo em hardware, portanto, você pode desenvolver e implantar aplicativos com mais rapidez e praticidade. 
+É um recurso extremamente volatil, pois permite executar quantos servidores virtuais forem necessários, aumentar ou reduzir a 
+escala para lidar com alterações nos requisitos ou com picos em popularidade, reduzindo sua necessidade de prever o tráfego.
+
+b)
 ![img.png](img.png)
 
 ---
