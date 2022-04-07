@@ -68,3 +68,18 @@ sqlite> SELECT * FROM programador ORDER BY nome DESC;
 1|Jose|12345678901|aws,sqlite,python
 2|Ana|48327449423|azure,c#,java,python
 ```
+
+
+## Alterando valores em tabelas:
+
+```
+sqlite> UPDATE programador
+   ...> SET habilidades = 'aws,sqlite,python,azure'
+   ...> WHERE idProgramador=1
+   ...> ;
+   
+sqlite> UPDATE programador
+   ...> SET habilidades = 'azure,c#,java,python,ibm cloud'
+   ...> ,nome = 'Ana Silva'
+   ...> WHERE idProgramador = 2;
+```
