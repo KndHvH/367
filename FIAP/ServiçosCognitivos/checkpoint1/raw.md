@@ -49,3 +49,5 @@ b)
 **4. Crie uma instância gratuita (t2.micro) com Windows Server 2019 Base no EC2. Acesse-o via remote desktop (RDP).
 Dê um print ao acessar a instância. Encerre a instância e dê um print das instâncias (incluindo as encerradas) (3 pontos)**
 
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
