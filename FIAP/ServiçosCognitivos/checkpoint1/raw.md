@@ -1,8 +1,8 @@
 # FIAP – Checkpoint #1
 
-####Entrega: 14/04/2022
+#### Entrega: 14/04/2022
 
-####Local: MS Teams
+#### Local: MS Teams
 
 ---
 **1. O que são regiões e zonas de disponibilidade (AZ)? Explique para que serve o AWS IAM? Para que serve o AWS CLI? (3 pontos)**
