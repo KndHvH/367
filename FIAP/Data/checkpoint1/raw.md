@@ -42,4 +42,4 @@ Para a nota fiscal, deverão ser armazenados:
 
 4) Apresente o modelo físico criado no SQLite ou no Mysql. Exiba o schema das tabelas criadas: (2 pontos)
 
-
+![img_2.png](img_2.png)
