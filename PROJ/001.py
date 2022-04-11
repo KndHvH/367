@@ -1,7 +1,8 @@
 
-z=[
-    'g','h','z','_','G','c','W','P','q','8','9','H','P','g','m','C','3','r','W','g','x','k','o','r','H','T','J','y','I','Y','G','i','9','L','1','1','e','0','6','m',
-]
+x='ghz_beB5J83pSEeV5ELq5Snfw1AIbhP53A0h2vyz'
+
+z=list(x)
+
 x=[]
 senha=input()
 x=list(senha)
