@@ -19,29 +19,14 @@ As Propriedades de ACID de transação de um SGBD:
 • Durabilidade = mesmo persistindo dados com falhas, é possível recuperá-los
 
 2) Apresente o modelo conceitual criado no BRmodelo para atender à seguinte necessidade de negócio: (3 pontos)
-```
-A vinícola Bacos deseja armazenar informações de seus diferentes tipos de vinhos, assim como os vinhos adquiridos por cada cliente e a nota fiscal emitida a cada venda. Uma nota fiscal pode ter vários itens pedidos (vinhos) e diferentes quantidades.
 
-Para cada vinho, deverão ser armazenados:
-•	Identificador do vinho, Nome do vinho, ano da safra, classificação (ex: tinto, seco, suave) do vinho, tipos de uvas utilizadas e valor de venda.
-
-Para os clientes, deverão ser armazenados:
-•	Nome, sobrenome, sexo, cpf e email
-
-Para cada item pedido, deverão ser armazenados:
-•	Identificador do item, vinho adquirido, quantidade e o valor unitário
-
-Para a nota fiscal, deverão ser armazenados:
-•	Número da nota, cliente que comprou, data da compra e o valor total da compra
-```
-![img_3.png](img_3.png)
 
 3) Apresente o modelo lógico criado no BRmodelo, com as chaves primárias, secundárias e tipos de dados para atender à seguinte necessidade de negócio da empresa Bacos: (3 pontos)
 
-![img.png](img.png)
+
 
 4) Apresente o modelo físico criado no SQLite ou no Mysql. Exiba o schema das tabelas criadas: (2 pontos)
 
-![img_1.png](img_1.png)
+
 
 
