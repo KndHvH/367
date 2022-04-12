@@ -34,12 +34,12 @@ Para cada item pedido, deverão ser armazenados:
 Para a nota fiscal, deverão ser armazenados:
 •	Número da nota, cliente que comprou, data da compra e o valor total da compra
 ```
-![img.png](img.png)
+![img_3.png](img_3.png)
 
 3) Apresente o modelo lógico criado no BRmodelo, com as chaves primárias, secundárias e tipos de dados para atender à seguinte necessidade de negócio da empresa Bacos: (3 pontos)
 
-![img_1.png](img_1.png)
+![img.png](img.png)
 
 4) Apresente o modelo físico criado no SQLite ou no Mysql. Exiba o schema das tabelas criadas: (2 pontos)
 
-![img_2.png](img_2.png)
+
