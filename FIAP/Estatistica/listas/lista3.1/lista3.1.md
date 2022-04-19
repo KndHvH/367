@@ -1,11 +1,13 @@
 # Lista 3 (ver.2)
 
 ### 1 - c
+![img.png](imgs/img.png)
 
 ### 2 - b
+![img_1.png](imgs/img_1.png)
 
 ### 3 - 
-
+![img_2.png](imgs/img_2.png)
 ```python
 A<- matrix(0,4,5)
 
@@ -17,6 +19,7 @@ array(A,dim = c(4,5,3),dimnames = list(nomes_linhas,names_col))
 
 ### 4 - 
 
+![img_3.png](imgs/img_3.png)
 ```python
 nomes_variaveis<-c('Nome', 'Salario', 'Idade', 'Motivo do Emprestimo' , 'Valor Solicitado')
 nomes_matrizes<-c('Funcionario 1 - Melissa M.' , 'Funcionario 2 - Carlos P.' , 'Funcionario - 3 Luciana T.') 
@@ -27,6 +30,8 @@ B <- array(0,dim = c(4,5,3),dimnames = list(nomes_linhas,nomes_variaveis,nomes_m
 ```
 
 ### 5 - 
+
+![img_4.png](imgs/img_4.png)
 
 ```python
 Nome = c('Marcos','Paulo','Joao','Kamila')
@@ -55,6 +60,7 @@ B[,,3] <-  cbind(Nome,Salario,Idade,Motivo,Valor.Pedido)
 ```
 
 ### 6 - 
+![img_5.png](imgs/img_5.png)
 ```python
 > sum(as.numeric(B[,2,1]))
 [1] 13800
