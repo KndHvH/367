@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/calculadora_tes" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/kndhvh.github.io" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/kndhvh.io" vcs="" />
   </component>
