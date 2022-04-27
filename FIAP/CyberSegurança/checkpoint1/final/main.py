@@ -9,15 +9,15 @@ from funcoes.api_passaport import *
 from funcoes.api_nome import *
 from funcoes.validar_passaporte import *
 from funcoes.validar_nome import *
+from funcoes.regez import *
 
 
 def main():
 
-    # lista_passaporte = api_passaport()
-    lista_passaporte = ['999999999','888888888']
+    lista_passaporte = api_passaport()
     lista_nome = api_nome()
 
-
+    lista_passaporte= regexlist(lista_passaporte)
     # print(lista_passaporte)
     # print(lista_nome)
     # input_passaporte = st.text_input('Passaporte')
