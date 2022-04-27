@@ -4,5 +4,5 @@ def api_passaport():
     lista_arg = req.get("https://kndhvh.github.io/arg.json")
     arg = lista_arg.json()['arg']
     for i in arg:
-        lista_passaporte.append(i['arg'])
+        lista_passaporte.append(str(i['arg']))
     return lista_passaporte
