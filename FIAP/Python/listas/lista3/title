@@ -1,0 +1,18 @@
+EXERCÍCIOS:
+1- Dado um número, exibir os seus próximos 10 números
+ENTRADA: 10	SAÍDA: 1 2 3 4 5 6 7 8 9 10
+
+2 - Dados dois números, exibir os números do seu intervalo (incluindo eles)
+ENTRADA: 4  8	SAÍDA: 4 5 6 7 8
+
+3 - Dados dois números, exibir os números do seu intervalo (não incluindo eles)
+ENTRADA: 4  8	SAÍDA:  5 6 7
+
+4 - Dado um número, verificar se ele é primo ou não
+ENTRADA: 11	SAÍDA: É primo
+
+5 - Dado um numero, calcular o seu fatorial. (Ex: 4! = 4 . 3 . 2 . 1 = 24)
+ENTRADA: 3	SAÍDA: 6
+
+6 – Dada a base e o expoente, calcular a potencia.
+ENTRADA: 2  4 	SAÍDA: 15
