@@ -1,0 +1,8 @@
+Na pasta do usuário local
+Ex: C:\Users\logonrmlocal
+
+Executar:
+sc config mysql80 start=auto
+
+Em seguida:
+net start mysql80

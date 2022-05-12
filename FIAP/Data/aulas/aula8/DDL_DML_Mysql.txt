@@ -1,0 +1,83 @@
+CREATE DATABASE papelaria;
+
+USE papelaria;
+
+DROP TABLE IF EXISTS `cliente`;
+
+CREATE TABLE `cliente` (
+  `idCliente` int NOT NULL AUTO_INCREMENT,
+  `Nome` varchar(100) NOT NULL,
+  `Cidade` varchar(50) NOT NULL,
+  PRIMARY KEY (`idCliente`)
+);
+
+INSERT INTO `cliente` VALUES (1,'Júlia','São Paulo'),(2,'Amanda','Belo Horizonte'),(3,'Roberto','Porto Alegre');
+
+DROP TABLE IF EXISTS `fornecedor`;
+
+CREATE TABLE `fornecedor` (
+  `idFornecedor` int NOT NULL AUTO_INCREMENT,
+  `Nome` varchar(50) NOT NULL,
+  `Cidade` varchar(50) NOT NULL,
+  PRIMARY KEY (`idFornecedor`)
+);
+
+#SELECT * FROM Fornecedor;
+INSERT INTO fornecedor (nome,cidade) VALUES ("Acme","São Paulo");
+INSERT INTO fornecedor (nome,cidade) VALUES ("Northwind","Rio de Janeiro");
+INSERT INTO fornecedor (nome,cidade) VALUES ("Atlas","Salvador");
+
+CREATE TABLE `produto` (
+  `idProduto` int NOT NULL AUTO_INCREMENT,
+  `dscProduto` varchar(50) NOT NULL,
+  `valor` decimal(10,2) NOT NULL,
+  `idFornecedor` int DEFAULT NULL,
+  PRIMARY KEY (`idProduto`),
+  KEY `idFornecedor` (`idFornecedor`),
+  CONSTRAINT `produto_ibfk_1` FOREIGN KEY (`idFornecedor`) REFERENCES `fornecedor` (`idFornecedor`)
+) ;
+
+
+
+INSERT INTO produto (dscProduto, valor, idFornecedor) VALUES ("Caderno",10,1);
+INSERT INTO produto (dscProduto, valor, idFornecedor) VALUES ('Lápis',5.00,1);
+INSERT INTO produto (dscProduto, valor, idFornecedor) VALUES ('Estojo',20.00,2);
+INSERT INTO produto (dscProduto, valor, idFornecedor) VALUES ('Borracha',10.00,2);
+INSERT INTO produto (dscProduto, valor, idFornecedor) VALUES ('Régua',15.00,3);
+
+
+CREATE TABLE `pedido` (
+  `idPedido` int NOT NULL AUTO_INCREMENT,
+  `idCliente` int NOT NULL,
+  `Data` datetime DEFAULT NULL,
+  PRIMARY KEY (`idPedido`),
+  KEY `idCliente` (`idCliente`),
+  CONSTRAINT `fk_pedido_cliente_idcliente` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`idCliente`)
+) ;
+
+
+INSERT INTO `pedido` VALUES (1,1,'2022-01-18 17:20:24'),(2,2,'2022-01-23 17:20:24'),(3,1,'2022-01-28 17:20:24'),(4,2,'2022-02-01 17:20:24');
+
+
+CREATE TABLE `itempedido` (
+  `idItemPedido` int NOT NULL AUTO_INCREMENT,
+  `idPedido` int NOT NULL,
+  `idProduto` int NOT NULL,
+  `quantidade` int NOT NULL,
+  `valorUnitario` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`idItemPedido`),
+  KEY `idPedido` (`idPedido`),
+  KEY `idProduto` (`idProduto`),
+  CONSTRAINT `itempedido_pedido_idpedido` FOREIGN KEY (`idPedido`) REFERENCES `pedido` (`idPedido`),
+  CONSTRAINT `itempedido_produto_idproduto` FOREIGN KEY (`idProduto`) REFERENCES `produto` (`idProduto`)
+);
+
+INSERT INTO `itempedido` (idPedido,idProduto,quantidade,valorUnitario) VALUES (1,1,1,10.00);
+INSERT INTO `itempedido` (idPedido,idProduto,quantidade,valorUnitario) VALUES (1,2,2,5.00);
+INSERT INTO `itempedido` (idPedido,idProduto,quantidade,valorUnitario) VALUES (2,3,1,20.00);
+INSERT INTO `itempedido` (idPedido,idProduto,quantidade,valorUnitario) VALUES (3,4,2,10.00);
+INSERT INTO `itempedido` (idPedido,idProduto,quantidade,valorUnitario) VALUES (4,1,1,10.00);
+INSERT INTO `itempedido` (idPedido,idProduto,quantidade,valorUnitario) VALUES (4,2,1,5.00);
+
+
+
