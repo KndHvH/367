@@ -1,0 +1,1 @@
+Msgbox "O sistema operacional foi corrompido"

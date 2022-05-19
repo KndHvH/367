@@ -1,0 +1,1 @@
+@ echo off Kernel Panic! Todos os arquivos foram corrompidos! SHUTDOWN -L
