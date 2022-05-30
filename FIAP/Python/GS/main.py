@@ -19,11 +19,13 @@ while decisao != 0:
             print("-----------------------")
             print("1 – Votar Candidato: Blue")
             print("2 – Votar Candidato: Red")
+            print("3 – Voto: Nulo")
             print("0 – SAIR")
-            voto = int(input("Digite a opção do candidato desejado:_"))
+            voto = int(input("Digite a opção desejada:_"))
+            if voto!=0:
+                listaVotos.append(voto)
 
-
-
+print(listaVotos)
 
 
 
