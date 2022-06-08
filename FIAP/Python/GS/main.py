@@ -1,7 +1,7 @@
 
-
-
-
+# RM 94199 - Matias Cornelsen Herklotz
+# RM 93821 - Gustavo Jordão Santos
+# RM 94026 - Daniel Faria de Barros
 
 print("\033[91m\033[1mVOTAÇÃO - SEGUNDO TURNO\033[0m")
 
