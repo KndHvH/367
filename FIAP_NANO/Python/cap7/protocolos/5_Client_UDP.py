@@ -3,14 +3,14 @@ from socket import *
 server = "127.0.0.1" #localhost
 port = 43210
 obj_socket = socket(AF_INET, SOCK_DGRAM)
-obj_socket.bind((server,port))
-print("Servidor pronto....")
+obj_socket.connect((server,port))
+saida = ""
 
-while True:
+while saida != "X":
+    msg = input("Sua Mensagem: ")
+    obj_socket.sendto(msg.encode(),(server,port))
     data, origem = obj_socket.recvfrom(65535)
-    print("Origem....:",origem)
-    print("Dados....:",data.decode(1))
-    response = input("Digite a resposta")
-    obj_socket.sendto(response.encode(),origem)
+    print("Resposta servidor:",data.decode())
+    saida = input("Digite x para sair! ").upper()
 
 obj_socket.close()

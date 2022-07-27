@@ -9,7 +9,7 @@ print("Servidor pronto....")
 while True:
     data, origem = obj_socket.recvfrom(65535)
     print("Origem....:",origem)
-    print("Dados....:",data.decode(1))
+    print("Dados....:",data.decode())
     response = input("Digite a resposta")
     obj_socket.sendto(response.encode(),origem)
 
