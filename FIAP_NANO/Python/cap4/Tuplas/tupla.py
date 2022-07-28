@@ -18,7 +18,14 @@ for i in range(0, len(tupla)):
     usuarios[tupla[i]] = [input("Digite o nome: "),input("Digite o nivel: ")]
     #{(0, 'abc@gmail.com'): ['abece', '33'], (1, 'def@gmail.com'): ['deefee', '44']}
 
+
+
 print(usuarios)
+
+
+print(usuarios[1])
+
+
 for i, dado in usuarios.items():
     print("Usuario.:",i[0])
     print("Email...:",i[1])
