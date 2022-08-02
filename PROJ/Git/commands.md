@@ -40,10 +40,12 @@ $ git add * (esse comando irá adicionar todos os arquivos novos e/ou modificado
 ## 5. git commit
 É fundamental se estabelecer uma diferença entre git add e git commit:
 
-```
 git add adiciona seus arquivos modificados à fila para serem submetidos a um commit posteriormente. Os arquivos não passaram por um commit.
 O git commit executa o commit dos arquivos que foram adicionados e cria uma nova revisão com um log. Por outro lado, se você não adicionar nenhum arquivo, o git não fará o commit de nada.
-É possível combinar as duas ações em um único comando: $ git commit -a.
+É possível combinar as duas ações em um único comando: 
+```
+
+$ git commit -a.
 ```
 Também é possível adicionar uma mensagem para a execução de um commit. Exemplo:
 ```
@@ -93,6 +95,8 @@ $ git push -u <nome_curto> <nome_do_branch>
 É importante especificar a origem e o upstream antes de usar o git push. Veja o exemplo:
 
 $ git push –set-upstream <nome_curto> <nome_do_branch>
+
+$ git push -u origin <branch>
 ```
 ## 10. git fetch
 Quando você precisa baixar as mudanças criadas por outros membros do seu projeto colaborativo, você precisa do comando Git fetch. A partir desse comando, você irá receber todas as informações de commits, para avaliar, antes de aplicar essas alterações na sua versão local do repositório.
