@@ -1,0 +1,10 @@
+- Redes Neurais Recorrentes, onde, diferente das feedforwards, a informação se retem ao longo da rede
+- Long Short Term Memory, que funciona como uma retenção de memória mais importante, onde cada neuronio vai ter a entrada
+, saída e esquecimento. Então ele retém o mais importante e passa pra frente a informação adquirida e aquilo antigo ou menos importante ele esquece. (Essa retenção de informação acaba com o problema do desaparecimento de gradiente)
+- GAN’s (Redes Adversárias Generativas), são redes para gerar novos dados de treinamento para o outro algoritmo, onde se tem dois algortimos, um para gerar novos dados/imagens e manda para o descriminador, este que vai tentar classificar como real ou fake. Sendo assim, o processo da GAN é gerar imagens tão boas e reais (qualidade de dados) que enganem o Descriminador.
+
+
+CNN
+Boa com imagns
+compacta e desloca pixeis de uma imagem para sintetizar uma nova imagem
+repetindo o processo
