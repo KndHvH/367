@@ -14,6 +14,8 @@ DBMS_OUTPUT.PUT_LINE(v_nome);
 DBMS_OUTPUT.PUT_LINE(v_cargo);
 END;
 /
+
+
 /
 DECLARE
     v_nome VARCHAR2(30);
@@ -42,6 +44,21 @@ END;
 /
 
 
+
+/
+DECLARE
+    v_empmo NUMBER:= 11;
+    v_ename VARCHAR2(13):='SANDRA';
+    v_job VARCHAR2(13):='GERENTE';
+    v_deptno NUMBER:= 10;
+
+BEGIN
+    INSERT INTO emp(empno,ename, job, deptno)
+end;
+
+
+
+/
 
 
 

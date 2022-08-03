@@ -69,14 +69,16 @@ INSERT INTO EMP VALUES
       (7934, 'MILLER', 'CLERK',     7782,
       TO_DATE('23-JAN-1982', 'DD-MON-YYYY'), 1300, NULL, 10);
 
-SELECT * FROM dept;          
+SELECT * FROM dept;
           
-SELECT * FROM emp;        
+SELECT * FROM emp;
           
-SELECT count(*) FROM emp;            
-          
-          
+SELECT count(*) FROM emp;
           
           
           
           
+          
+CREATE TABLE icaro(
+    a NUMBER (2,2)
+)
