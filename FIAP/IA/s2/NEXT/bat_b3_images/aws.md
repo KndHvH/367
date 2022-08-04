@@ -108,8 +108,7 @@ function getHtml(template) {
 }
 
 ```
-User name,Password,Access key ID,Secret access key,Console login link
-cafe,,AKIA3K6TTNCMGZUVBPRR,XHCJO31J80X7GCYihsO5zoedUm8TvH78C+ZkzHmx,https://kndhvh.signin.aws.amazon.com/console
+
 
 FONTE: https://butecotecnologico.com.br/python-aws-s3/
 
