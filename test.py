@@ -1,10 +1,10 @@
 import streamlit as st
 
-st.title('Counter Example')
-count = 0
+# Check if 'key' already exists in session_state
+# If not, then initialize it
+if 'key' not in st.session_state:
+    st.session_state['key'] = 'value'
 
-increment = st.button('Increment')
-if increment:
-    count += 1
-
-st.write('Count = ', count)
+# Session State also supports the attribute based syntax
+if 'key' not in st.session_state:
+    st.session_state.key = 'value'
