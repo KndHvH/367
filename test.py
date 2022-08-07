@@ -1,9 +1,11 @@
 import streamlit as st
 
-if 'key' not in st.session_state:
-    st.session_state['key'] = 'value'
+st.title('Counter Example')
+if 'count' not in st.session_state:
+    st.session_state.count = 0
 
-# Reads
-st.write(st.session_state.key)
+increment = st.button('Increment')
+if increment:
+    st.session_state.count += 1
 
-# Outputs: value
+st.write('Count = ', st.session_state.count)
