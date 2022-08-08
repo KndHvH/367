@@ -104,10 +104,8 @@ def calcCheck(lista):
     """
     calcula a media dos checkpoins e exclui o de menor nota
 
-    @param param1: lis
-    @param param2: this is a second param
-    @return: this is a description of what is returned
-    @raise keyError: raises an exception
+    @param param1: lista das notas
+    @return: retorna a media dos checkpoints
     """
     totalCheck = 0
     menor = 100000
@@ -118,15 +116,13 @@ def calcCheck(lista):
     return (totalCheck - menor)/2
 
 
-    # recebe todos os inputs e armazena em uma lista
+    
 def inputData(n):
     """
-    funcao para receber a nota do exame e calcular o novo status do aluno
+    recebe todos os inputs e armazena em uma lista
 
-    @param param1: this is a first param
-    @param param2: this is a second param
-    @return: this is a description of what is returned
-    @raise keyError: raises an exception
+    @param param1: o numero do semestre
+    @return: retorna a lista de notas
     """
     print(f"Semestre:{n} ")
 
@@ -148,7 +144,7 @@ if __name__ == '__main__':
 
 
 """
-    funcao para receber a nota do exame e calcular o novo status do aluno
+    describe
 
     @param param1: this is a first param
     @param param2: this is a second param
