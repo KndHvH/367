@@ -23,6 +23,7 @@ def main():
         status = exame(notaTotal)
 
     
+    print("Nota final:",notaTotal)
     print("Status:",status)
 
 def inputData(n):
@@ -98,6 +99,7 @@ def calcAll(lista):
     gsSem = lista[5]
     notaSem = pesoNota(checkSem, sprintSem, gsSem)
 
+    print("Media Check:", checkSem)
     print("Media Sprint:", sprintSem)
     print("Media GS:", gsSem)
     print("Media Semestre:", notaSem)
