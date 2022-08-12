@@ -1,4 +1,4 @@
-```mongodb
+```mariadb
 
 show databases
 admin   40.00 KiB
