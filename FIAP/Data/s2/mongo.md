@@ -1,4 +1,4 @@
-```mariadb
+```sql
 
 show databases
 admin   40.00 KiB
@@ -89,7 +89,7 @@ db.Alunos.getIndexes()
 ]
 
 db.Alunos.dropIndex("sobrenome_1_nome_1")
-{ nIndexesWas: 2, ok: 1 }
+{ nIndexesWas: 2, ok: 1 
 
 db.Alunos.createIndex({"sobrenome":1,"nome":-1})
 'sobrenome_1_nome_-1'
