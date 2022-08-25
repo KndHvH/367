@@ -107,4 +107,6 @@ db.Alunos.getIndexes()
   },
   { v: 2, key: { idade: 1 }, name: 'idade_1' }
 ]
+
+
 ```

@@ -1,0 +1,29 @@
+[
+    {
+    "nome":"José",
+    "sosobrenome":"Silva",
+    "idade":45,
+    "sexo":"Masculino"
+    },
+    {
+    "nome":"João",
+    "sosobrenome":"Barros",
+    "idade":38,
+    "sexo":"Masculino"
+    },
+    {
+    "nome":"Joana",
+    "sosobrenome":"Santos",
+    "idade":19,
+    "sexo":"Feminino"
+    },
+    {
+    "nome":"Olívia",
+    "sosobrenome":"Ferreira",
+    "idade":25,
+    "sexo":"Feminino"
+    }
+
+    
+    
+]
