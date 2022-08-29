@@ -10,6 +10,8 @@
 
 
 
+
+
 def main():
 
     while True:
@@ -101,7 +103,16 @@ def triangleType(list):
     if list[0] == list[1] or list[0] == list[2] or list[1] == list[2]:
         return 2
     return 3
+
     
+def eEquilatero(data : list) -> bool :
+    return len(set(data)) == 1
+
+def eEscaleno(data : list) -> bool :
+    return len(set(data)) == 3
+
+def eIsosceles(data : list) -> bool :
+    return len(set(data)) == 2
 
 
 class Error(Exception):
