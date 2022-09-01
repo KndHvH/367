@@ -1,4 +1,29 @@
-list = [2,7,8,6,4,1,9,9,10]
+
+from calendar import c
+from re import X
+
+
+list = [
+        [
+            'a', 'b', 'c'
+        ],
+        [
+            'a', 'c', 'd'
+        ],
+        [
+            'a'
+        ],
+]
+total = {}
+
+for i in list:
+    for j in i:
+        total.setdefault(j,0)
+
+        total[j] += 1
+
+print(total)
+
 
 total = len(list)
 promoters = 0

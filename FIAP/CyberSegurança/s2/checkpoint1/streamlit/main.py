@@ -1,4 +1,4 @@
-from distutils.fancy_getopt import fancy_getopt
+from unittest import result
 import streamlit as st
 from PIL import Image
 from captcha.image import ImageCaptcha 
@@ -8,8 +8,7 @@ import random
 import time
 import cvlib as cv
 import cv2
-import sys
-from cvlib.object_detection import YOLO
+from cvlib.object_detection import draw_bbox
 
 
 
@@ -20,6 +19,12 @@ def main ():
 
     if 'cap_img' not in st.session_state:
         st.session_state.cap_img, st.session_state.cap_txt = captcha()
+
+    if 'hasimg' not in st.session_state:
+        st.session_state.hasimg = 0
+
+    if 'apple' not in st.session_state:
+        st.session_state.apple = 0
 
 
     
@@ -59,27 +64,83 @@ def main ():
         st.subheader("Verification step (2/2)")
 
     
-        image = st.camera_input("Tire uma foto sua, segurando uma caneta")
+        image = st.camera_input("Tire uma foto sua, segurando uma maça")
 
+        if st.session_state.apple == 0:
+            if st.button('Não tenho uma maça!'):
+                st.info('Vá comprar uma e ser saudável!')
+                st.session_state.apple = 1
         if image is not None:
 
-            bytes_data = image.getvalue()
-            cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
+            cv2_img = cv2Image(image)
+           
+            results, st.session_state.output_image = detectObjects(cv2_img)
+
+            st.session_state.hasimg = 1
+
+            if appleMatch(results):
+                if personMatch(results):
+                    st.success("Success!")
+                    time.sleep(2)
+                    st.session_state.cap = 2
+                    st.experimental_rerun()
+                else:
+                    st.warning('Pessoa não detectada!')
+            else:
+                st.warning('Maça não detectada!')
+
+    if st.session_state.cap == 2:
+        if st.session_state.hasimg == 1:
+            if st.checkbox("See photo result"):
+                    st.image(st.session_state.output_image)
+        
+        if st.button("Try app again "):
+            st.session_state.cap = 0
+            st.experimental_rerun()
+
+        st.balloons()
+        
+        gifList = [
+            'https://media.giphy.com/media/vLvoizmG4esTveDkGW/giphy.gif',
+            'https://media.giphy.com/media/pzrsklEOuucIWSADBA/giphy.gif',
+            'https://media.giphy.com/media/3b4JiHClZdMlT8OK7I/giphy.gif',
+            'https://media.giphy.com/media/SXZj5WFLxiSdy/giphy.gif'
+
+        ]
+        
+        for i in gifList:
+            st.markdown(f"![Alt Text]({i})")
+
+        
+        
+def detectObjects(image):
+    bbox, label, conf = cv.detect_common_objects(image, confidence=0.5, nms_thresh=0.3, model='yolov3')
+    output_image = draw_bbox(image, bbox, label, conf)
+        
+    results={}
+    for i in range(len(label)):
+        results[label[i]]=conf[i]   
+    return  results, output_image
+
+def cv2Image(image):
+    bytes_data = image.getvalue()
+    cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
+    return cv2_img
 
 
-            faces, confidences = cv.detect_face(cv2_img)
-            if confidences == []:
-                confidences.append(0)   
-            st.text(confidences)
+def appleMatch(results:dict)->bool:
+    for i in results.keys():
+        if i == "apple":
+            if results[i] > 0.8:
+                return True
+    return False
 
-            st.text(facematch(faces,confidences))
-            
-            # for (x, y, w, h) in faces:
-            #     cv2.rectangle(cv2_img, (x, y), (w, h), (255, 0, 0), 2)
-
-
-            # st.image(cv2_img)
-
+def personMatch(results:dict)->bool:
+    for i in results.keys():
+        if i == "person":
+            if results[i] > 0.8:
+                return True
+    return False
 
 def capReset(i:int=0):
     time.sleep(i)
@@ -87,11 +148,6 @@ def capReset(i:int=0):
     del st.session_state.cap_txt
     st.experimental_rerun()
 
-def facematch(faces:list,confidences:float) -> bool:
-    if confidences[0] > 0.5:
-        if faces != None:
-            return True   
-    return False
 
 
 def captcha():
