@@ -1,7 +1,7 @@
 
 import random
 
-print("\033[91m\033[1mMENU - OusadIA\033[0m")
+print("MENU - OusadIA")
 
 # Função
 # A função do nosso programa seria poder converter os comentarios de um serviço ou produto determinado,
@@ -18,16 +18,16 @@ newData = 0
 sizeNotas = 0
 
 while decisao != 0:
-    print("\033[1m-----------------------\033[0m")
-    print("\033[92m1\033[0m – Inserir comentarios do clientes")
-    print("\033[92m2\033[0m – Exibir todos os comentarios")
-    print("\033[92m3\033[0m – Converter dados quali. para quant.")
-    print("\033[92m4\033[0m – Exibir pontuações")
-    print("\033[92m5\033[0m – Media pontuaçao total")
-    print("\033[92m0\033[0m – SAIR")
+    print("-----------------------")
+    print("1 - Inserir comentarios do clientes")
+    print("2 - Exibir todos os comentarios")
+    print("3 - Converter dados quali. para quant.")
+    print("4 - Exibir pontuações")
+    print("5 - Media pontuaçao total")
+    print("0 - SAIR")
     try:
 
-        decisao = int(input("\033[92mDigite a opção desejada:\033[0m "))
+        decisao = int(input("mDigite a opção desejada: "))
 
         if decisao == 1:
             entrada = ''
@@ -41,7 +41,7 @@ while decisao != 0:
 
         if decisao == 2:
             if comentario==[]:
-                print("\033[91m\033[1mLista de comentarios vazia!\033[0m")
+                print("Lista de comentarios vazia!")
             else:
 
                 for i in range(0,contador):
@@ -52,7 +52,7 @@ while decisao != 0:
             # Como ainda nao desenvolvemos um recurso capaz de realizar essa tarefa, irenos escolher os
             # numeros aleatoriamente.
             if newData == 0:
-                print("\033[91m\033[1mNovos dados nao foram inseridos!\033[0m")
+                print("Novos dados nao foram inseridos!")
             else:
                 for i in range(0,contador-sizeNotas):
                     numero = random.randrange(0,6)
@@ -62,26 +62,26 @@ while decisao != 0:
 
         if decisao == 4:
             if notas==[] or sizeNotas != contador:
-                print("\033[91m\033[1mFavor converter dados!\033[0m")
+                print("Favor converter dados!")
             else:
                 for i in range(0,contador):
                     print(f"Nota cliente numero {i+1}: {notas[i]}")
 
         if decisao == 5:
             if contador == 0:
-                print("\033[91m\033[1mFavor inserir os comentarios!\033[0m")
+                print("Favor inserir os comentarios!")
             elif notas==[] or sizeNotas != contador:
-                print("\033[91m\033[1mFavor converter dados!!\033[0m")
+                print("Favor converter dados!!")
             else:
                 total = 0
                 for i in range(0,contador):
                      total += notas[i]
                 media = total / contador
-                print(f"\033[94m\033[1mMedia: {media:.2f}\033[0m")
+                print(f"Media: {media:.2f}")
 
 
     except ValueError:
-        print('\033[91m\033[1mFavor inserir numero valido!\033[0m')
+        print('Favor inserir numero valido!')
 
 
 
