@@ -1,8 +1,3 @@
-
-from calendar import c
-from re import X
-
-
 list = [
         [
             'a', 'b', 'c'
