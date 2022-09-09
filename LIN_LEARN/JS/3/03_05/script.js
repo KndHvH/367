@@ -2,11 +2,23 @@ var a = 5;
 var b = 4;
 var theNumbersMatch
 
-// Comparação de igualdade incorreta
-if ( a = b ) {
+
+if ( a == b ) {
     theNumbersMatch = true;
 } else {
     theNumbersMatch = false;
 }
 
-console.log(theNumbersMatch);
+if (2=="2"){
+    console.log('uau')
+}
+
+if (2==="2"){
+    console.log('ghjkjh')
+} else {
+    console.log('diferente')
+}
+
+if (!theNumbersMatch){
+    console.log('77')
+}
