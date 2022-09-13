@@ -1,6 +1,8 @@
 import re
 from random import randint
 
+# Matias Herklotz rm94199
+
 # EXERCÍCIOS:
 # 1. Contar palavras
 #         Testes:
@@ -99,9 +101,9 @@ print(verificationCalculator('168995350'))
 def cpfGenerator(n=1)->str:
     cpfs = []
     while n > 0:
-        nine = str(randint(100000000, 999999999))
-        eleven = verificationCalculator(nine)
-        cpf = nine[:3] + '.' + nine[3:6] + '.' +  nine[6:9] + eleven
+        a = str(randint(100000000, 999999999))
+        b = verificationCalculator(a)
+        cpf = a[:3] + '.' + a[3:6] + '.' +  a[6:9] + b
         cpfs.append(cpf)
         n -= 1
     return cpfs
