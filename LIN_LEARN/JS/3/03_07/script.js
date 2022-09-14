@@ -1,9 +1,6 @@
 // Array
 
-var canetas;
-
-canetas = ["vermelha", "azul", "verde", "laranja"];
-
+var canetas = ["vermelha", "azul", "verde", "laranja"];
 console.log(canetas);
 
 // canetas = new Array("vermelha", "azul", "verde", "laranja");
@@ -17,3 +14,7 @@ console.log(quartaCaneta);
 canetas[3] = "roxo";
 
 console.log(canetas);
+
+var matias = [0,1]
+
+console.log(matias)

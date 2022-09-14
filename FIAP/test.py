@@ -1,8 +1,3 @@
-
-from calendar import c
-from re import X
-
-
 list = [
         [
             'a', 'b', 'c'
@@ -64,3 +59,4 @@ print(f'Porcentagem Det {pcemDet:.2f}%')
 print(f'Nps Total Score: {nps:.2f}')
 print(f'NPS {npsString}')
 
+print('hello from ubuntu')
