@@ -1,13 +1,15 @@
-
-
-function detectBiggestNumber(x,y){
-    if (x>y){
-        return x
-    } else if (y>x){
-        return y
-    }
-    return 'equal'
+function display(){
+    console.log('function test')
 }
 
+display()
 
-detectBiggestNumber(1/2,1/4)
+function detectBiggestNumber(x,y){
+    x>y ? console.log('x: '+x) : console.log('y: '+y)
+}
+
+a= 3/6
+b= 6/11
+
+x = detectBiggestNumber(a,b)
+console.log(x)
