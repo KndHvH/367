@@ -1,15 +1,20 @@
 function display(){
-    console.log('function test')
+    console.log('function test');
 }
 
-display()
+display();
 
 function detectBiggestNumber(x,y){
-    x>y ? console.log('x: '+x) : console.log('y: '+y)
+    let biggest;
+
+    x>y ? biggest = ['primeiro',x] : x<y ? biggest = ['segundo',y] : biggest = null;
+
+    return biggest;
 }
 
-a= 3/6
-b= 6/11
+a = 3/6;
+b = 6/13;
 
-x = detectBiggestNumber(a,b)
-console.log(x)
+x = detectBiggestNumber(a,b);
+
+x == null ? console.log('Numeros Iguais!') : console.log('O maior numero e o ' + x[0] + ' com o valor de ' + x[1])
