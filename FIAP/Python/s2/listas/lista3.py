@@ -1,7 +1,8 @@
 import re
 from random import randint
-from traceback import print_tb
+
 # Matias Herklotz rm94199
+
 # EXERCÍCIOS:
 # 1. Contar palavras
 #         Testes:
@@ -14,120 +15,100 @@ from traceback import print_tb
 #     from random import randint
 #     numero = str(randint(100000000, 999999999))
 
+
+
+
+
+
 #1
-TO_SPLIT_CHARACTERS = {',' : ' ',
-                     '.' : ' ',}
-
-def words_counter( text : str ) -> int:
-    text = text.translate(str.maketrans(TO_SPLIT_CHARACTERS))
-
-    return len(text.split())
-
-print(words_counter("ola,             amigos.Vapo"))
-
 def wordsCounter(phrase:str)->int:
-    phrase = phrase.replace('.',' ')
-    phrase = phrase.replace(',',' ')
+    phrase = phrase.replace('.','/')
+    phrase = phrase.replace(',','/')
 
-
-    words = phrase.split()
-
+    words = phrase.split('/')
     return len(words)
 
 #test
 print(wordsCounter("ola,             amigos.Vapo"))
 
 
+
 #2
 def caracterRemoval(phrase:str)->str:
-
     phrase = re.sub("\D","",phrase)
-
     return phrase
 
-
 def firstDigitCalculator(cpf:str)->int:    
-
     number = 10
-
     total = 0
-
     for i in cpf:
-
         total += int(i)*number
-
         number -= 1
-
     if total % 11 < 2:
-
         return 0
-
     digt = 11 - (total%11)
-
-
     if digt > 9:
         return 0
-
     return digt
-
+    
 def secondDigitCalculator(cpf:str)->int:
-
     digt1 = firstDigitCalculator(cpf)
-
     cpf = cpf + str(digt1)
-
     number = 11
-
     total = 0
-
     for i in cpf:
-
         total += int(i)*number
-
         number -= 1
-
     if total % 11 < 2:
-
         return 0
-
     digt = 11 - (total%11)
-
     if digt > 9:
-
         return 0
-        
     return digt
 
 def cpfVerificator(cpf:str)->bool:
     cpf = caracterRemoval(cpf)
     cpf2 = cpf[:-2]
+
     dig1 = firstDigitCalculator(cpf2)
     dig2 = secondDigitCalculator(cpf2)
+
     cpf2 = cpf2 + str(dig1) + str(dig2)
+
     if cpf2 == cpf:
         return True
     return False
+
 #test
-print(cpfVerificator('416.924.828-75'))
+print(cpfVerificator('168.995.350-09'))
+
+
 #3
 def verificationCalculator(cpf:str)->str:
     clean = caracterRemoval(cpf)
+
+
     dig1 = firstDigitCalculator(clean)
     dig2 = secondDigitCalculator(clean)
+
     return '-' + str(dig1) + str(dig2)
+
 #test
 print(verificationCalculator('168995350'))
+
+
 #4 
 def cpfGenerator(n=1)->str:
     cpfs = []
     while n > 0:
-        nine = str(randint(100000000, 999999999))
-        eleven = verificationCalculator(nine)
-        cpf = nine[:3] + '.' + nine[3:6] + '.' +  nine[6:9] + eleven
+        a = str(randint(100000000, 999999999))
+        b = verificationCalculator(a)
+        cpf = a[:3] + '.' + a[3:6] + '.' +  a[6:9] + b
         cpfs.append(cpf)
-        print(cpf)
         n -= 1
     return cpfs
+
 #test
-cpfs = cpfGenerator(50000000)
+
+cpfs = cpfGenerator(5)
 print(cpfs)
