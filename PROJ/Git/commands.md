@@ -226,3 +226,31 @@ Exemplo:
 ```
 $ git whatchanged
 ```
+
+## 26. git reset
+volta um numero especifico de commits (3)
+```
+
+$ git reset --soft HEAD~3 
+```
+
+## 27. git reflog 
+mostra a log
+```
+
+$ git reflog
+```
+
+## 27. git git reset
+colta um add
+```
+
+$ git reset .\FIAP\RedesNeurais\s2\
+```
+
+## 27. git reset 
+volta a um ponto especifico
+```
+
+$ git reset --hard a0d3fe6
+```
