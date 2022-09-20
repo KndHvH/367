@@ -12,18 +12,21 @@ def main():
     total = 0
 
     for x in Xs:
-        result = proba(x,n,p,q)
+        result = proba(x, n, p, q)
+        print(f'X={x}: {result}')
         total += result
 
-    print(result)
-def proba(x,n,p,q):
-    
-    result = combinasao(x,n) * p**x * q**(n-x)
+    print(1-total)
+
+
+def proba(x, n, p, q):
+
+    result = combinasao(x, n) * p**x * q**(n-x)
 
     return result
 
 
-def combinasao(x,n):
+def combinasao(x, n):
     result = fatorial(n) / (fatorial(x)*fatorial(n-x))
     return result
 
@@ -37,17 +40,4 @@ def fatorial(x):
 
 
 if __name__ == '__main__':
-   main()
-
-
-
-
-
-
-
-
-
-
-
-
-
+    main()
