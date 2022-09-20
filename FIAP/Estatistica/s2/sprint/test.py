@@ -1,52 +1,53 @@
-bad = 0.05
-god = 0.95
-total = 10
-popam = total
-dictt = {}
-while total > -1:
 
-    chance = god ** total * bad ** (popam - total)
+def main():
 
-    print(f"chance {(popam - total)} bads = {bad ** (popam - total)}")
-    print(f"chance {total} goods = {god ** total}")
-    print("total chance =",chance)
-    print("---------------------")
+    Xs = [0, 1, 2, 3]
 
-    dictt[popam-total] = chance
+    n = 10
 
-    total -= 1
+    p = 0.05
 
-media = 0
-for i in dictt:
+    q = 0.95
+
+    total = 0
+
+    for x in Xs:
+        result = proba(x,n,p,q)
+        total += result
+
+    print(result)
+def proba(x,n,p,q):
     
-    print(f"media = {media} + ({i}*{dictt[i]})")
-    media += (i*dictt[i])
-    
-print("media total= ",media)
-print("---------------------")
+    result = combinasao(x,n) * p**x * q**(n-x)
 
-ex = 0
-
-for i in dictt:
-    
-    print(f"ex = {ex} + ({i}*{dictt[i]})")
-    ex += (i**2*dictt[i])
-    
-print("ex total = ",ex)
-print("---------------------")
+    return result
 
 
-variancia = ex - media**2
+def combinasao(x,n):
+    result = fatorial(n) / (fatorial(x)*fatorial(n-x))
+    return result
 
-desp = variancia**0.5
 
-print("desvio padrao = ", desp)
-print("---------------------")
+def fatorial(x):
+    total = 1
+    while x > 0:
+        total *= x
+        x -= 1
+    return total
 
-verif = 0
 
-for i in dictt.keys():
-    verif += dictt[i]
+if __name__ == '__main__':
+   main()
 
-print("verif = ",verif)
-print("---------------------")
+
+
+
+
+
+
+
+
+
+
+
+
