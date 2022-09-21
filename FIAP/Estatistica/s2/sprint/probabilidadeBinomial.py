@@ -1,13 +1,15 @@
 
 def main():
+    # intervalo da probabilidade
+    Xs = [0,1,2,3]
 
-    Xs = [0, 1, 2, 3]
-
+    # n total
     n = 10
 
+    # sucesso
     p = 0.05
 
-    q = 0.95
+    q = 1-p
 
     total = 0
 
@@ -16,22 +18,50 @@ def main():
         print(f'X={x}: {result}')
         total += result
 
-    print(1-total)
+    print(f'P{Xs}=', 1-total)
 
 
-def proba(x, n, p, q):
+def proba(x: int, n: int, p: int, q: int) -> float:
+    """calcula a probabilidade de X
 
-    result = combinasao(x, n) * p**x * q**(n-x)
+    Args:
+        x (int): x
+        n (int): n total
+        p (int): p sucesso
+        q (int): p fracasso
+
+    Returns:
+        float: probabilidade
+    """
+
+    result = combinacao(x, n) * p**x * q**(n-x)
 
     return result
 
 
-def combinasao(x, n):
+def combinacao(x: int, n: int) -> float:
+    """combinacao de x e n
+
+    Args:
+        x (int): x
+        n (int): n
+
+    Returns:
+        float: resultado
+    """
     result = fatorial(n) / (fatorial(x)*fatorial(n-x))
     return result
 
 
-def fatorial(x):
+def fatorial(x: int) -> float:
+    """calcula fatorial
+
+    Args:
+        x (int): numero
+
+    Returns:
+        float: resultado do fatorial
+    """
     total = 1
     while x > 0:
         total *= x
