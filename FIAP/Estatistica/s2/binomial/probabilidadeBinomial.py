@@ -1,13 +1,13 @@
 
 def main():
     # intervalo da probabilidade
-    Xs = [0,1,2,3]
+    Xs = [3,4,5,6,7]
 
     # n total
-    n = 10
+    n = 18
 
     # sucesso
-    p = 0.05
+    p = 0.1
 
     q = 1-p
 
@@ -18,7 +18,7 @@ def main():
         print(f'X={x}: {result}')
         total += result
 
-    print(f'P{Xs}=', 1-total)
+    print(f'P{Xs}=', total)
 
 
 def proba(x: int, n: int, p: int, q: int) -> float:
