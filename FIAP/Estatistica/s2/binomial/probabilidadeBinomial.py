@@ -1,10 +1,10 @@
 
 def main():
     # intervalo da probabilidade
-    Xs = [0, 1, 2]
+    Xs = [0]
 
     # n total
-    n = 20
+    n = 37
 
     # sucesso
     p = 0.02
