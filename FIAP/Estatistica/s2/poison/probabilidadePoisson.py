@@ -1,13 +1,13 @@
 
-from math import factorial
-
 
 def main():
     # intervalo da probabilidade
-    Xs = [2,3,4]
+    Xs = [0, 1, 2]
 
     # lambda
-    lam = 2.3
+    lam = 6 * 0.5
+
+    
     # euler
     e = 2.718281828459045
 
@@ -22,7 +22,7 @@ def main():
     print(f'1 - P{Xs} =', 1 - total)
 
 
-def proba(x: int, lam , e) -> float:
+def proba(x: int, lam, e) -> float:
     """calcula a probabilidade de X
 
     Args:
@@ -31,7 +31,7 @@ def proba(x: int, lam , e) -> float:
         float: probabilidade
     """
 
-    result = (e**-lam * lam**x)/factorial(x)
+    result = (e**-lam * lam**x)/fatorial(x)
 
     return result
 
