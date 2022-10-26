@@ -1,4 +1,5 @@
-# terceira versao, adaptando antigo programa para atender as necessidades do sprint4
+# https://drive.google.com/file/d/1LHXQyuXlQza0VZ8xONvYS4r7c6-qTm43/view?usp=sharing
+
 import random
 
 
@@ -7,7 +8,7 @@ def main():
     print("MENU - OusadIA")
 
     comments = importData()
-
+   
     while True:
 
         choice = decision()
@@ -24,6 +25,16 @@ def main():
 
         if choice == 3:
             showData(comments)
+        
+        if choice == 4:
+            sortById(comments)
+        
+        if choice == 5:
+            sortByScore(comments)
+        
+        if choice == 6:
+            comments = []
+            saveData(comments)
 
 
 def insertData(comments: list) -> list:
@@ -89,7 +100,7 @@ def decision() -> int:
     permite ao usuario escolher o que deseja fazer no programa
     e retorna sua decisao
 
-    @return: sua decisao entre 0-3
+    @return: sua decisao entre 0-6
     """
     while True:
         try:
@@ -97,7 +108,7 @@ def decision() -> int:
             choice = int(
                 input("Digite o numero do procedimento que deseja realizar: "))
 
-            if choice > 3 or choice < 0:
+            if choice > 6 or choice < 0:
                 raise ValueError
 
             return choice
@@ -115,10 +126,18 @@ def menuDisplay():
     print("1 - Inserir comentarios do clientes")
     print("2 - Converter dados quali. para quant.")
     print("3 - Exibir todos os comentarios")
+    print("4 - Ordenar lista por Id")
+    print("5 - Ordenar lista por Score")
+    print("6 - Apagar lista")
     print("0 - SAIR")
 
 
-def saveData(list):
+def saveData(list:list):
+    """armazena a lista de dicionarios em um arquivo txt
+
+    Args:
+        list (list): lista de dicionarios
+    """
     with open("db.txt", "w") as db:
         
         for db_dict in list:
@@ -126,14 +145,16 @@ def saveData(list):
             db.write(f"{str(db_dict)}\n")
 
 
-def importData():
+def importData()->list:
+    """importa a lista pelo txt e retorna a lista
+
+    Returns:
+        list: lista de dicionarios de comentarios
+    """
     try:
         with open("db.txt", "r") as db:
             db_list = []
             for line in db:
-            
-                # db_line = line[:-1]
-
                 db_list.append(eval(line))
 
     except FileNotFoundError:
@@ -141,6 +162,20 @@ def importData():
 
     return db_list
 
+def sortByScore(comments:list)->list:
+
+    comments.sort(key=getScore)
+
+def getScore(e:dict)->int:
+        return e['score']
+
+
+def sortById(comments:list)->list:
+
+    comments.sort(key=getId)
+
+def getId(e:dict)->int:
+        return e['id']
 
 if __name__ == '__main__':
     main()
