@@ -1,4 +1,4 @@
-# terceira versao, adaptando antigo programa para atender as necessidades do sprint4
+# https://drive.google.com/file/d/1gJfd2w7DdwyL2I0wq-3A9LSZ94GtBpbe/view?usp=sharing
 import random
 
 
@@ -118,7 +118,12 @@ def menuDisplay():
     print("0 - SAIR")
 
 
-def saveData(list):
+def saveData(list:list):
+    """armazena a lista de dicionarios em um arquivo txt
+
+    Args:
+        list (list): lista de dicionarios
+    """
     with open("db.txt", "w") as db:
         
         for db_dict in list:
@@ -126,7 +131,12 @@ def saveData(list):
             db.write(f"{str(db_dict)}\n")
 
 
-def importData():
+def importData()->list:
+    """importa a lista pelo txt e retorna a lista
+
+    Returns:
+        list: lista de dicionarios de comentarios
+    """
     try:
         with open("db.txt", "r") as db:
             db_list = []
