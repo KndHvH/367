@@ -139,3 +139,5 @@ Pipfile.lock
 results.xlsx
 
 darknet/
+
+db.txt
