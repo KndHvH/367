@@ -8,7 +8,7 @@ def main():
     print("MENU - OusadIA")
 
     comments = importData()
-   
+
     while True:
 
         choice = decision()
@@ -25,13 +25,13 @@ def main():
 
         if choice == 3:
             showData(comments)
-        
+
         if choice == 4:
             sortById(comments)
-        
+
         if choice == 5:
             sortByScore(comments)
-        
+
         if choice == 6:
             comments = []
             saveData(comments)
@@ -41,7 +41,7 @@ def insertData(comments: list) -> list:
     """
     recebe a lista de comentarios ja existentes e pede ao usuario que ele insira novas entradas
     e retorna a lista com todos os comentarios
-    
+
 
     @param: lista de comentarios
 
@@ -63,11 +63,10 @@ def showData(comments: list):
 
     @param: lista de comentarios
     """
+    print("-----------------------")
     if comments == []:
-        print("-----------------------")
         print('Não foram inseridos comentarios!')
     else:
-        print("-----------------------")
         for i in comments:
             print(f"Comentario #{i['id']+1}: {i['comentario']}." +
                   (i['score'] != None and f"\nScore: {i['score']}" or ""))
@@ -85,14 +84,15 @@ def convertData(comments: list) -> list:
     if comments == []:
         print("-----------------------")
         print('Não foram inseridos comentarios!')
-    else:
-        for i in comments:
-            numero = random.randrange(0, 6)
-            if i['score'] == None:
-                i['score'] = numero
-        print("-----------------------")
-        print('Comentarios convertidos!')
+
         return comments
+    for i in comments:
+        numero = random.randrange(0, 6)
+        if i['score'] == None:
+            i['score'] = numero
+    print("-----------------------")
+    print('Comentarios convertidos!')
+    return comments
 
 
 def decision() -> int:
@@ -132,20 +132,20 @@ def menuDisplay():
     print("0 - SAIR")
 
 
-def saveData(list:list):
+def saveData(list: list):
     """armazena a lista de dicionarios em um arquivo txt
 
     Args:
         list (list): lista de dicionarios
     """
     with open("db.txt", "w") as db:
-        
+
         for db_dict in list:
-        
+
             db.write(f"{str(db_dict)}\n")
 
 
-def importData()->list:
+def importData() -> list:
     """importa a lista pelo txt e retorna a lista
 
     Returns:
@@ -162,20 +162,54 @@ def importData()->list:
 
     return db_list
 
-def sortByScore(comments:list)->list:
 
+def sortByScore(comments: list) -> list:
+    """organiza a lista de comentarios pelo score do sentimento em ordem crescente
+
+    Args:
+        comments (list): lista de comentarios
+
+    Returns:
+        list: lista de comentarios organizada
+    """
     comments.sort(key=getScore)
 
-def getScore(e:dict)->int:
-        return e['score']
+
+def getScore(e: dict) -> int:
+    """funcao para retornar score de um comentario
+
+    Args:
+        e (dict): comentario
+
+    Returns:
+        int: score do comentario
+    """
+    return e['score']
 
 
-def sortById(comments:list)->list:
+def sortById(comments: list) -> list:
+    """organiza a lista de comentarios em ordem de ID
 
+    Args:
+        comments (list): lista de comentarios
+
+    Returns:
+        list: lista de comemtarios organizada
+    """
     comments.sort(key=getId)
 
-def getId(e:dict)->int:
-        return e['id']
+
+def getId(e: dict) -> int:
+    """funcao para retornar id de um comentario
+
+    Args:
+        e (dict): comentario
+
+    Returns:
+        int: id do comentario
+    """
+    return e['id']
+
 
 if __name__ == '__main__':
     main()
