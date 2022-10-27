@@ -172,6 +172,11 @@ def sortByScore(comments: list) -> list:
     Returns:
         list: lista de comentarios organizada
     """
+    for i in comments:
+        if i['score'] == None:
+            print("-----------------------")
+            print('Nem todos os comentarios receberam um Score!')
+            return None
     comments.sort(key=getScore)
 
 
