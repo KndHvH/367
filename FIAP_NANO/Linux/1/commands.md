@@ -120,3 +120,15 @@ z - utiliza gzip
 v - verbose
 f - name
 x - descompress
+
+### 20 - top
+
+    top
+
+abre gerenciador de tarefas no terminal
+
+### 21 - kill
+
+    kill 53301
+
+mata o processo pelo pid    
