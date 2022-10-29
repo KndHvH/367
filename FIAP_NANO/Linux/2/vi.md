@@ -55,3 +55,14 @@ apaga x linhas, p colar
 Undo controlz
 
 
+### 13 - /
+	/
+	enter
+	n
+	N
+pesquis algo no doc, enter para ir para primeiro e n para proximo e N para anterior
+
+
+### 14 - %s
+	 %s/mais/menos/Gc
+Substitui no formato antigo/novo/parametros, g - global, c - certeza	
