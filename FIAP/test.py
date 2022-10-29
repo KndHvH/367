@@ -1,8 +1,6 @@
 
 import requests
 
-# test
-
 import json
 
 url = 'http://0.0.0.0:8000/v1/sentiment'
