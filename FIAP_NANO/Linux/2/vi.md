@@ -31,3 +31,26 @@ salva documento sem sair
 	:wq
 	:x
 salvar e sair
+
+### 9 - x,xw
+	:3,5w arquivo.txt
+cria um novo arquivo copiando as linhas de 3 a 5, com o nome especifico
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
