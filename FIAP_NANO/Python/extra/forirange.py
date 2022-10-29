@@ -33,13 +33,13 @@ for av, bv in zip(a,b):
 
 
 
-while True:
 
-   try:
-       if 1 != 2:
-           raise ValueError
 
-       pass
+try:
+    if 1 != 2:
+        raise ValueError
 
-   except ValueError:
-       print("error")
+    pass
+
+except ValueError:
+    print("error")

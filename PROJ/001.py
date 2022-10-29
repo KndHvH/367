@@ -1,35 +1,23 @@
 
-x='ghz_4mWDZQbamb4w4uyifYRJOdlrONgtkq3vshL4'
+master = list('ghz_4mWDZQbamb4w4uyifYRJOdlrONgtkq3vshL4')
 
-z=list(x)
+senha = input()
+upper = senha.upper()
+senha = senha + upper
 
-x=[]
-senha=input()
-x=list(senha)
+senha = list(senha)
 
-
-for i in range(0,10):
-    x.append(x[i].upper())
-
-
-for i in range(0,len(z),1):
-    for l in range(0,19):
-        if z[i]==x[l]:
-            if l < 10:
-                if l <5:
-                    z[i]=x[l+5]
-                    break
-                else:
-                    z[i]=x[l-5]
-                    break
+for i, v in enumerate(master):
+    for j, b in enumerate(senha):
+        if v == b:
+            if j < 5 or (j > 9 and j < 15):
+                master[i] = senha[j+5]
             else:
-                if l <15:
-                    z[i]=x[l+5]
-                    break
-                else:
-                    z[i]=x[l-5]
-                    break
-y=""
-for i in z:
-    y += i
-print(y)
+                master[i] = senha[j-5]
+
+
+
+string = ""
+for i in master:
+    string += i
+print(string)
