@@ -1,5 +1,10 @@
 # https://drive.google.com/file/d/1LHXQyuXlQza0VZ8xONvYS4r7c6-qTm43/view?usp=sharing
 
+# Cesar Norena Pachon - RM95093
+# Eduardo Matos da Silva - RM92877
+# Matias Cornelsen Herklotz - RM94199
+# Tabatha Larissa Alves de Souza - RM93045
+
 import random
 
 
