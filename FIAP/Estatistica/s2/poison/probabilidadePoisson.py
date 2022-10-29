@@ -2,10 +2,10 @@
 
 def main():
     # intervalo da probabilidade
-    Xs = [0, 1, 2]
+    Xs = [2,3,4,5]
 
     # lambda
-    lam = 6 * 0.5
+    lam = 2.5 
 
     
     # euler
