@@ -37,20 +37,21 @@ salvar e sair
 cria um novo arquivo copiando as linhas de 3 a 5, com o nome especifico
 
 
+### 10 - yy
+	yy
+	3yy
+	p
+copia x linhas e cola com p
 
 
+### 11 - dd
+	3dd
+	dd
+	p
+apaga x linhas, p colar
 
-
-
-
-
-
-
-
-
-
-
-
-
+### 12 - U
+	U
+Undo controlz
 
 
