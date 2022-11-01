@@ -1,36 +1,23 @@
 ### 1 - bin
-
     principais executaveis
 
-
 ### 2 - boot
-
     dir de bootagem
 
-
-
 ### 3 - dev
-
     pseudo arquivos
 
 ### 4 - etc
-
     configuracoes
 
-
-
 ### 5 - home
-
     usuarios
 
 ### 6 - lib / lib64
-
     bibliotecas so sistemas
 
 ### 7 - lost and founds
-
     arquivos corrompidos ou perdidos
-
 
 ### 8 - media / mnt
     dir de montagem
