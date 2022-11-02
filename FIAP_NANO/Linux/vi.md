@@ -64,5 +64,15 @@ pesquis algo no doc, enter para ir para primeiro e n para proximo e N para anter
 
 
 ### 14 - %s
-	 %s/mais/menos/Gc
+	 %s/mais/menos/gc
 Substitui no formato antigo/novo/parametros, g - global, c - certeza	
+
+
+### 15 - tabe
+	 :tabe file.txt
+abre um segundo arquivo em outra aba gt ou gT para trocar de aba	
+
+
+### 16- 
+	 :tabe file.txt
+abre um segundo arquivo em outra aba gt ou gT para trocar de aba	
