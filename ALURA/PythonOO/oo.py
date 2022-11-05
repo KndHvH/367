@@ -1,6 +1,8 @@
 
 class Conta:
 
+    bank_code = '001'
+
     def __init__(self, id: int, name: str, value=0.0, limit=1000.0) -> None:
 
         print('Contruindo', self)
@@ -22,7 +24,21 @@ class Conta:
 
         self.extract()
 
+    def __canWithdraw(self, value):
+        limit = self.__money + self.__limit
+        if value > limit:
+            decision = input(
+                f'Apenas pode sacar R${limit:.2f}, digite \'y\' para proseguir: ')
+
+            if decision == 'y':
+                return limit
+            else:
+                return 0
+        return value
+
     def withdraw(self, value):
+
+        value = self.__canWithdraw(value)
 
         self.__money -= value
 
@@ -33,7 +49,7 @@ class Conta:
         self.withdraw(value)
 
         destin.deposit(value)
-    
+
     @property
     def id(self):
         return self.__id
@@ -57,3 +73,8 @@ class Conta:
     @limit.setter
     def limit(self, limit):
         self.__limit = limit
+
+    @staticmethod
+    def bank_codes():
+        print('codes copied')
+        return {'BB': '001',  'Caixa': '104', 'Bradesco': '237'}
