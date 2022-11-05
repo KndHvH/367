@@ -93,3 +93,8 @@ mata o processo pelo pid
 ### 22 - fdisk
 	sudo fdisk /dev/sda
 abre prompt dos discos
+
+### 23 - nautilus
+	nautilus --browser
+abre o file explorer
+
