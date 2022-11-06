@@ -1,5 +1,8 @@
 import random
 import re
+import os
+scriptPath = os.path.dirname(__file__)
+ 
 
 
 class Code:
@@ -11,7 +14,7 @@ class Code:
         self.__body = Code.swap(body, password)
 
     def __generateId():
-        with open("service/id.txt", "r+") as file:
+        with open(os.path.join(scriptPath, 'service/id.txt'), "r+") as file:
             id = int(file.read())
             file.seek(0)
             file.write(str(id+1))
@@ -21,7 +24,7 @@ class Code:
     def __generateTitle():
         return random.randint(10000000, 99999999)
 
-    def __letterToNumber(name: str) -> int:
+    def letterToNumber(name: str) -> int:
 
         equiv = {'a': '01', 'b': '02', 'c': '03', 'd': '04', 'e': '05', 'f': '06', 'g': '07', 'h': '08', 'i': '09', 'j': '10',
                  'k': '11', 'l': '12', 'm': '13', 'n': '14', 'o': '15', 'p': '16', 'q': '17', 'r': '18', 's': '19', 't': '20',
@@ -36,11 +39,13 @@ class Code:
 
     def __generateFileName(self, title):
 
-        name = Code.__letterToNumber(title)
+        name = Code.letterToNumber(title)
 
         name += self.__title
 
-        return name
+        relPath = 'database/'+str(name)+'.txt'
+        return (os.path.join(scriptPath, relPath))
+            
 
     def swap(self, body: str, password: str) -> str:
         master = list(body)
@@ -56,6 +61,13 @@ class Code:
                         master[i] = password[j-step]
         return listToString(master)
 
+    def saveData(self):
+        title = input('file title_')
+        filename = Code.__generateFileName(title)
+        filename = os.path.join(scriptPath, filename)
+        with open(filename, "w") as file:
+            file.write(self.__id + "\n" + self.__title + "\n" + self.__body)
+
 
 def main():
 
@@ -66,16 +78,23 @@ def main():
         match choice:
 
             case 'a':
+
                 master = list(input('file_'))
                 password = passwordVerif()
 
-                master = swap(master, password)
+                code = Code(master, password)
+
+                code.saveData()
 
             case 'r':
-                master = list(importData())
+                filename = input('filename_')
+
+                filename = Code.letterToNumber(filename)
+
+                #masterList = importData(filename+)
                 password = input('password_')
 
-                master = swap(master, password)
+                #message = Code.swap(masterList, password)
 
                 print(master)
 
@@ -140,6 +159,20 @@ def listToString(list: list) -> str:
     for i in list:
         string += i
     return string
+
+
+def importData(title):
+    try:
+        with open('database/' + title + '.txt', "r") as db:
+            dbList = []
+            for line in db:
+                dbList.append(eval(line))
+
+    except FileNotFoundError:
+        print('file not found')
+        dbList = []
+
+    return dbList
 
 
 if __name__ == '__main__':
