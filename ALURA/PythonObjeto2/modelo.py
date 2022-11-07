@@ -45,7 +45,7 @@ class Film(Program):
         return self.__duration
 
     def __str__(self):
-        likes = f'Likes: {self.likes}' if self.likes > 1 else f'Like: {self.likes}' 
+        likes = f'Likes: {self.likes}' if self.likes > 1 else f'Like: {self.likes}'
         return f'Name: {self.name} \nYear: {self.year}\nDuration: {self.duration} min\n{likes}'
 
 
@@ -66,22 +66,18 @@ class Serie(Program):
         return f'Name: {self.name} \nYear: {self.year}\nDuration: {seasons}\n{likes}'
 
 
-class Playlist:
+class Playlist(list):
 
     def __init__(self, name, programs) -> None:
+        super().__init__(programs)
         self.__name = name
-        self.__programs = programs
-        self.__size = self.__getSize()
-
-    def __getSize(self):
-        return len(self.__programs)
 
     def __str__(self) -> str:
         return f'Name: {self.name}\nSize: {self.size}'
 
     def showcase(self):
         print(self)
-        for i in self.programs:
+        for i in self:
             print(10*'--')
             print(i)
 
@@ -91,7 +87,7 @@ class Playlist:
 
     @property
     def size(self):
-        return self.__size
+        return len(self)
 
     @property
     def programs(self):
