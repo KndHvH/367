@@ -10,13 +10,13 @@
 ### Urgent Important
 
 ### Not Urgent Important
--python oo
--alura courses
--estagio2023
+- python oo
+- alura courses
+- estagio2023
 
 ### Urgent Not Important
 
 ### Not Urgent Not Important
--got
--forza
--warband
+- got
+- forza
+- warband
