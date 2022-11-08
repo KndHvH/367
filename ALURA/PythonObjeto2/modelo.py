@@ -62,18 +62,24 @@ class Serie(Program):
 
     def __str__(self):
         likes = f'Likes: {self.likes}' if self.likes > 1 else f'Like: {self.likes}'
-        seasons = f'{self.seasons} Seasons' if self.seasons > 1 else f'{self.seasons}Season'
+        seasons = f'{self.seasons} Seasons' if self.seasons > 1 else f'{self.seasons} Season'
         return f'Name: {self.name} \nYear: {self.year}\nDuration: {seasons}\n{likes}'
 
 
 class Playlist(list):
 
     def __init__(self, name, programs) -> None:
-        super().__init__(programs)
         self.__name = name
+        self.__programs = programs
+
+    def __getitem__(self, item):
+        return self.__programs[item]
 
     def __str__(self) -> str:
-        return f'Name: {self.name}\nSize: {self.size}'
+        return f'Name: {self.name}\nSize: {len(self)}'
+
+    def __len__(self):
+        return len(self.__programs)
 
     def showcase(self):
         print(self)
@@ -86,10 +92,6 @@ class Playlist(list):
         return self.__name
 
     @property
-    def size(self):
-        return len(self)
-
-    @property
     def programs(self):
         return self.__programs
 
@@ -98,6 +100,7 @@ vingadores = Film('Vingadores', 2015, 160)
 starwars = Film('star wars', 1999, 130)
 got = Serie('Game of Thrones', 2012, 8)
 dark = Serie('dark', 2019, 3)
+the100 = Serie('The 100', 1900, 1)
 
 
 dark.liked()
@@ -112,7 +115,7 @@ starwars.liked()
 vingadores.liked()
 
 
-programs = [vingadores, got, starwars, dark]
+programs = [vingadores, got, starwars, dark, the100]
 
 favoritos = Playlist('Favorites', programs)
 
