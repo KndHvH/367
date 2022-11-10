@@ -8,7 +8,9 @@
 
 
 ### Urgent Important
-
+- sent email, negative response
+- speak iza
+  
 ### Not Urgent Important
 - ##### Alura 
   - Agile
