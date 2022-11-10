@@ -10,9 +10,15 @@
 ### Urgent Important
 
 ### Not Urgent Important
-- python oo
-- alura courses
-- estagio2023
+#### Alura 
+	- Agile
+	- Https
+	- Html Css
+	- Flask
+#### Estagio
+	- teste logicalis
+	- teste atlas
+- js
 
 ### Urgent Not Important
 
@@ -20,3 +26,4 @@
 - got
 - forza
 - warband
+- dark
