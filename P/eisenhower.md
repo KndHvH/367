@@ -17,10 +17,12 @@
   - Https
   - Html Css
   - Flask
+
   
 - ##### Estagio
   - teste logicalis
   - teste atlas
+  
 - js
 
 ### Urgent Not Important
