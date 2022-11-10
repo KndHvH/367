@@ -10,14 +10,15 @@
 ### Urgent Important
 
 ### Not Urgent Important
-#### Alura 
-	- Agile
-	- Https
-	- Html Css
-	- Flask
-#### Estagio
-	- teste logicalis
-	- teste atlas
+- ##### Alura 
+  - Agile
+  - Https
+  - Html Css
+  - Flask
+  
+- ##### Estagio
+  - teste logicalis
+  - teste atlas
 - js
 
 ### Urgent Not Important
