@@ -17,7 +17,6 @@
   - Https
   - Html Css
   - Flask
-
   
 - ##### Estagio
   - teste logicalis
