@@ -1,19 +1,23 @@
 import random
 import re
 import os
+
+
 scriptPath = os.path.dirname(__file__)
- 
 
 
 class Code:
 
     def __init__(self, body, password) -> None:
 
-        self.__id = Code.__generateId()
-        self.__title = Code.__generateTitle()
-        self.__body = Code.swap(body, password)
+        self.__id = self.__generateId()
+        self.__title = self.__generateTitle()
+        self.__body = self.swap(body, password)
 
-    def __generateId():
+    def __str__(self) -> str:
+        return f'{self.__body}'
+
+    def __generateId(self):
         with open(os.path.join(scriptPath, 'service/id.txt'), "r+") as file:
             id = int(file.read())
             file.seek(0)
@@ -21,31 +25,15 @@ class Code:
             file.truncate()
         return id
 
-    def __generateTitle():
+    def __generateTitle(self):
         return random.randint(10000000, 99999999)
 
-    def letterToNumber(name: str) -> int:
-
-        equiv = {'a': '01', 'b': '02', 'c': '03', 'd': '04', 'e': '05', 'f': '06', 'g': '07', 'h': '08', 'i': '09', 'j': '10',
-                 'k': '11', 'l': '12', 'm': '13', 'n': '14', 'o': '15', 'p': '16', 'q': '17', 'r': '18', 's': '19', 't': '20',
-                 'u': '21', 'v': '22', 'w': '23', 'x': '24', 'y': '25', 'z': '26'}
-
-        number = []
-
-        for letter in name:
-            number.append(equiv.get(letter))
-
-        return int(listToString(number))
-
-    def __generateFileName(self, title):
-
-        name = Code.letterToNumber(title)
+    def __generateFileName(self, name):
 
         name += self.__title
 
         relPath = 'database/'+str(name)+'.txt'
         return (os.path.join(scriptPath, relPath))
-            
 
     def swap(self, body: str, password: str) -> str:
         master = list(body)
@@ -61,12 +49,34 @@ class Code:
                         master[i] = password[j-step]
         return listToString(master)
 
-    def saveData(self):
+    def saveBody(self):
+
         title = input('file title_')
-        filename = Code.__generateFileName(title)
-        filename = os.path.join(scriptPath, filename)
-        with open(filename, "w") as file:
-            file.write(self.__id + "\n" + self.__title + "\n" + self.__body)
+        titleNumber = letterToNumber(title)
+        filename = self.__generateFileName(titleNumber)
+        filepath = os.path.join(scriptPath, filename)
+        with open(filepath, "w") as file:
+            file.write(str(self))
+
+        self.saveHead(titleNumber)
+
+    def saveHead(self, titleNumber):
+        filepath = os.path.join(scriptPath, 'service/titles.txt')
+
+        try:
+            with open(filepath, "r") as file:
+                file_list = []
+                for line in file:
+                    file_list.append(line)
+
+        except FileNotFoundError:
+            file_list = []
+
+        file_list.append(titleNumber)
+        with open(filepath, "w") as file:
+            for file in file_list:
+
+                file.write(f'{str(file)}\n')
 
 
 def main():
@@ -84,14 +94,14 @@ def main():
 
                 code = Code(master, password)
 
-                code.saveData()
+                code.saveBody()
 
             case 'r':
-                filename = input('filename_')
+                filepath = input('filename_')
 
-                filename = Code.letterToNumber(filename)
+                filename = letterToNumber(filename)
 
-                #masterList = importData(filename+)
+                # masterList = importData(filename+)
                 password = input('password_')
 
                 #message = Code.swap(masterList, password)
@@ -173,6 +183,20 @@ def importData(title):
         dbList = []
 
     return dbList
+
+
+def letterToNumber(name: str) -> int:
+
+    equiv = {'a': '01', 'b': '02', 'c': '03', 'd': '04', 'e': '05', 'f': '06', 'g': '07', 'h': '08', 'i': '09', 'j': '10',
+             'k': '11', 'l': '12', 'm': '13', 'n': '14', 'o': '15', 'p': '16', 'q': '17', 'r': '18', 's': '19', 't': '20',
+             'u': '21', 'v': '22', 'w': '23', 'x': '24', 'y': '25', 'z': '26'}
+
+    number = []
+
+    for letter in name:
+        number.append(equiv.get(letter))
+
+    return int(listToString(number))
 
 
 if __name__ == '__main__':

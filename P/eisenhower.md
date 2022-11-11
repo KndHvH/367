@@ -8,15 +8,26 @@
 
 
 ### Urgent Important
-
+- sent email, negative response
+- speak iza
+  
 ### Not Urgent Important
--python oo
--alura courses
--estagio2023
+- ##### Alura 
+  - Agile
+  - Https
+  - Html Css
+  - Flask
+  
+- ##### Estagio
+  - teste logicalis
+  - teste atlas
+  
+- js
 
 ### Urgent Not Important
 
 ### Not Urgent Not Important
--got
--forza
--warband
+- got
+- forza
+- warband
+- dark

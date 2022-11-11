@@ -66,7 +66,7 @@ class Serie(Program):
         return f'Name: {self.name} \nYear: {self.year}\nDuration: {seasons}\n{likes}'
 
 
-class Playlist(list):
+class Playlist:
 
     def __init__(self, name, programs) -> None:
         self.__name = name
