@@ -14,8 +14,6 @@
 ### Not Urgent Important
 - ##### Alura 
   - Agile
-  - Https
-  - Html Css
   - Flask
   
 - ##### Estagio
