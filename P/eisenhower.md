@@ -15,6 +15,7 @@
 - ##### Alura 
   - Agile
   - Flask
+  - Html Css
   
 - ##### Estagio
   - teste logicalis
