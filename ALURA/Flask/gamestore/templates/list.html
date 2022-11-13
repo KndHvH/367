@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gamestore</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
     <div class="container">
         <div class="page-header">
             <h1>{{columnTitle}}</h1>
@@ -14,20 +17,23 @@
             <thead class="thead-default">
                 <tr>
                     <th>Name</th>
+                    <th>Category</th>
+                    <th>Console</th>
                 </tr>
             </thead>
             <tbody>
+                {%for game in games%}
                 <tr>
-                    <td>God of War</td>
+                    <td>{{game.name}}</td>
+                    <td>{{game.category}}</td>
+                    <td>{{game.console}}</td>
                 </tr>
-                <tr>
-                    <td>Skyrim</td>
-                </tr>
-                <tr>
-                    <td>Valorant</td>
-                </tr>
+                {%endfor%}
             </tbody>
         </table>
+        <a href="{{ url_for('addgame') }}">Add</a>
+
     </div>
-  </body>
+</body>
+
 </html>
