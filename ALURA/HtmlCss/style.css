@@ -1,20 +1,30 @@
-
 body {
-    background: #1a1a1a;
     color: beige;
+    background: #1a1a1a;
+}
+
+.maintitle {
+    padding-left: 20px;
 }
 
 #banner {
     width: 100%;
 }
 
-h1 {     
-    text-align: center;
+.main {
+    background: #3b0035;
+    padding: 30px;
 }
+
+.centertitle {
+    text-align: center;
+    margin: 30px;
+}
+
 
 p {
     text-align: center;
-    
+
 }
 
 #missao {
@@ -23,4 +33,25 @@ p {
 
 em strong {
     color: red;
+}
+
+.benef {
+    text-align: left;
+    padding: 20px;
+}
+
+
+.item {
+    font-style: italic;
+}
+
+ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imgbenef {
+    width: 50%;
 }
