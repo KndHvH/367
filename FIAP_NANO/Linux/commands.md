@@ -98,3 +98,6 @@ abre prompt dos discos
 	nautilus --browser
 abre o file explorer
 
+### 24 - unzip
+	unzip test.zip
+unzipa o arquivo zip
