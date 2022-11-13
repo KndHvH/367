@@ -3,8 +3,10 @@
 
 ### Sobre:
 
-Este repositorio serve para guardar o aprendizado de todos os cursos que realizei, todas as anotacoes, projetos, codigos e exercicios.
 
-A principio os cursos estao organizados por *Instituicao / Curso*
+Este repositório serve para guardar o aprendizado de todos os cursos que fiz, todas as anotações, projetos, códigos e exercícios.
+
+A princípio os cursos são organizados por: *Instituição/Curso*
+
 
 
