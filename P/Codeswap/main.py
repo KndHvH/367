@@ -17,7 +17,7 @@ def main():
 
                 master = list(input('file_'))
                 password = genCode()
-                title = genCode()
+                title = genTitle()
 
                 master = swap(master, password)
 
@@ -46,9 +46,9 @@ def main():
 
 
 def genCode() -> str:
-    alphPool = 'abcdefghijklmnopqrstuvwxyz'
-    numPool = '0123456789!@#$%^&*()\-,.? '
-    upperPool = alphPool.upper()
+    alphPool = 'abcdefghijklmnopqrstuvwxyz'  # 26
+    numPool = '0123456789!@#$%^&*\-,.? '  # 24
+    upperPool = alphPool.upper()  # 26
 
     pool = list(alphPool + upperPool + numPool)
 
@@ -57,6 +57,42 @@ def genCode() -> str:
     pool = ''.join(pool)
 
     return pool
+
+
+def genTitle() -> str:
+
+    while True:
+        pool = ['ba', 'be', 'bi', 'bo', 'bu',
+                'ca', 'ce', 'ci', 'co', 'cu'
+                'da', 'de', 'di', 'do', 'du'
+                'fa', 'fe', 'fi', 'fo', 'fu'
+                'ga', 'ge', 'gi', 'go', 'gu'
+                'la', 'le', 'li', 'lo', 'lu'
+                'ma', 'me', 'mi', 'mo', 'mu'
+                'pa', 'pe', 'pi', 'po', 'pu'
+                'sa', 'se', 'si', 'so', 'su'
+                'ta', 'te', 'ti', 'to', 'tu']
+
+        random.shuffle(pool)
+
+        pool = pool[0:5]
+
+        pool = ''.join(pool)
+
+        if titleVerif(pool):
+            return pool
+
+
+def titleVerif(title: str) -> bool:
+    try:
+        relPath = 'database/'+title+'.txt'
+        filepath = os.path.join(scriptPath, relPath)
+        with open(filepath, "r") as file:
+            body = file.read()
+        return False
+    
+    except FileNotFoundError:
+        return True
 
 
 def swap(body: str, password: str) -> str:
@@ -99,11 +135,15 @@ def decision() -> str:
 
 
 def getBody(key) -> str:
-    relPath = 'database/'+key+'.txt'
-    filepath = os.path.join(scriptPath, relPath)
-    with open(filepath, "r") as file:
-        body = file.read()
-    return body
+    try:
+        relPath = 'database/'+key+'.txt'
+        filepath = os.path.join(scriptPath, relPath)
+        with open(filepath, "r") as file:
+            body = file.read()
+        return body
+    
+    except FileNotFoundError:
+        return 'None'
 
 
 if __name__ == '__main__':

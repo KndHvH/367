@@ -7,21 +7,23 @@
 	
 
 
-### Urgent Important
-- sent email, negative response
-- speak iza
+### Urgent Importanta
   
 ### Not Urgent Important
+
+- ##### Codeswap
+  - Editar texto
+  - black page com botao verde
+  - ao 'logar' entrar na edit page
+  - custom title and password (repeated title #1337
+
 - ##### Alura 
   - Agile
-  - Flask
-  - Html Css
-  
-- ##### Estagio
-  - teste logicalis
-  - teste atlas
-  
+  - Flask  
 - js
+- sobre cv - knowhow goals
+- estudar back video cezinha
+- organizar git
 
 ### Urgent Not Important
 

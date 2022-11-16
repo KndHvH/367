@@ -54,7 +54,7 @@ def add():
     game = Game(name, category, console)
     gamesList.append(game)
 
-    return redirect('http://127.0.0.1:8080/home') 
+    return redirect('http://127.0.0.1:8080/home')   
 
 
 app.run(host='0.0.0.0', port=8080, debug=True)
