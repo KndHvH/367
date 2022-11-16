@@ -50,7 +50,7 @@ apaga um dir
 
 ### 13 - rm
     rm Arquivo.txt
-apagar arquivos
+apagar arquivos - -rf para forcar e tirar ate um dir
 
 ### 14 - tail
     sudo tail -n 7 /var/log/syslog
@@ -98,3 +98,6 @@ abre prompt dos discos
 	nautilus --browser
 abre o file explorer
 
+### 24 - unzip
+	unzip test.zip
+unzipa o arquivo zip

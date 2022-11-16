@@ -1,5 +1,4 @@
 import random
-import re
 import os
 
 
@@ -74,9 +73,11 @@ class Code:
 
         file_list.append(titleNumber)
         with open(filepath, "w") as file:
-            for file in file_list:
+            for line in file_list:
 
-                file.write(f'{str(file)}\n')
+                line = str(line)
+
+                file.write(f'{line}\n')
 
 
 def main():
@@ -97,14 +98,14 @@ def main():
                 code.saveBody()
 
             case 'r':
-                filepath = input('filename_')
+                filename = input('filename_')
 
                 filename = letterToNumber(filename)
 
-                # masterList = importData(filename+)
+                masterList = importData(filename+)
                 password = input('password_')
 
-                #message = Code.swap(masterList, password)
+                message = Code.swap(masterList, password)
 
                 print(master)
 
@@ -140,13 +141,9 @@ def passwordVerif() -> str:
                 print('password too small.')
                 raise ValueError
 
-            if re.search('\W', password):
-                print('password can only contain letters.')
-                raise ValueError
-
             if hasDouble(password):
-                print('password can\'t have repeated letters.')
-                raise ValueError
+                print('password can\'t have repeated chars.')
+                raise ValueError    
 
             upper = password.upper()
             password = password + upper
@@ -171,7 +168,7 @@ def listToString(list: list) -> str:
     return string
 
 
-def importData(title):
+def importData(title) -> list:
     try:
         with open('database/' + title + '.txt', "r") as db:
             dbList = []

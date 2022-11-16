@@ -73,6 +73,3 @@ Substitui no formato antigo/novo/parametros, g - global, c - certeza
 abre um segundo arquivo em outra aba gt ou gT para trocar de aba	
 
 
-### 16- 
-	 :tabe file.txt
-abre um segundo arquivo em outra aba gt ou gT para trocar de aba	
