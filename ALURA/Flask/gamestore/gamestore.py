@@ -37,7 +37,7 @@ def index():
 @app.route('/home')
 def home():
 
-    return render_template('list.html', columnTitle='Jogos', games=gamesList)
+    return render_template('list.html', title='Games', games=gamesList)
 
 
 @app.route('/addgame')

@@ -92,6 +92,7 @@ mata o processo pelo pid
 
 ### 22 - fdisk
 	sudo fdisk /dev/sda
+	sudo fdisk -l
 abre prompt dos discos
 
 ### 23 - nautilus
@@ -101,3 +102,8 @@ abre o file explorer
 ### 24 - unzip
 	unzip test.zip
 unzipa o arquivo zip
+
+### 25 - inxi
+	sudo apt-get install inxi
+	inxi -F
+mostra informacoes do sistema
