@@ -11,8 +11,6 @@
   
 ### Not Urgent Important
 
-- Intern
-
 - ##### Codeswap
   - Editar texto
   - black page com botao verde
