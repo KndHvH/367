@@ -24,3 +24,16 @@ Então, segmente em pequenas metas. Determine a tarefa que deve ser resolvida co
 O feedback nada mais é do que avaliações e críticas sobre os resultados obtidos, sejam elas positivas ou negativas, colaborando para o crescimento da empresa.
 Com essa reação do cliente (feedback) é possível fazer alterações no fluxo ou até eliminar tarefas que não sejam mais necessárias.
 
+## O que é ser Ágil?
+
+- *Entregar valor rapidamente!*
+- Priorização + Feedback = Ciclos Rápidos!
+
+
+## Manifesto Ágil
+
+
+- Individuos e interações >> Processos e Ferramentas
+- Software funcional >> Documentação compreensiva
+- Colaboração com cliente >> Negociação de Contrato
+- Responder a mudanças >> Seguir um Plano
