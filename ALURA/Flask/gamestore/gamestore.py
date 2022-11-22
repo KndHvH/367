@@ -85,8 +85,9 @@ def home():
 @app.route('/addgame')
 def addgame():
     if 'username' in session:
-        return render_template('add.html', title='New Game')
-    return redirect('http://127.0.0.1:8080/login')
+        if session['username'] != None:
+            return render_template('add.html', title='New Game')
+    return redirect('http://127.0.0.1:8080/login?n=addgame')
 
 
 @app.route('/add', methods=['POST'])
@@ -118,6 +119,12 @@ def logincheck():
             return redirect('http://127.0.0.1:8080/addgame')
         flash('not logged!')
         return redirect('http://127.0.0.1:8080/login')
+    
+@app.route('/logout')
+def logout():
+    session['username'] = None
+    flash('logged out')
+    return redirect('htps://127.0.0.1:8080/home')
 
 
 app.run(host='0.0.0.0', port=8080, debug=True)

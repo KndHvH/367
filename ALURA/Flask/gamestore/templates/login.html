@@ -1,11 +1,10 @@
 {% extends "template.html" %}
 {% block content %}
-<div class="container">
   <form method="POST" action="/logincheck">
-      <p><label>Email:</label> <input class="form-control" type="text" name="email" required></p>
-      <p><label>Password:</label> <input class="form-control" type="password" name="password" required></p>
-      <p><button class="btn btn-primary" type="submit">Login</button></p>
+    <p><label>Email:</label> <input class="form-control" type="text" name="email" required></p>
+    <p><label>Password:</label> <input class="form-control" type="password" name="password" required></p>
+    <p><button class="btn btn-primary" type="submit">Login</button></p>
   </form>
-</form>
-<a href="{{ url_for('home') }}">Home</a>
+  </form>
+  <a href="{{ url_for('home') }}">Home</a>
 {% endblock %}
