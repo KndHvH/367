@@ -14,7 +14,15 @@
 - mrm 
 - positivo 
 
+### Cia de estágios
+- scania
 
 ### Email
-- Scania
 - Taleting
+
+### Linkedin
+- Fresenius
+
+### Vagas.com
+- Ey
+
