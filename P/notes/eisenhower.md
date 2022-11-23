@@ -20,6 +20,18 @@
 - ##### Alura 
   - Agile
   - Flask  
+
+- #### Apply
+  - pwc
+  - deoitte
+  - peer consult
+  - kpmg
+  - ntt data
+  - capgemini
+  - brq
+  - gtf
+  - tivit
+  
 - estudar back video cezinha
 - sql nosql
 - js
