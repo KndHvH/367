@@ -54,6 +54,7 @@ BIT(2) -> 00 , 01 , 10 , 11
 - SIGNED ou UNSIGNED:
   - Possui ou nao sinal numérico (+,-)
 
+
 - ZEROFILL:
   - Preenche com 0 os espaços vazios
   - Exemplo: INT(4)
@@ -69,7 +70,7 @@ BIT(2) -> 00 , 01 , 10 , 11
 
 - CHAR(4) - 'aa' -> '__aa' 
 - VARCHAR(4) - 'aa' -> 'aa'
-- ENUM:
+- Size ENUM:
   - Permite armazenar uma lista pré definida de valores
   - ex: ENUM('x-small','small','medium','large','x-large')
  
