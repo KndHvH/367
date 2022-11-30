@@ -16,6 +16,35 @@ CREATE TABLE tbClient(
     NEWCLIENT BIT(1)
 );
 
+CREATE TABLE tbProducts(
+    ID INT(6) NOT NULL PRIMARY KEY,
+    NAME VARCHAR(70),
+    PACKAGE VARCHAR(30),
+    SIZE VARCHAR(30),
+    FLAVOUR VARCHAR(30),
+    PRICE DOUBLE
+);
+
+CREATE TABLE tbVendors(
+    MATRICUL INT(6) ZEROFILL NOT NULL PRIMARY KEY,
+    NAME VARCHAR(70),
+    COMISSION DOUBLE
+);
+
+INSERT INTO `tbProducts`(
+    `ID`,`NAME`,`PACKAGE`,`SIZE`,`FLAVOUR`,`PRICE`
+) VALUES (
+    104107, 'Light - 350ml - Melancia', 'Lata','350ml','Melancia',4.56
+);
 
 
-DROP TABLE if EXISTS tbClient
+INSERT INTO `tbVendors`(
+    `MATRICUL`,`NAME`,`COMISSION`
+) VALUES (
+    233, 'Joao Geraldo da Fonseca', 10
+);
+
+DROP TABLE if EXISTS tbClient;
+DROP TABLE if EXISTS tbProducts;
+
+
