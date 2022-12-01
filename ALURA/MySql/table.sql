@@ -17,7 +17,7 @@ CREATE TABLE tbClient(
 );
 
 CREATE TABLE tbProducts(
-    ID INT(6) NOT NULL PRIMARY KEY,
+    ID INT(10) ZEROFILL NOT NULL PRIMARY KEY,
     NAME VARCHAR(70),
     PACKAGE VARCHAR(30),
     SIZE VARCHAR(30),
@@ -34,7 +34,7 @@ CREATE TABLE tbVendors(
 INSERT INTO `tbProducts`(
     `ID`,`NAME`,`PACKAGE`,`SIZE`,`FLAVOUR`,`PRICE`
 ) VALUES (
-    104107, 'Light - 350ml - Melancia', 'Lata','350ml','Melancia',4.56
+    22349, 'Frescor do Inverno - 2L - Pera', 'PET','2L','Pera',12.99
 );
 
 
