@@ -28,7 +28,7 @@ class Biggest:
 
 big = Biggest()
 
-for i in range(1, 4000):
+for i in range(1, 200):
     print(i)
     total = 0
 
