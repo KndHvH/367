@@ -20,3 +20,8 @@ SELECT * FROM `tbProducts`;
 UPDATE `tbProducts`
 SET
     `CREATED` = '2022-12-02';
+
+UPDATE `tbProducts`
+SET
+    `FLAVOUR` = 'Melancia'
+WHERE `FLAVOUR` = 'Melância'
