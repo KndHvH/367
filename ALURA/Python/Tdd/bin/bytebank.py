@@ -19,12 +19,20 @@ class Employee:
     def salary(self):
         return self.__salary
 
+    def last_name(self):
+        nospace = (self.name.strip()).split(' ')
+        return nospace[-1] if len(nospace) > 1 else None
+
+    def salary_reduce(self):
+        if self.salary >= 100000:
+            self.__salary = self.salary*0.9
+
     def getAge(self):
 
         birthday = (self.__birthday).split('/')
 
         currentYear = date.today().year
-        return currentYear - int(birthday[-1])  
+        return currentYear - int(birthday[-1])
 
     def getBonus(self):
         value = self.salary * 0.1
