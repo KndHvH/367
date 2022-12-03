@@ -19,26 +19,36 @@ class Employee:
     def salary(self):
         return self.__salary
 
+    @salary.setter
+    def salary(self, value):
+        self.__salary = value
+
     def last_name(self):
         nospace = (self.name.strip()).split(' ')
         return nospace[-1] if len(nospace) > 1 else None
 
-    def salary_reduce(self):
-        if self.salary >= 100000:
-            self.__salary = self.salary*0.9
+    def __can_reduce(self):
+        names = ['Braganca', 'Windsor', 'Bourbon', 'Yamato',
+                 'Al saud', 'Khan', 'Tudor', 'Ptolomeu']
+        return (self.last_name() in names) and (self.salary >= 100000)
 
-    def getAge(self):
+    def salary_reduce(self):
+        if self.__can_reduce():
+            self.salary = self.salary*0.9
+
+    def get_age(self):
 
         birthday = (self.__birthday).split('/')
 
         currentYear = date.today().year
         return currentYear - int(birthday[-1])
 
-    def getBonus(self):
+    def increase_salary_by_value(self, value):
+        self.salary = self.salary + value
+
+    def get_bonus(self):
         value = self.salary * 0.1
-        if value > 1000:
-            value = 0
-        return value
+        return 0 if value > 1000 else value
 
     def __str__(self) -> str:
         return f'Employee({self.name}, {self.birthday}, {self.salary})'
