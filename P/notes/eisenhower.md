@@ -7,28 +7,34 @@
 	
 
 
-### Urgent Importanta
+### Urgent Important 
   
 ### Not Urgent Important
 
 - ##### Codeswap
-  - Editar texto
   - black page com botao verde
   - ao 'logar' entrar na edit page
-  - custom title and password (repeated title #1337
+  - custom title and password (repeated title #1337)
 
 - ##### Alura 
   - Agile
   - Flask  
-- js
-- sobre cv - knowhow goals
+
+- #### Apply
+  - pwc
+  - deoitte
+  - peer consult
+  - kpmg
+  - ntt data
+  - capgemini
+  - brq
+  - gtf
+  - tivit
+  
 - estudar back video cezinha
-- organizar git
+- sql nosql
+- js
 
 ### Urgent Not Important
 
 ### Not Urgent Not Important
-- got
-- forza
-- warband
-- dark
