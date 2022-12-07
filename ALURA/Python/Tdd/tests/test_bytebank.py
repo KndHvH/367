@@ -1,5 +1,6 @@
 
 from bin.bytebank import *
+import pytest
 
 
 class Test_Class:
@@ -68,33 +69,35 @@ class Test_Class:
 
         assert expect == test.salary
 
-    def test_when_increase_salary_receive_3000_and_1000_must_return_4000(self):
 
-        entry_salary = 3000
-        entry_increase = 1000
-        expect = 4000
+    def test_when_get_bonus_receive_1000_must_return_100(self):
 
-        test = Employee('name', '00/00/0000', entry_salary)
-
-        test.increase_salary_by_value(entry_increase)
-        assert expect == test.salary
-
-    def test_when_getbonus_receive_5000_must_return_500(self):
-
-        entry = 5000
-        expect = 500
+        entry = 1000
+        expect = 100
 
         test = Employee('name', '00/00/0000', entry)
 
         assert expect == test.get_bonus()
 
-    def test_when_getbonus_receive_5000_must_set_salary_5500(self):
 
-        entry = 5000
-        expect = 5500
+    def test_when_get_bonus_receive_11000_must_return_exception(self):
 
-        test = Employee('name', '00/00/0000', entry)
+        with pytest.raises(Exception):
 
-        test.increase_salary_by_value(test.get_bonus())
+            entry = 11000
+
+            test = Employee('name', '00/00/0000', entry)
+
+            test.get_bonus()
+
+
+    def test_when_increase_salary_receive_1000_and_500_must_return_1500(self):
+
+        entry_salary = 1000
+        entry_increase = 500
+        expect = 1500
+
+        test = Employee('name', '00/00/0000', entry_salary)
+        test.increase_salary_by_value(entry_increase)
 
         assert expect == test.salary

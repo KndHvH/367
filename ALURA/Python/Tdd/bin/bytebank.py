@@ -48,7 +48,12 @@ class Employee:
 
     def get_bonus(self):
         value = self.salary * 0.1
-        return 0 if value > 1000 else value
+    
+        if value > 1000:
+            raise Exception('Salary too big')
+        return value
+
+
 
     def __str__(self) -> str:
         return f'Employee({self.name}, {self.birthday}, {self.salary})'
