@@ -1,7 +1,7 @@
 
 from bin.bytebank import *
 import pytest
-
+from pytest import mark
 
 class Test_Class:
 
@@ -69,7 +69,7 @@ class Test_Class:
 
         assert expect == test.salary
 
-
+    @mark.get_bonus
     def test_when_get_bonus_receive_1000_must_return_100(self):
 
         entry = 1000
@@ -79,7 +79,7 @@ class Test_Class:
 
         assert expect == test.get_bonus()
 
-
+    @mark.get_bonus
     def test_when_get_bonus_receive_11000_must_return_exception(self):
 
         with pytest.raises(Exception):
@@ -101,3 +101,13 @@ class Test_Class:
         test.increase_salary_by_value(entry_increase)
 
         assert expect == test.salary
+
+
+        
+    def test_when_print_employee_must_return_class_str(self):
+
+        entry = Employee('Matuaas','02/05/2002',0)
+
+        expect = 'Employee(Matuaas, 02/05/2002, 0)'
+
+        assert str(entry) == expect
