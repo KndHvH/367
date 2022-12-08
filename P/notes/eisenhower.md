@@ -12,13 +12,12 @@
 ### Not Urgent Important
 
 - ##### Codeswap
-  - black page com botao verde
-  - ao 'logar' entrar na edit page
-  - custom title and password (repeated title #1337)
-
+  - cli 
+  - fix edit mode can destroy document even with wrong password
+  
 - ##### Alura 
-  - Agile
-  - Flask  
+  - Scrum
+  - Tdd
 
 - #### Apply
   - pwc
@@ -32,7 +31,6 @@
   - tivit
   
 - estudar back video cezinha
-- sql nosql
 - js
 
 ### Urgent Not Important
