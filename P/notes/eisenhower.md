@@ -14,6 +14,7 @@
 - ##### Codeswap
   - cli 
   - fix edit mode can destroy document even with wrong password
+  - fix if db.json dont exist
   
 - ##### Alura 
   - Scrum
