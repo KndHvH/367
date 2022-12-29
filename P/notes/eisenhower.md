@@ -12,14 +12,16 @@
 ### Not Urgent Important
 
 - ##### Codeswap
-  - cli 
-  - fix edit mode can destroy document even with wrong password
-  - Api com chave valor, que guarda a key e retorna um codigo mais simples  
-  - better delete, delete in json file
+  - feat: edit password
+  - feat: backup
+  - feat: interface command
+  - fix: read, edit, delete, non existant file
+  - feat: create bin files on desktop
+  - tests
+  - update readme video
 
 - ##### Alura 
   - Scrum
-  - Tdd
 
 - #### Apply
   - pwc
