@@ -13,12 +13,10 @@
 
 - ##### Codeswap
   - feat: edit password
-  - feat: backup
-  - feat: interface command
-  - fix: read, edit, delete, non existant file
-  - feat: create bin files on desktop
-  - tests
-  - update readme video
+  - terminar refactor
+  - mudar comando de cs file -> cs
+  - mudar comando de cs backup -b -> cs -b
+  - 
 
 - ##### Alura 
   - Scrum
@@ -34,8 +32,9 @@
   - gtf
   - tivit
   
-- estudar back video cezinha
-- js
+- procurar novo curso alura
+
+- fiap 5/2 bol
 
 ### Urgent Not Important
 
