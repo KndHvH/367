@@ -8,29 +8,46 @@
 
 
 ### Urgent Important 
-  
+
+##### Global Hits
+- Estudar mais sobre a empresa
+  - Projetos
+  - Historia
+  - Desafios
+
+- Relacionar minhas competencias com material estudado
+
+- Levantamento de projetos com competencias
+
+- Pitch
+  - qualificações 
+  - Pontos Fortes
+  - Objetivos
+  - Conquistas
+
+
+
 ### Not Urgent Important
 
-- ##### Codeswap
-  - feat: edit password
-  - terminar refactor
-  - mudar comando de cs file -> cs
-  - mudar comando de cs backup -b -> cs -b
-  - 
+##### Codeswap
+- feat: edit password
+- inverter de relacao de divisao e multiplicacao entre senha e user
+- cancel editor create file 
 
-- ##### Alura 
-  - Scrum
+##### Alura 
+- Scrum
+- Power BI e Data Warehouse
 
-- #### Apply
-  - pwc
-  - deoitte
-  - peer consult
-  - kpmg
-  - ntt data
-  - capgemini
-  - brq
-  - gtf
-  - tivit
+#### Apply
+- pwc
+- deoitte
+- peer consult
+- kpmg
+- ntt data
+- capgemini
+- brq
+- gtf
+- tivit
   
 - procurar novo curso alura
 
