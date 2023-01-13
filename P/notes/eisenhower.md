@@ -20,7 +20,7 @@
 - Levantamento de projetos com competencias
 
 - Pitch
-  - qualificações 
+  - Qualificações 
   - Pontos Fortes
   - Objetivos
   - Conquistas
@@ -29,10 +29,14 @@
 
 ### Not Urgent Important
 
+- Estudar Vim
+
 ##### Codeswap
+- fix: Update!
 - feat: edit password
 - inverter de relacao de divisao e multiplicacao entre senha e user
-- cancel editor create file 
+- cancel editor create file
+ 
 
 ##### Alura 
 - Scrum
