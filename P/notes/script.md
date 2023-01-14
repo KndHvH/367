@@ -40,3 +40,11 @@ Codeswap
 
 
 # Afinidades e interesses
+
+Meu maior desejo profissional hoje, é poder adiquirir o maximo de conhecimento possivel, por isso decidi que queria fazer um Estágio, e nao tentar uma vaga de Junior.
+
+Adoraria poder trabalhar Com desenvolvimento ou Dados, Recentemente iniciei um curso na Alura sobre BI e Data Warehouse com SQL Server e Power BI, para poder me adequar mais a vaga de dados. 
+
+MELHORAR
+
+Acredito que o meu perfil se encaixa bastante com a empresa pois adoraria trabalhar com consultoria, poderia estudar bastante e me tornar um profissional capacitado, ajudando os outros a lidarem com seus desafios e necessidades, sempre aprendendo e realizando diferentes tarefas, tenho preferencia em realizar tarefas diferenciadas ao longo do tempo, e acredito que trabalhar com consultoria pode ser bem dinamico.
