@@ -31,6 +31,15 @@ Apos meu primeiro ano no curso de inteligencia artificial eu estava completament
 
 Sou Criativo, Empatico e tenho senso de urgencia e facilidade com trabalho em equipe, gosto de ajudar os outros e ser prestativo, gosto de um bom desafio e vejo os desafios dos outros como se fossem meus. Sei quando pedir ajuda e quanto nao consigo realizar uma tarefa, assim como sei quando preciso me arriscar e sair da zona de conforto para me desenvolver. Aprendo rapido e sei me virar, me adapto facilmente as normas e processos, respeitando a forma como sao feitas as tarefas, ao mesmo tempo que me atento a oportunidades de melhorias.
 
+# Habilidades
+
+No Meu antigo emprego adquiri habilidades 
+
+Na minha faculdade aprendi
+
+Realizei cursos na Alura, Linkedin e prorria fiap sobre
+
+
 
 # Projetos
 
@@ -59,4 +68,4 @@ Meu maior desejo profissional hoje, é poder adiquirir o maximo de conhecimento 
 
 Adoraria poder trabalhar Com desenvolvimento ou Dados, Recentemente iniciei um curso na Alura sobre BI e Data Warehouse com SQL Server e Power BI, para poder me adequar mais a vaga de dados. 
 
-Acredito que o meu perfil se encaixa bastante com a empresa pois adoraria trabalhar com consultoria em geral, e sinto ainda mais afinidade com a area de ti, vejo que poderia estudar bastante e me tornar um profissional capacitado, ajudando os outros a lidarem com seus desafios e necessidades, sempre aprendendo e realizando diferentes tarefas, e aprendendo com os diferentes clientes com suas necessidades diferentes. vejo que essa rotina seria bastante agradavel e eu seria bastante realizado.
+Acredito que o meu perfil se encaixa bastante com a empresa pois adoraria trabalhar com consultoria em geral, e sinto ainda mais afinidade com a area de ti, vejo que poderia aprender e estudar bastante e me tornar um profissional capacitado, ajudando os outros a lidarem com seus desafios e necessidades, sempre melhorando e realizando diferentes tarefas, aprendendo com os varios colegas e clientes com suas diferentes necessidades. vejo que essa rotina seria bastante agradavel e eu seria bastante realizado.
