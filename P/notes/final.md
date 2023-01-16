@@ -30,14 +30,9 @@ Possuo Ingles Intermediario, Sei me comunicar por emails, lendo e escrevendo, co
 
 Estou comecando a minha carreira em Ti agora e no momento busco uma oportunidade, onde eu possa aprender coisas novas, conhecer novas pessoas e me desenvolver,ao mesmo tempo que ponho em pratica os conhecimentos que ja adquiri de preferencia trabalhando com algo que eu me identifique.
 
-adoraria trabalhar na analise de Dados, tratando,  interpretando, extraindo informacao, gerando graficos, dashboards e insights
+adoraria trabalhar na analise de Dados, tratando,  interpretando, extraindo informacao, gerando graficos, dashboards e insights, ou entao trabalhar com Desenvolvimento Back-end, com base de dados, criando soluçoes e melhorando, aperfeicoando e mantendo sulucoes ja existentes Ou tambem trabalhar com modelos de predicao, utilizando de tecnicas de machine learning e tratamento de dados na tomada de decisoes.
 
-tambem Adoraria trabalhar com Desenvolvimento Back-end, com base de dados, criando soluçoes e melhorando, aperfeicoando e mantendo sulucoes ja existentes.
+E é claro que eu estou aberto a outras areas similares
 
-
-E a ultima opcao seria trabalhando com modelos de predicao, utilizando de tecnicas de machine learning e tratamento de dados na tomada de decisoes.
-
-
-E é claro que eu estou aberto a outras areas similares e tarefas nao citadas
-
+Acredito que o meu perfil se encaixa bastante com a empresa pois adoraria trabalhar com consultoria em geral, e sinto ainda mais afinidade com a area de ti, vejo que poderia aprender e estudar bastante e me tornar um profissional capacitado, ajudando os outros a lidarem com seus desafios e necessidades, sempre melhorando e realizando diferentes tarefas, aprendendo com os varios colegas e clientes com suas diferentes necessidades. vejo que essa rotina seria bastante agradavel e eu seria bastante realizado.
 
