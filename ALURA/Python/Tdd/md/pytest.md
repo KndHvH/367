@@ -5,3 +5,5 @@ tests/test_x.py/TestClass/test_xx
 
 
     pytest -v
+    pytest -k salary -v
+    pytest -m get_bonus

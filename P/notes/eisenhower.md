@@ -8,32 +8,54 @@
 
 
 ### Urgent Important 
-  
+
+##### Global Hits
+- Estudar mais sobre a empresa
+  - Projetos
+  - Historia
+  - Desafios
+
+- Relacionar minhas competencias com material estudado
+
+- Levantamento de projetos com competencias
+
+- Pitch
+  - Qualificações 
+  - Pontos Fortes
+  - Objetivos
+  - Conquistas
+
+
+
 ### Not Urgent Important
 
-- ##### Codeswap
-  - black page com botao verde
-  - ao 'logar' entrar na edit page
-  - custom title and password (repeated title #1337)
+- Estudar Vim
 
-- ##### Alura 
-  - Agile
-  - Flask  
+##### Codeswap
+- fix: Update!
+- feat: edit password
+- inverter de relacao de divisao e multiplicacao entre senha e user
+- cancel editor create file
+ 
 
-- #### Apply
-  - pwc
-  - deoitte
-  - peer consult
-  - kpmg
-  - ntt data
-  - capgemini
-  - brq
-  - gtf
-  - tivit
+##### Alura 
+- Scrum
+- Power BI e Data Warehouse
+
+#### Apply
+- pwc
+- deoitte
+- peer consult
+- kpmg
+- ntt data
+- capgemini
+- brq
+- gtf
+- tivit
   
-- estudar back video cezinha
-- sql nosql
-- js
+- procurar novo curso alura
+
+- fiap 5/2 bol
 
 ### Urgent Not Important
 
