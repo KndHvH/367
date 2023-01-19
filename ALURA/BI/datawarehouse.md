@@ -70,23 +70,41 @@ exemplo:
 - Posso ver Vendas por Cliente e por Produto
 - Custo de Materia Prima, posso ver por Produto, e NÃO por cliente (regra varia por lógica de negócio)
 
+
 |               |Cliente|Produto|
 |---            |---    |---    |
 |Vendas         | x     | x     |
 |Custo Mat Prima|       | x     |
 
 
+## Projetar Tabelas
+
+Datawarehouse é um banco de dados, composto de tabelas, campos, registros, indices, chaves primarias e enstrangeiras
+Unico diferencial é que o desenho do datawarehouse em suas caracteristicas sera a matriz de dimensão indicador.
+
+As Tabelas são divididos em 2 grandes grupos:
+- Tabelas de dimensão
+- Tabelas de fato -> Grava uma ocorrencia, no momento tempo, quando algo ocorre com determinado indicador, é registrado aqui.
+
+
+Como descobrir as tabelas de fato a partir da matriz de dimensao indicador?
+Uma tabela de fato é o conjunto de dimensoes e indicadores que possuam os mesmo cruzamentos. Exemplo:
+
+||Dim1|Dim2|Dim3|Dim4|
+|---|---|---|---|---|
+|Ind1|a|a|a|a|
+|Ind2|a|a|a|a|
+|Ind3||b|b|b|
+|Ind4||b|b|b|
+|Ind5|c|c|c||
+|Ind6|c|c|c||
 
 
 
+Fato A = Indicador1,2 e Dim1,2,3,4 
+Fato B = Indicador3,4 e Dim2,3,4 
+Fato C = Indicador5,6 e Dim1,2,3
 
-
-
-
-
-
-
-
-
+Cada fato é uma tabela, e todas as Dimensoes devem ser uma Chave Primaria de outra tabela 
 
 
