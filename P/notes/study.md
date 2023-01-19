@@ -17,12 +17,17 @@
 
 
 ## Habilidades e Conhecimentos (cursos, estudos ou aprendizado com o tempo)
+- Curso de Metodologia Agil
+- Curso de Scrum em progresso
 - Experiencia de trabalho com pacote office no ultimo emprego,
 - Experiencia com excel = Regex, Funcoes e Proc, Procv (conhecimento ainda precisa ser colocado em pratica, senti muito mais facilidade na prova de programacao no que na de excel)
 - Experiencia de trabalho com iso 9002, prezando sempre pela agilidade, otimizacao e prioridade na satisfacao do cliente
-
+- Ingles Intermediario, Sei me comunicar por emails, lendo e escrevendo, consigo ler livros e paginas completamente em ingles, e minha conversasao esta um pouco enferrujada e precisava de mais pratica.
 
 - Tenho Uma experiencia Pequena com Power BI, tive apenas uma aula em que montavamos graficos a partir de Base de dados, Mas tenho experiencia com outras formas de criar graficos e interpretar base de dados, com pyplot ou seaborn, tenho experienca na criacao de  modelos de predicao, e no tratamento de dados com pandas. 
 
 
+
 ## Afinidades e interesses
+
+- Hoje Iniciei um curso na Alura sobre BI e Data Warehouse com SQL Server e Power BI, para poder me adequar mais a vaga.

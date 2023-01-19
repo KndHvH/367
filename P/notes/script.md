@@ -63,3 +63,10 @@ Meu maior desejo profissional hoje, é poder adiquirir o maximo de conhecimento 
 Adoraria poder trabalhar Com desenvolvimento ou Dados, Recentemente iniciei um curso na Alura sobre BI e Data Warehouse com SQL Server e Power BI, para poder me adequar mais a vaga de dados. 
 
 Acredito que o meu perfil se encaixa bastante com a empresa pois adoraria trabalhar com consultoria em geral, e sinto ainda mais afinidade com a area de ti, vejo que poderia aprender e estudar bastante e me tornar um profissional capacitado, ajudando os outros a lidarem com seus desafios e necessidades, sempre melhorando e realizando diferentes tarefas, aprendendo com os varios colegas e clientes com suas diferentes necessidades. vejo que essa rotina seria bastante agradavel e eu seria bastante realizado.
+
+
+
+
+# Qualidades
+
+Me considero uma pessoa Criativa, Empatica e com senso de urgencia e facilidade no trabalho em equipe, gosto de ajudar os outros e ser prestativo, aprecio um bom desafio pois a dificuldade me motiva. Sei quando pedir ajuda e quanto nao consigo realizar uma tarefa, assim como sei quando preciso me arriscar e sair da zona de conforto para me desenvolver. Aprendo rapido e sei me virar, me adapto facilmente as normas e processos, respeitando a forma como sao feitas as tarefas, ao mesmo tempo que me atento a oportunidades de melhorias.
