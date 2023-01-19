@@ -19,10 +19,7 @@ Armazem de dados ou DataWarehouse
 
 
 # Problemas Comuns nas Empresas
-
-pergunta? qual for a nossa venda em $ no Mês
-
-- Vendedor - R$ 7.234.436,41
-- Financeiro - R$6.924.323,65
-- Contador - R$ 6.610.340,77
-
+- Diversos problemas podem ocorrer quando não tomamos cuidado em extrair informações das empresas;
+- Temos departamentos que olham valores dos mesmos indicadores de maneiras distintas;
+- Diferentes formas de agregação dentro da empresa;
+- Sistemas de informação que não se falam também é um problema muito comum.
