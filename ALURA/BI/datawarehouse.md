@@ -5,7 +5,7 @@ Visa solucionar os seguintes problemas:
 - Temos departamentos que olham valores dos mesmos indicadores de maneiras distintas;
 - Diferentes formas de agregação dentro da empresa;
 - Sistemas de informação que não se falam também é um problema muito comum.
-
+****
 Como?
 Fornecendo informações gerenciais na tomada de decisões
 
@@ -146,7 +146,7 @@ Qual a relação entre estas entidade? (1:1, 1:n, n:n) - Cliente, Cidade, Estado
 |TAMANHO | n:n   | n:n  | n:n  | n:n    | x     | x     |
 |PRODUTO | n:n   | n:n  | n:n  | n:n    | 1:n   | x     |
 
-- Relacoes de 1:N viram uma seta, como CIDADE 1:n Cliente vira |CIDADE| -> |CLIENTE|
+- Relacoes de 1:N viram uma seta, como Cidade 1:n Cliente vira |CIDADE| -> |CLIENTE|
 - Relações de 1:N em sequencia viram uma hierarquia 
 
 ![](pics/pic2.jpeg)
@@ -163,7 +163,7 @@ Nova tabela Matriz
 
 Estrutura dimensão Cliente
 - 2 Hierarquias -> Geografica e Segmento
-- 4 Níveis -> Cidade, Estado, Segmento e cliente
-
-
-
+- 4 Níveis -> Cidade, Estado, Segmento e Cliente
+- Nivel folha - chave primaria da tabela de dimensao -> Cliente
+  
+![](pics/pic4.jpeg)
