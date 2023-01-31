@@ -266,7 +266,6 @@ Conta de luz, onde a medição é feita a cada segundo (Periodicidade de 1segund
 |São paulo|SÃO PAULO|
 
 
-
 ##### LOOKUP
 
 ###### Origem
@@ -305,7 +304,43 @@ Conta de luz, onde a medição é feita a cada segundo (Periodicidade de 1segund
 |2             |
 |1             |
 
+
+##### Funções
+
+|ORIGEM             |CIDADE        |ESTADO|
+|---                |---           |---   |
+|RIO DE JANEIRO - RJ|RIO DE JANEIRO|RJ    |
+|SAO PAULO - SP     |SAO PAULO     |SP    |
+|SAO PAULO - SP     |SAO PAULO     |SP    |
+|RIO DE JANEIRO - RJ|RIO DE JANEIRO|RJ    |
+
+
 ---
+
+
+## ODS
+
+Tabelas temporarias para efetuar transformações
+
+###### Exemplo
+
+Todo dia dados são gravados na ODS, porem apenas no fim da semana que os dados sao gravados da ODS para o data warehouse e enteao a ODS é esvaziada
+
+---
+## ETL
+
+- Extract (adquirir informação)
+- Transform (tratar informação)
+- Load (guardar informação
+
+
+
+
+---
+
+
+
+
 
 
 
