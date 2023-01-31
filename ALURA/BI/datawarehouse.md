@@ -246,7 +246,7 @@ Menor grão da dimensão tempo associado a uma ocorrencia (diferenca entre os re
 
 ### Periodicidade
 
-Menor grão da dimensão tempo onde é feito um registro (como é registrado)
+Menor grão da dimensão tempo onde é feito uma medicao (como é lido)
 
 ### Exemplo
 
