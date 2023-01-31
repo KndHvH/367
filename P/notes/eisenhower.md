@@ -9,22 +9,10 @@
 
 ### Urgent Important 
 
-##### Global Hits
-- Estudar mais sobre a empresa
-  - Projetos
-  - Historia
-  - Desafios
-
-- Relacionar minhas competencias com material estudado
-
-- Levantamento de projetos com competencias
-
-- Pitch
-  - Qualificações 
-  - Pontos Fortes
-  - Objetivos
-  - Conquistas
-
+- 2/2 - exam 8:30
+- 4/2 - ani
+- 5/2 - lunch maciel
+- 6/2 - first day
 
 
 ### Not Urgent Important
@@ -42,20 +30,7 @@
 - Scrum
 - Power BI e Data Warehouse
 
-#### Apply
-- pwc
-- deoitte
-- peer consult
-- kpmg
-- ntt data
-- capgemini
-- brq
-- gtf
-- tivit
-  
-- procurar novo curso alura
-
-- fiap 5/2 bol
+- fiap 5/3
 
 ### Urgent Not Important
 
