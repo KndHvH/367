@@ -5,38 +5,40 @@ Visa solucionar os seguintes problemas:
 - Temos departamentos que olham valores dos mesmos indicadores de maneiras distintas;
 - Diferentes formas de agregação dentro da empresa;
 - Sistemas de informação que não se falam também é um problema muito comum.
-****
+    
 Como?
 Fornecendo informações gerenciais na tomada de decisões
+
+---
 
 ## Caracteristicas do Datawarehouse
 
 - Funciona separado da estrutura operacional da empresa
-- Integração de diversas fontes de dados. (independente de origem, tipo ou formato ou origem interna ou externa)
-- Implementeção das regras de negócio (nefinir o conceito utilizado para cada termo)
+- Integração de diversas fontes de dados. (independente de tipo, formato ou origem interna ou externa)
+- Implementeção das regras de negócio (definir o conceito utilizado para cada termo)
 - Não possui obrigacao fiscal ou de impostos, entao pode ser modelado a gosto da empresa. 
 - Limpeza de dados
 - Análise ao longo do tempo (estudo do dado)
 
-## Inicando projeto em uma empresa
+---
+
+## Iniciando projeto em uma empresa
 
 O que a empresa faz?
 Quais sao os principais indicadores?
 Como os executivos tomam suas decisões?
 Baseado em que informações?
 
-|
-v
+->
 
 O que quero analisar? (que tipo de informação eu preciso? -> Indicador/Medida ou variavel)
 Como quero analisar? (de que maneira eu quero ver essa informação? -> Dimensão)
 
-Exemplo
-
-Vendemos R$ 10000,00.
+Exemplo:
 
 Vendemos R$ 10000,00 em Notebooks em Março.
 
+---
 
 ## Matriz Dimenção X Indicador
 
@@ -57,9 +59,9 @@ Colunas - Dimensão:
 
 |      |Cliente|Empresa|Tempo|
 |---   |---    |---    |---  |
-|Vendas| x     | x     |     |
-|Custos|       |       |x    |
-|Lucro |       | x     |     |
+|Vendas| x     | x     |x    |
+|Custos| x     | x     |x    |
+|Lucro | x     | x     |x    |
 
 x -> cruzamento que faça sentido
 nem sempre todos os indicadores vao cruzar com todas as dimensoes
@@ -76,14 +78,15 @@ exemplo:
 |Vendas         | x     | x     |
 |Custo Mat Prima|       | x     |
 
+---
 
 ## Projetar Tabelas
 
 Datawarehouse é um banco de dados, composto de tabelas, campos, registros, indices, chaves primarias e enstrangeiras
-Unico diferencial é que o desenho do datawarehouse em suas caracteristicas sera a matriz de dimensão indicador.
+Unico diferencial é que o desenho do datawarehouse em suas caracteristicas sera feito pela matriz de dimensão indicador.
 
 As Tabelas são divididos em 2 grandes grupos:
-- Tabelas de dimensão
+- Tabelas de dimensão -> uma tabela para cada dimensao
 - Tabelas de fato -> Grava uma ocorrencia, no momento tempo, quando algo ocorre com determinado indicador, é registrado aqui.
 
 
@@ -116,11 +119,13 @@ Dimensão > Hierarquia > Nível > Atributo
 
 ![](pics/pic.jpeg)
 
+---
+
 ### Exemplo
 
 #### Pedido
 
-*'Quero saber as vendas por cliente, cidade, estadp, segmento, tamanho e produto'*
+*'Quero saber as vendas por cliente, cidade, estado, segmento, tamanho e produto'*
 
 - Indicador - Vendas
 - Dimensão - (Cliente, Cidade, Estado, Segmento, Tamanho, Produto)
@@ -134,7 +139,7 @@ Dimensão > Hierarquia > Nível > Atributo
 
 #### Análise do relacionamento
 
-Qual a relação entre estas entidade? (1:1, 1:n, n:n) - Cliente, Cidade, Estado, Segmento, Tamanho, Produto
+Qual a relação entre estas entidade? (1:1, 1:n, n:n) 
 
 
 |        |CLIENTE|CIDADE|ESTADO|SEGMENTO|TAMANHO|PRODUTO|
@@ -146,8 +151,15 @@ Qual a relação entre estas entidade? (1:1, 1:n, n:n) - Cliente, Cidade, Estado
 |TAMANHO | n:n   | n:n  | n:n  | n:n    | x     | x     |
 |PRODUTO | n:n   | n:n  | n:n  | n:n    | 1:n   | x     |
 
-- Relacoes de 1:N viram uma seta, como Cidade 1:n Cliente vira |CIDADE| -> |CLIENTE|
-- Relações de 1:N em sequencia viram uma hierarquia 
+- Relacoes de 1:n viram uma seta, como Cidade 1:n Cliente vira |CIDADE| -> |CLIENTE|
+- Relações de 1:n em sequencia viram uma hierarquia 
+- Relacoes de 1:1 viram atributo
+
+Como escolher entre hierarquia de 2 niveis, (tabela separada), ou atributo(coluna)?
+- Devemos escolher como atributo quando tempos poucos tipods de valores ou sem codigos - pequeno, medio, grande
+- Valores unicos - CPF, Telefone, etc
+
+
 
 ![](pics/pic2.jpeg)
 
@@ -166,4 +178,81 @@ Estrutura dimensão Cliente
 - 4 Níveis -> Cidade, Estado, Segmento e Cliente
 - Nivel folha - chave primaria da tabela de dimensao -> Cliente
   
+
 ![](pics/pic4.jpeg)
+
+---
+
+## Modelos DW
+
+### Modelo Estrela
+- Desnormalizado
+- nao economiza espaco
+
+
+### Modelo Floco de neve
+- economiza espaco
+- Cada nivel é uma tabela, Atributos podem ser apenas uma coluna na tabela de fato
+
+
+
+## Dimensões irregulares
+- é usado quando nao saberemos quantos niveis teremos e nem como serao as relacoes entre os seus membros;
+- planos contabeis
+
+### Tabela Pai/Filho
+
+![](pics/pic5.jpeg)
+
+
+--- 
+
+## Sistemas
+
+
+
+t.1	t.2	t.3
+__________________arro    
+ -> -> -> -> -> ->   
+
+### Sistema transacional
+
+t.3
+__________carro
+
+### Sistema gerencial
+
+t.1
+carro__________
+
+t.2
+_____carro_____
+
+t.3
+__________carro
+
+---
+
+## Diemensão Tempo
+____
+
+No Data Warehouse o Tempo é uma das dimensões mais importantes, determina as ocorrencias dos indicadores dentro da tabela de fato, 
+Toda tabela de fato deve possuir pelo menos um membro da dimensão de tempo 
+
+
+### Granularidade
+
+Menor grão da dimensão tempo associado a uma ocorrencia (diferenca entre os registros ex: 1hora, 1dia)
+
+### Periodicidade
+
+Menor grão da dimensão tempo onde é feito um registro (como é registrado)
+
+### Exemplo
+
+Conta de luz, onde a medição é feita a cada segundo (Periodicidade de 1segundo) mas na conta vem por dia (Granularidade de 1 dia)
+
+
+
+
+
