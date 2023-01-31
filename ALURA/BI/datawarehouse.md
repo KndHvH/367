@@ -212,45 +212,102 @@ Estrutura dimensão Cliente
 
 
 t.1	t.2	t.3
-__________________arro    
+---------------------carro    
  -> -> -> -> -> ->   
 
 ### Sistema transacional
 
 t.3
-__________carro
+-----------carro
 
 ### Sistema gerencial
 
 t.1
-carro__________
+carro----------
 
 t.2
-_____carro_____
+-----carro-----
 
 t.3
-__________carro
+------------carro
 
 ---
 
 ## Diemensão Tempo
-____
+
 
 No Data Warehouse o Tempo é uma das dimensões mais importantes, determina as ocorrencias dos indicadores dentro da tabela de fato, 
 Toda tabela de fato deve possuir pelo menos um membro da dimensão de tempo 
 
 
-### Granularidade
+##### Granularidade
 
 Menor grão da dimensão tempo associado a uma ocorrencia (diferenca entre os registros ex: 1hora, 1dia)
 
-### Periodicidade
+##### Periodicidade
 
 Menor grão da dimensão tempo onde é feito uma medicao (como é lido)
 
-### Exemplo
+###### Exemplo
 
 Conta de luz, onde a medição é feita a cada segundo (Periodicidade de 1segundo) mas na conta vem por dia (Granularidade de 1 dia)
+
+---
+
+## Tranformações 
+
+##### Limpeza de Dados
+
+|CIDADE   |CIDADE   |
+|---      |---      |
+|S. Paulo |SÃO PAULO|
+|SAO PAULO|SÃO PAULO|
+|SP       |SÃO PAULO|
+|São paulo|SÃO PAULO|
+
+
+
+##### LOOKUP
+
+###### Origem
+
+
+|CIDADE        |
+|---           |
+|RIO DE JANEIRO|
+|SAO PAULO     |
+|RIO DE JANEIRO|
+|NITEROI       |
+|SAO PAULO     |
+|RIO DE JANEIRO|
+
+###### Tabela lookup
+
+
+
+|Cidade        |Lookup|
+|---           |---   |
+|RIO DE JANEIRO|1     |
+|SAO PAULO     |2     |
+|NITEROI       |3     |
+
+
+
+###### Resultado
+
+
+|CIDADE        |
+|---           |
+|1             |
+|2             |
+|1             |
+|3             |
+|2             |
+|1             |
+
+---
+
+
 
 
 
