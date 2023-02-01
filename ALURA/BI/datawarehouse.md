@@ -218,7 +218,7 @@ t.1	t.2	t.3
 ### Sistema transacional
 
 t.3
------------carro
+----------carro
 
 ### Sistema gerencial
 
@@ -229,7 +229,7 @@ t.2
 -----carro-----
 
 t.3
-------------carro
+----------carro
 
 ---
 
@@ -320,7 +320,7 @@ Conta de luz, onde a medição é feita a cada segundo (Periodicidade de 1segund
 
 ## ODS
 
-Tabelas temporarias para efetuar transformações
+Tabelas temporarias para efetuar transformações, são usadas quando temos um indicador com uma Peridiocidade menor que a granulidade
 
 ###### Exemplo
 
@@ -333,13 +333,61 @@ Todo dia dados são gravados na ODS, porem apenas no fim da semana que os dados 
 - Transform (tratar informação)
 - Load (guardar informação
 
-
-
-
 ---
 
+## OLAPs
 
+Online Analytical Process
 
++ Eficiente que um banco de dado relacional
+
+Não possuem tabelas, campos, registros
+
+Possuem 2 estruturas:
+ 
+#### Modelagem logica das dimensões do data warehouse
+
+|Tipo  |Produto     |
+|---   |---         |
+|Sucos |Suco laranja|
+|Sucos |Suco maca   |
+|Aguas |Agua sem gas|
+|Aguas |Agua com gas|
+
+|Tipo        |Cliente     |
+|---         |---         |
+|Supermercado|Super Princesa|
+|Supermercado|Super Princesa|
+|Lanchonete  |Hamburghuer 2 |
+|Lanchonete  |Padaria Maria |
+
+##### Passa a ser:
+
+###### Dimensao Produtos
+
+Sucos = Suco de laranja + suco de maca
+Aguas = Agua com gas + agua sem gas   
+Produtos = Sucos + Aguas
+
+###### Dimensao Cliente
+
+Supermercado = Super Princesa
+Lanchonete = Hamburgueria 2 + Padaria Maria
+Cliente = Supermercado + Lanchonete
+
+#### Matriz entre as 2 Dimensoes
+
+|               |Super Princesa|Super Gigante|Hamburgueria 2|Padaria Maria|SuperMercado|Lanchonete|Clientes|
+|---            |---           |---          |---           |---          |---         |---       |---     |
+|Suco de Laranja|__100__       |__250__      |__0__         |__50__       |350         |50        |400     |
+|Suco de Maca   |__200__       |__300__      |__300__       |__0__        |500         |300       |800     |
+|Agua com Gas   |__150__       |__250__      |__70__        |__70__       |400         |140       |540     |
+|Agua sem Gas   |__300__       |__100__      |__120__       |__120__      |400         |240       |640     |
+|Sucos          |300           |550          |300           |50           |850         |350       |2380    |
+|Aguas          |450           |350          |190           |190          |800         |380       |1180    |
+|Produtos       |750           |900          |490           |240          |1650        |730       |2460    |
+
+---
 
 
 
