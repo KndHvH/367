@@ -9,7 +9,7 @@ Visa solucionar os seguintes problemas:
 Como?
 Fornecendo informações gerenciais na tomada de decisões
 
----
+
 
 ## Caracteristicas do Datawarehouse
 
@@ -20,25 +20,29 @@ Fornecendo informações gerenciais na tomada de decisões
 - Limpeza de dados
 - Análise ao longo do tempo (estudo do dado)
 
----
+
 
 ## Iniciando projeto em uma empresa
 
 O que a empresa faz?
+
 Quais sao os principais indicadores?
+
 Como os executivos tomam suas decisões?
+
 Baseado em que informações?
 
 ->
 
 O que quero analisar? (que tipo de informação eu preciso? -> Indicador/Medida ou variavel)
+
 Como quero analisar? (de que maneira eu quero ver essa informação? -> Dimensão)
 
 Exemplo:
 
 Vendemos R$ 10000,00 em Notebooks em Março.
 
----
+
 
 ## Matriz Dimenção X Indicador
 
@@ -64,6 +68,7 @@ Colunas - Dimensão:
 |Lucro | x     | x     |x    |
 
 x -> cruzamento que faça sentido
+
 nem sempre todos os indicadores vao cruzar com todas as dimensoes
 
 
@@ -78,11 +83,12 @@ exemplo:
 |Vendas         | x     | x     |
 |Custo Mat Prima|       | x     |
 
----
+
 
 ## Projetar Tabelas
 
 Datawarehouse é um banco de dados, composto de tabelas, campos, registros, indices, chaves primarias e enstrangeiras
+
 Unico diferencial é que o desenho do datawarehouse em suas caracteristicas sera feito pela matriz de dimensão indicador.
 
 As Tabelas são divididos em 2 grandes grupos:
@@ -91,6 +97,7 @@ As Tabelas são divididos em 2 grandes grupos:
 
 
 Como descobrir as tabelas de fato a partir da matriz de dimensao indicador?
+
 Uma tabela de fato é o conjunto de dimensoes e indicadores que possuam os mesmo cruzamentos. Exemplo:
 
 
@@ -104,9 +111,9 @@ Uma tabela de fato é o conjunto de dimensoes e indicadores que possuam os mesmo
 |Ind6|c|c|c||
 
 
-Fato A = Indicador1,2 e Dim1,2,3,4 
-Fato B = Indicador3,4 e Dim2,3,4 
-Fato C = Indicador5,6 e Dim1,2,3
+- Fato A = Indicador1,2 e Dim1,2,3,4 
+- Fato B = Indicador3,4 e Dim2,3,4 
+- Fato C = Indicador5,6 e Dim1,2,3
 
 Cada fato é uma tabela, e todas as Dimensoes devem ser uma Chave Primaria de outra tabela 
 
@@ -119,7 +126,7 @@ Dimensão > Hierarquia > Nível > Atributo
 
 ![](pics/pic.jpeg)
 
----
+
 
 ### Exemplo
 
@@ -181,7 +188,7 @@ Estrutura dimensão Cliente
 
 ![](pics/pic4.jpeg)
 
----
+
 
 ## Modelos DW
 
@@ -205,7 +212,7 @@ Estrutura dimensão Cliente
 ![](pics/pic5.jpeg)
 
 
---- 
+
 
 ## Sistemas
 
@@ -231,7 +238,7 @@ t.2
 t.3
 ----------carro
 
----
+
 
 ## Diemensão Tempo
 
@@ -252,7 +259,7 @@ Menor grão da dimensão tempo onde é feito uma medicao (como é lido)
 
 Conta de luz, onde a medição é feita a cada segundo (Periodicidade de 1segundo) mas na conta vem por dia (Granularidade de 1 dia)
 
----
+
 
 ## Tranformações 
 
@@ -315,7 +322,7 @@ Conta de luz, onde a medição é feita a cada segundo (Periodicidade de 1segund
 |RIO DE JANEIRO - RJ|RIO DE JANEIRO|RJ    |
 
 
----
+
 
 
 ## ODS
@@ -326,14 +333,14 @@ Tabelas temporarias para efetuar transformações, são usadas quando temos um i
 
 Todo dia dados são gravados na ODS, porem apenas no fim da semana que os dados sao gravados da ODS para o data warehouse e enteao a ODS é esvaziada
 
----
+
 ## ETL
 
 - Extract (adquirir informação)
 - Transform (tratar informação)
 - Load (guardar informação
 
----
+
 
 ## OLAPs
 
@@ -347,7 +354,7 @@ Todo dia dados são gravados na ODS, porem apenas no fim da semana que os dados 
 
 - Podemos separas diversos OLAPs por assuntos contanto que a fonte de dados seja somente o DW
  
-#### Modelagem logica das dimensões do data warehouse
+### Modelagem logica das dimensões do data warehouse
 
 |Tipo  |Produto     |
 |---   |---         |
@@ -368,16 +375,20 @@ Todo dia dados são gravados na ODS, porem apenas no fim da semana que os dados 
 ##### Dimensao Produtos
 
 Sucos = Suco de laranja + suco de maca
+
 Aguas = Agua com gas + agua sem gas   
+
 Produtos = Sucos + Aguas
 
 ##### Dimensao Cliente
 
 Supermercado = Super Princesa
+
 Lanchonete = Hamburgueria 2 + Padaria Maria
+
 Cliente = Supermercado + Lanchonete
 
-#### Matriz entre as 2 Dimensoes
+### Matriz entre as 2 Dimensoes
 
 |               |Super Princesa|Super Gigante|Hamburgueria 2|Padaria Maria|SuperMercado|Lanchonete|Clientes|
 |---            |---           |---          |---           |---          |---         |---       |---     |
@@ -393,7 +404,7 @@ Cliente = Supermercado + Lanchonete
 
 
 
-#### Esparsividade
+### Esparsividade
 
 Esparsividade = Numero de combinações reais / Numero de combinações possiveis
 
@@ -425,7 +436,7 @@ Ideal seria algo como 0.05
 - Consultas mais demoaradas que HOLAP
 - Criaçao mais rapida que HOLAP
 
----
+
 
 
 
