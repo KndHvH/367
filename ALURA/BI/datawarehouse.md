@@ -345,13 +345,9 @@ Todo dia dados são gravados na ODS, porem apenas no fim da semana que os dados 
 ## OLAPs
 
 - Online Analytical Process
-
 - Mais Eficiente em uma busca que um banco de dado relacional 
-
 - Ocupa mais espaço que um Banco relacional
-
 - Não possuem tabelas, campos, registros
-
 - Podemos separas diversos OLAPs por assuntos contanto que a fonte de dados seja somente o DW
  
 ### Modelagem logica das dimensões do data warehouse
@@ -370,23 +366,19 @@ Todo dia dados são gravados na ODS, porem apenas no fim da semana que os dados 
 |Lanchonete  |Hamburghuer 2 |
 |Lanchonete  |Padaria Maria |
 
-#### Passa a ser:
+### Passa a ser:
 
-##### Dimensao Produtos
+#### Dimensao Produtos
 
-Sucos = Suco de laranja + suco de maca
+- Sucos = Suco de laranja + suco de maca
+- Aguas = Agua com gas + agua sem gas   
+- Produtos = Sucos + Aguas
 
-Aguas = Agua com gas + agua sem gas   
+#### Dimensao Cliente
 
-Produtos = Sucos + Aguas
-
-##### Dimensao Cliente
-
-Supermercado = Super Princesa
-
-Lanchonete = Hamburgueria 2 + Padaria Maria
-
-Cliente = Supermercado + Lanchonete
+- Supermercado = Super Princesa
+- Lanchonete = Hamburgueria 2 + Padaria Maria
+- Cliente = Supermercado + Lanchonete
 
 ### Matriz entre as 2 Dimensoes
 
@@ -415,22 +407,22 @@ Ideal seria algo como 0.05
 
 
 
-#### Tipos de OLAP
+### Tipos de OLAP
 
-###### **M**OLAP - Multidimensional OLAP
+#### **M**OLAP - Multidimensional OLAP
 - Todas as combinações ja calculadas previamente
 - Consultas mais rapidas
 - Criação mais demorada
 
  
-###### **H**OLAP - Hibrido OLAP
+#### **H**OLAP - Hibrido OLAP
 - Alguma combinações foram caluladas previamente, e o resto é calculado na hora da consulta
 - Cache: consultas são armazenadas, e a cada consulta realizada a próxima é mais eficiente
 - Consultas mais demoradas que MOLAP
 - Criaçao mais rapida que Molap
 
 
-###### **R**OLAP - Relational OLAP
+#### **R**OLAP - Relational OLAP
 - Nenhuma combinação calculada
 - Cache
 - Consultas mais demoaradas que HOLAP
