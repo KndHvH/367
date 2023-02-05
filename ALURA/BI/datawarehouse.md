@@ -337,13 +337,15 @@ Todo dia dados são gravados na ODS, porem apenas no fim da semana que os dados 
 
 ## OLAPs
 
-Online Analytical Process
+- Online Analytical Process
 
-+ Eficiente que um banco de dado relacional
+- Mais Eficiente em uma busca que um banco de dado relacional 
 
-Não possuem tabelas, campos, registros
+- Ocupa mais espaço que um Banco relacional
 
-Possuem 2 estruturas:
+- Não possuem tabelas, campos, registros
+
+- Podemos separas diversos OLAPs por assuntos contanto que a fonte de dados seja somente o DW
  
 #### Modelagem logica das dimensões do data warehouse
 
@@ -361,15 +363,15 @@ Possuem 2 estruturas:
 |Lanchonete  |Hamburghuer 2 |
 |Lanchonete  |Padaria Maria |
 
-##### Passa a ser:
+#### Passa a ser:
 
-###### Dimensao Produtos
+##### Dimensao Produtos
 
 Sucos = Suco de laranja + suco de maca
 Aguas = Agua com gas + agua sem gas   
 Produtos = Sucos + Aguas
 
-###### Dimensao Cliente
+##### Dimensao Cliente
 
 Supermercado = Super Princesa
 Lanchonete = Hamburgueria 2 + Padaria Maria
@@ -379,13 +381,49 @@ Cliente = Supermercado + Lanchonete
 
 |               |Super Princesa|Super Gigante|Hamburgueria 2|Padaria Maria|SuperMercado|Lanchonete|Clientes|
 |---            |---           |---          |---           |---          |---         |---       |---     |
-|Suco de Laranja|__100__       |__250__      |__0__         |__50__       |350         |50        |400     |
-|Suco de Maca   |__200__       |__300__      |__300__       |__0__        |500         |300       |800     |
-|Agua com Gas   |__150__       |__250__      |__70__        |__70__       |400         |140       |540     |
-|Agua sem Gas   |__300__       |__100__      |__120__       |__120__      |400         |240       |640     |
+|Suco de Laranja|**100**       |**250**      |**0**         |**50**       |350         |50        |400     |
+|Suco de Maca   |**200**       |**300**      |**300**       |**0**        |500         |300       |800     |
+|Agua com Gas   |**150**       |**250**      |**70**        |**70**       |400         |140       |540     |
+|Agua sem Gas   |**300**       |**100**      |**120**       |**120**      |400         |240       |640     |
 |Sucos          |300           |550          |300           |50           |850         |350       |2380    |
 |Aguas          |450           |350          |190           |190          |800         |380       |1180    |
 |Produtos       |750           |900          |490           |240          |1650        |730       |2460    |
+
+- Para 3 ou mais Dimensoes utilizamos um cubo, ou seja, varias fatias dessa matriz
+
+
+
+#### Esparsividade
+
+Esparsividade = Numero de combinações reais / Numero de combinações possiveis
+
+Quanto mais perto de 1 -> Mais denso o cubo OLAP
+
+Ideal seria algo como 0.05
+
+
+
+
+#### Tipos de OLAP
+
+###### **M**OLAP - Multidimensional OLAP
+- Todas as combinações ja calculadas previamente
+- Consultas mais rapidas
+- Criação mais demorada
+
+ 
+###### **H**OLAP - Hibrido OLAP
+- Alguma combinações foram caluladas previamente, e o resto é calculado na hora da consulta
+- Cache: consultas são armazenadas, e a cada consulta realizada a próxima é mais eficiente
+- Consultas mais demoradas que MOLAP
+- Criaçao mais rapida que Molap
+
+
+###### **R**OLAP - Relational OLAP
+- Nenhuma combinação calculada
+- Cache
+- Consultas mais demoaradas que HOLAP
+- Criaçao mais rapida que HOLAP
 
 ---
 
