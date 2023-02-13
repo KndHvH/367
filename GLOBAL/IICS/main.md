@@ -285,8 +285,19 @@ No entanto, o modelo On-premise também pode ser mais caro e requerer mais esfor
 Em resumo, o modelo On-premise é uma arquitetura de software que significa que o software é instalado e executado localmente, em equipamentos próprios da organização, oferecendo mais controle, privacidade e segurança, mas também maiores custos e esforços de gerenciamento.
 
 
+### O que é um conector
+
+Em relação ao Informatica Intelligent Cloud Services (IICS), um conector é uma ferramenta que permite a conexão e integração de aplicações ou sistemas de dados diferentes com o IICS. Esses conectores podem ser usados para importar ou exportar dados, sincronizar informações entre aplicações, ou mesmo para integrar sistemas externos à nuvem com o IICS. Exemplos de conectores no contexto do IICS incluem conectores para aplicações como Salesforce, SAP, Oracle, entre outros. Eles possibilitam que você extraia, transforme e carregue dados de e para essas aplicações, sem precisar escrever códigos complexos.
 
 
+### O que é CDI
+
+CDI (Cloud Data Integration) funcionalidade é uma parte da plataforma Informatica Intelligent Cloud Services (IICS). Ele permite a integração de dados em nuvem, oferecendo recursos para coletar, transformar, integrar e carregar dados de diferentes fontes de dados em nuvem. O CDI permite a integração de dados em tempo real, batch e em fluxo, além de oferecer recursos avançados de gerenciamento de dados, como validação, limpeza e transformação de dados. Em resumo, a funcionalidade CDI é projetada para ajudar as empresas a aproveitar ao máximo seus dados em nuvem, tornando-os mais fáceis de acessar, integrar e utilizar.
+
+
+### o que é Sincronization Task
+
+A sincronização de tarefas é uma funcionalidade no Informatica Intelligent Cloud Services (IICS) que permite sincronizar dados entre diferentes fontes de dados. É uma tarefa programada que compara as informações existentes nas fontes de dados, identifica as diferenças e atualiza automaticamente as informações para manter a consistência dos dados. Isso é útil quando você precisa manter dados em sincronia em vários sistemas ou bancos de dados.   
 
 
 
