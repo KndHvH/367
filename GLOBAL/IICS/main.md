@@ -270,7 +270,7 @@ O modelo Multi-Tenant é muito comum em software como serviço (SaaS) e platafor
 Vantagens do modelo Multi-Tenant incluem redução de custos, pois é possível compartilhar recursos e infraestrutura, e facilidade de gerenciamento, pois é possível gerenciar vários clientes a partir de uma única instância do software. Além disso, o modelo Multi-Tenant é muito eficiente em termos de recursos, pois permite compartilhar recursos e otimizar o uso de hardware e infraestrutura.
 
 Em resumo, o modelo Multi-Tenant é uma arquitetura de software que permite que vários clientes compartilhem uma única instância de aplicativo ou infraestrutura, oferecendo vantagens em termos de eficiência, escalabilidade, acessibilidade e gerenciamento de custos.
-
+****
 
 ### O que é On-premise?
 
