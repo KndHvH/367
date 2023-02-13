@@ -20,21 +20,6 @@ Targer > Target
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Glossarie
 
 
