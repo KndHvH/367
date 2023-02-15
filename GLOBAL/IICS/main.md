@@ -252,6 +252,10 @@ O Informatica Secure Agent é projetado para garantir a segurança dos dados dur
 
 O Informatica Secure Agent é uma parte importante da plataforma de integração de dados da Informatica, ajudando as empresas a integrar dados de diferentes sistemas e fontes de maneira segura e confiável. Isso permite que as empresas obtenham insights valiosos a partir de seus dados e melhorem a eficiência dos processos de negócios.
 
+### O que é Metadata
+
+Metadados são informações sobre outros dados. Eles descrevem as características, propriedades e relações de outros dados, mas não incluem os dados em si. Por exemplo, metadados podem incluir informações como o tipo de dados, a data de criação, o autor, a fonte dos dados, entre outros. Estas informações são importantes porque ajudam a entender, organizar, gerenciar e proteger os dados. Em sistemas de gerenciamento de banco de dados, os metadados são armazenados separadamente dos dados para garantir a integridade e segurança dos dados.
+
 ### O que é Metadata Repository
 Um repositório de metadados é um sistema de gerenciamento de dados que armazena informações sobre outros sistemas de dados e suas estruturas. O repositório de metadados é usado para documentar e gerenciar informações sobre os dados em um sistema, incluindo sua estrutura, relações, definições de campo e regras de negócios.
 
@@ -270,7 +274,6 @@ O modelo Multi-Tenant é muito comum em software como serviço (SaaS) e platafor
 Vantagens do modelo Multi-Tenant incluem redução de custos, pois é possível compartilhar recursos e infraestrutura, e facilidade de gerenciamento, pois é possível gerenciar vários clientes a partir de uma única instância do software. Além disso, o modelo Multi-Tenant é muito eficiente em termos de recursos, pois permite compartilhar recursos e otimizar o uso de hardware e infraestrutura.
 
 Em resumo, o modelo Multi-Tenant é uma arquitetura de software que permite que vários clientes compartilhem uma única instância de aplicativo ou infraestrutura, oferecendo vantagens em termos de eficiência, escalabilidade, acessibilidade e gerenciamento de custos.
-****
 
 ### O que é On-premise?
 

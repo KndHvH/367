@@ -11,4 +11,6 @@
 
 5. Em algum momento nós vamos precisar nos preocupar com a transição de PowerCenter para o IICS?
 
+6. Como funciona o treinamento 37, o que precisamos instalar e fazer
+
 # Respostas
