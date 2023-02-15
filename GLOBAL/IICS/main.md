@@ -304,6 +304,10 @@ A sincronização de tarefas é uma funcionalidade no Informatica Intelligent Cl
 
 
 
+### O que é Data Request
 
+Levantamento da origem dos dados e suas regras para utilização final na area do negócio
+
+As vezes as regras muda ou o Data Request está incompleto ou errado e tem que ser refeito, ja que ele é insumo para o desenvolvimento
 
 
