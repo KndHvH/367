@@ -1,0 +1,20 @@
+
+Existem diversas funções de ativação em redes neurais, cada uma com suas características e diferenças. Algumas das principais funções de ativação utilizadas são:
+
+- Função de ativação linear: retorna a entrada sem modificação. É útil em redes neurais simples que não exigem não-linearidade.
+
+- Função de ativação sigmoide: mapeia valores em uma escala de 0 a 1. É amplamente utilizada em redes neurais antigas, mas pode causar problemas de gradiente.
+
+- Função de ativação tangente hiperbólica: mapeia valores em uma escala de -1 a 1. Também é amplamente utilizada em redes neurais antigas, mas pode causar problemas de gradiente.
+
+-  Função de ativação ReLU (Rectified Linear Unit): retorna 0 para valores negativos e a entrada para valores positivos. É a função de ativação mais comum em redes neurais modernas e pode ajudar a evitar o problema de gradiente.
+
+- Função de ativação Leaky ReLU: similar à ReLU, mas retorna uma pequena fração da entrada para valores negativos.
+
+- Função de ativação ELU (Exponential Linear Unit): similar à ReLU, mas retorna uma exponencial da entrada para valores negativos, o que pode melhorar a suavidade e a estabilidade da rede.
+
+- Função de ativação Softmax: é usada para classificação multiclasse, retornando probabilidades normalizadas que somam 1 para cada classe.
+
+Cada função de ativação tem suas próprias vantagens e desvantagens e pode ser mais adequada para diferentes tipos de problemas. A escolha da função de ativação pode afetar a velocidade de treinamento da rede, sua capacidade de modelar relações não-lineares e a sensibilidade do modelo a gradientes de erro.
+
+
