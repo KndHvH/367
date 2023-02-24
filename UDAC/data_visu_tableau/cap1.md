@@ -14,7 +14,7 @@ Histogram -> Dado continuo
 Bar Chart, Pie chart e Pareto chart-> Dado Categorizado
 
 
-### Two quantitative variables
+### Bivariate
 
 ##### Scatter Plot
 - Strenght
@@ -29,6 +29,8 @@ Bar Chart, Pie chart e Pareto chart-> Dado Categorizado
   - -1 -> negativo
   - 1 -> positivo
   - 0 -> fraco
+
+##### Line Chart
 
 ## Gloss
 
