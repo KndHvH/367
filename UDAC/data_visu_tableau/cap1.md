@@ -32,6 +32,38 @@ Bar Chart, Pie chart e Pareto chart-> Dado Categorizado
 
 ##### Line Chart
 
+
+## Data Ink
+
+amount of ink used to describe data / amount used in total
+
+(bad) 0 - 1 (good)
+
+## Lie Factor
+
+      (VisualF - Visual°) / Visual°
+LF = -------------------------------
+      (DataF - Data°) / Data°
+ 
+    
+
+1 = Good
+
+1+ or = Bad
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Gloss
 
 ### O que é Estatistica resumida?
