@@ -35,15 +35,15 @@ Bar Chart, Pie chart e Pareto chart-> Dado Categorizado
 
 ## Data Ink
 
-amount of ink used to describe data / amount used in total
+    amount of ink used to describe data / amount used in total
 
 (bad) 0 - 1 (good)
 
 ## Lie Factor
 
-      (VisualF - Visual°) / Visual°
-LF = -------------------------------
-      (DataF - Data°) / Data°
+        (VisualF - Visual°) / Visual°
+    LF = -------------------------------
+        (DataF - Data°) / Data°
  
     
 
@@ -53,14 +53,12 @@ LF = -------------------------------
 
 
 
+## Color
 
-
-
-
-
-
-
-
+- Make first version on B&W
+- Less intense colors
+- Color facilitates comms
+- Avoid red-green and go orange-blue cuz colorblindness
 
 
 
