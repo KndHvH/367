@@ -8,9 +8,9 @@ Automation -> Robo
 
 ## Automation
 
-- Control Room -> Painel, Dashboard, iPaaS
+### Control Room -> Painel, Dashboard, iPaaS
 
-### Task Bot
+#### Task Bot
 
 - Tarefa -> que pode ser reutilizado em um processo
 - Processo -> Conjunto de Tarefas para solucionar algo
@@ -22,7 +22,7 @@ Funciona como um Incoming fields do IICS,
 
 
 
-## Bot Editor
+### Bot Editor
 
 - Onde escreveremos os codigos,
 - Low Code
@@ -30,14 +30,6 @@ Funciona como um Incoming fields do IICS,
 
 
 
-Boas Prática:
-
-- Sistema -
-
-
-
-
-
-
+### Bot Agent
 
 
