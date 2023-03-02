@@ -9,6 +9,35 @@ class Wien():
         self.__comp = self.__get_comp()
         self.__comp_type = self.__get_comp_type()
         self.__b_constant = 2.898*(10**-3)
+        self.__result = self.calculate()
+
+    def __str__(self) -> str:
+
+        result_value = self.__result[0]
+        result_icon = self.__get_icon(self.__result[1])
+
+        message = f'Resultado: {result_value:.2f} {result_icon}'
+ 
+        if result_value < 1:
+            message = f'Resultado: {result_value} {result_icon}'
+
+        return message
+    
+
+    def __get_icon(self, result_type):
+
+        icon = self.__temp_type
+        if result_type == 'c':
+            icon = self.__comp_type
+
+        pool = {
+            'a': 'Å',
+            'm': 'm',
+            'k': 'K',
+            'c': '°C'
+        }
+
+        return pool.get(icon)
 
     def __get_temp(self):
         while True:
@@ -55,9 +84,10 @@ class Wien():
     def calculate(self):
         if not ((self.__comp == '' and self.__temp == '') or (self.__comp != '' and self.__temp != '')):
             if self.__comp == '':
-                result = self.calculate_comp()
+                result = [self.calculate_comp(), 'c']
+
             if self.__temp == '':
-                result = self.calculate_temp()
+                result = [self.calculate_temp(), 't']
 
             return result
 
@@ -67,7 +97,6 @@ class Wien():
         if self.__temp_type == 'c':
             self.__temp = self.__c_to_k(self.__temp)
 
-        print(self.__temp)
         calculated_comp = self.__b_constant / self.__temp
 
         if self.__comp_type == 'a':
@@ -95,9 +124,9 @@ class Wien():
         return a * (10**-10)
 
     def __m_to_a(self, m):
-        return m / (10**10)
+        return m / (10**-10)
 
 
 exercice = Wien()
 
-print(exercice.calculate())
+print(exercice)

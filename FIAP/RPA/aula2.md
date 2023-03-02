@@ -10,13 +10,13 @@ Automation -> Robo
 
 ### Control Room -> Painel, Dashboard, iPaaS
 
-#### Task Bot
+- Task Bot
 
-- Tarefa -> que pode ser reutilizado em um processo
-- Processo -> Conjunto de Tarefas para solucionar algo
-- Form -> Formulario para agregar diferentes informacoes em uma origem de uma vez só
+  - Tarefa -> que pode ser reutilizado em um processo
+  - Processo -> Conjunto de Tarefas para solucionar algo
+  - Form -> Formulario para agregar diferentes informacoes em uma origem de uma vez só
 
-#### Variaveis
+- Variaveis
 
 Funciona como um Incoming fields do IICS, 
 
