@@ -1,5 +1,7 @@
 sudo mount -t virtiofs share host/
 
+sudo dpkg -i ~pkg.deb
+
 share -> destin variable
 host -> destin path
 
