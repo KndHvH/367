@@ -1,4 +1,4 @@
-Recap & Next Steps
+ Recap & Next Steps
 
 Though there is a ton you can do with Tableau, you are now ready to take on essentially building any visual in Tableau! You have come a long way in a short amount of time, and you should feel comfortable navigating the many facets of the Tableau environment!
 
