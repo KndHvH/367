@@ -1,5 +1,7 @@
 from math import dist
 import csv
+import os
+import time
 
 
 class KndEuclides:
@@ -32,14 +34,23 @@ class KndEuclides:
                 self.__biggest_distance_coord_pair = value
 
     def __get_csv(self):
-        euclides_list = []
+        while True:
+            try:
+                euclides_list = []
 
-        with open('~/csv.csv') as csv_file:
-            csv_reader = csv.reader(csv_file, delimiter=',')
-            for row in csv_reader:
-                euclides_list.append((row[1], row[2]))
+                file_name = 'file.csv'
+                file_path = os.path.abspath(file_name)
 
-        return euclides_list[1:]
+                with open(file_path) as csv_file:
+                    csv_reader = csv.reader(csv_file, delimiter=',')
+                    for row in csv_reader:
+                        euclides_list.append((row[1], row[2]))
+
+                return euclides_list[1:]
+
+            except:
+                print('make sure u have a \'file.csv\' on your home!')
+                time.sleep(15)
 
     def __calculate_euclides(self, x1=0, x2=0, y1=0, y2=0, z1=0, z2=0):
 
@@ -52,4 +63,6 @@ class KndEuclides:
 
 euclides = KndEuclides()
 
-print(euclides)
+for _ in range(3):
+    print(euclides)
+    time.sleep(5)
