@@ -1,4 +1,9 @@
 
+# Temperatura: 1000
+# (k)Kelvin (c)Celcius: k
+# Comprimento: 
+# (m)Metro (a)A: m
+# Resultado: 2.8980000000000005e-06 m
 
 class Wien():
 
@@ -42,7 +47,7 @@ class Wien():
     def __get_temp(self):
         while True:
             try:
-                temp = input('temperatura ')
+                temp = input('Temperatura: ')
                 if temp != '':
                     temp = float(temp)
                 return temp
@@ -52,7 +57,7 @@ class Wien():
     def __get_temp_type(self):
         while True:
             try:
-                type = input('(k)kelvin (c)celcius ')
+                type = input('(k)Kelvin (c)Celcius: ')
                 if type != 'k' and type != 'c':
                     raise Exception
                 return type
@@ -63,7 +68,7 @@ class Wien():
     def __get_comp(self):
         while True:
             try:
-                comp = input('comprimento ')
+                comp = input('Comprimento: ')
                 if comp != '':
                     comp = float(comp)
                 return comp
@@ -73,7 +78,7 @@ class Wien():
     def __get_comp_type(self):
         while True:
             try:
-                type = input('(m)metro (a)A ')
+                type = input('(m)Metro (a)A: ')
                 if type != 'm' and type != 'a':
                     raise Exception
                 return type
@@ -130,3 +135,4 @@ class Wien():
 exercice = Wien()
 
 print(exercice)
+
