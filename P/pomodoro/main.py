@@ -2,6 +2,9 @@ import os
 import time
 
 
+# sudo apt install sox                                                                                                                         git:2*
+
+
 def main():
     small = [0.2,700] 
     large = [2,400] 

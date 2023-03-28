@@ -1,13 +1,8 @@
-# Constante de Stefan-Boltzmann
-sigma = 5.67e-8 # W/m^2K^4
 
-# Temperatura em Kelvin
+stefBoltz = 5.67e-8
 T = 2500
-
-# Potência emitida pela
 P = 100
-
-# Área da superfície
-A = P / (sigma * T**4)
+A = P / (stefBoltz * T**4)
 
 print("A área da superfície é de", A, "metros quadrados.")
+# A área da superfície é de 4.5149911816578484e-05 metros quadrados.
