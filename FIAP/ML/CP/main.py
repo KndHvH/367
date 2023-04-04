@@ -1,4 +1,4 @@
-#!pip install streamlit
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -79,9 +79,6 @@ if database == 'CSV':
         
     else:
         st.warning('Arquivo CSV não foi carregado')
-        # st.info('Arquivo CSV não foi carregado')
-        # st.error('Arquivo CSV não foi carregado')
-        # st.success('Arquivo CSV não foi carregado')
 
 if database == 'Online':
     with st.form("Single Consult"):
