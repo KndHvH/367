@@ -1,8 +1,8 @@
 version: "3.4"
 services:
-  fastapi-simple-starter-project:
+  auto-ml-deploy:
     tty: true
-    image: "comp-neu-checkpoint1"
+    image: "auto-ml-deploy"
     stdin_open: true
     build:
       context: .
