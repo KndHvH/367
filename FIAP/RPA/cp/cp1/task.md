@@ -1,0 +1,4 @@
+- Fazer um agrupamento de jogadores, extraindo para uma tabela do excel uma única linha de jogador, clubes e anos.
+- Qual jogador atuou por mais tempo em um clube ?
+- Qual é a duração média de tempo que um jogador passa em um clube?
+- Quais os clubes tiveram mais craques em seus elencos ?
