@@ -1,5 +1,5 @@
-APP_NAME="deploy-auto-ml-ousadia"
-IMAGE_NAME="deploy-auto-ml-ousadia"
+APP_NAME="auto-ml-deploy"
+IMAGE_NAME="auto-ml-deploy"
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
     DOCKER_USER=$(shell id -u $(USER)):$(shell id -g $(USER))
