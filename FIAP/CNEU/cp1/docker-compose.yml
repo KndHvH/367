@@ -11,24 +11,24 @@ services:
       - ".:/app"
     environment:
       - ENV_FOR_DYNACONF=development
-      - DATABASE_URL=localhost
-      - DATABASE_NAME=auto-ml-db
+      - DATABASE_URL=postgres-db
+      - DATABASE_NAME=postgres
       - DATABASE_USER=postgres
       - DATABASE_PASSWORD=postgres
       - DATABASE_PORT=5432
     ports:
-      - "8000:8000"
+      - "8501:8501"
     networks:
       - db_nw
 
-  auto-ml-db:
+  postgres-db:
     image: postgres:11
     ports:
       - "5432:5432"
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=auto-ml-db
+      - POSTGRES_DB=postgres
     networks:
       - db_nw
 
@@ -37,4 +37,4 @@ networks:
     driver: bridge
 
 volumes:
-  auto-ml-db:
+  postgres-db:

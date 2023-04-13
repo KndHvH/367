@@ -7,7 +7,7 @@ init_session_state()
 
 st.title('Checkpoint1 - ComNeu')
 
-if st.session_state.form is None:
+if not st.session_state.form:
         single_consult_form()
 else:
     predict_consult()

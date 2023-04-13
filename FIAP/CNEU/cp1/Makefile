@@ -20,6 +20,10 @@ local/run:
 docker/build:
 	CURRENT_UID=${DOCKER_USER} docker-compose build ${APP_NAME}
 
+
+docker/up/database:
+	CURRENT_UID=${DOCKER_USER} docker-compose up -d postgres-db
+
 docker/up:
 	CURRENT_UID=${DOCKER_USER} docker-compose up -d
 
