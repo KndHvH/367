@@ -1,25 +1,42 @@
 
 
 from sqlalchemy import text
-from database.connection import create_session
+from database.connection import get_connection
 import pandas as pd
+import datetime
+
+CONNECTION = get_connection()
+
+def save_predict(pred):
+    cursor = CONNECTION.cursor()
+
+    values = []
+    for column in pred:
+        values.append(pred[column].values[0])
+
+    current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    cursor.execute(
+        f"""
+        INSERT INTO weather_data (Wind_Direction, Wind_Speed, Humidity, Pressure, Power_Level, Light_Intensity, prediction_label, consult_date)
+        VALUES ({values[0]},{values[1]},{values[2]},{values[3]},{values[4]},{values[5]},{values[6]},'{current_time}');
+        """
+    )
+
+    CONNECTION.commit()
+    cursor.close()
 
 
-# def save_predict(pred):
-#     session = create_session()
-#     create_table(session)
-#     pred.to_sql('weather_data', con=session.bind, if_exists='append', index=False)
+    
     
 
 
 
+def create_table():
 
-
-def create_table(session):
-    session.execute(
-        text(
-            '''
-            CREATE TABLE IF NOT EXISTS weather_data (
+    cursor = CONNECTION.cursor()
+    sql = '''
+        CREATE TABLE IF NOT EXISTS weather_data (
             id SERIAL PRIMARY KEY,
             Wind_Direction INTEGER,
             Wind_Speed FLOAT,
@@ -27,17 +44,23 @@ def create_table(session):
             Pressure FLOAT,
             Power_Level FLOAT,
             Light_Intensity INTEGER,
-            prediction_label INTEGER
-            );
-            '''
-        )
-    )
-    
-session = create_session()
-create_table(session)
+            prediction_label INTEGER,
+            consult_date DATE
+        );
+    '''
+    cursor.execute(sql)
+    CONNECTION.commit()
+    cursor.close()
 
-# def get_predicts_in_db():
-#     session = create_session()
-#     query = session.execute(text("SELECT * FROM weather_data;"))
 
-#     return pd.DataFrame(query.fetchall())
+def get_predicts_in_db():
+    cursor = CONNECTION.cursor()
+
+    cursor.execute("SELECT * FROM weather_data;")
+    results = cursor.fetchall()
+    columns = [desc[0] for desc in cursor.description]
+    df = pd.DataFrame(results, columns=columns)
+
+    cursor.close()
+
+    return df

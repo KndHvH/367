@@ -24,6 +24,9 @@ docker/build:
 docker/up/database:
 	CURRENT_UID=${DOCKER_USER} docker-compose up -d postgres-db
 
+docker/down/database:
+	CURRENT_UID=${DOCKER_USER} docker-compose down postgres-db
+
 docker/up:
 	CURRENT_UID=${DOCKER_USER} docker-compose up -d
 

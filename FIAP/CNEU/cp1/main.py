@@ -14,6 +14,7 @@ else:
 
     if st.button('New Submit'):
         st.session_state.form = None
+        st.session_state.posted = False
         st.experimental_rerun()
 
 

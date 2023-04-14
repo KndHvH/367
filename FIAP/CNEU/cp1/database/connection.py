@@ -1,16 +1,13 @@
+import psycopg2
+
 from os import getenv as env
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 
+def get_connection():
+    url = env("DATABASE_URL")
+    name = env("DATABASE_NAME")
+    user = env("DATABASE_USER")
+    password = env("DATABASE_PASSWORD")
+    port = env("DATABASE_PORT")
 
-def create_session():
-    engine = create_engine(get_connection_string())
-    Session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-    return Session()
-
-
-def get_connection_string():
-    driver = "postgresql+psycopg2"
-    return f'{driver}://{env("DATABASE_USER")}:{env("DATABASE_PASSWORD")}@{env("DATABASE_URL")}:{env("DATABASE_PORT")}/{env("DATABASE_NAME")}'
-
+    return  psycopg2.connect(f"host={url} dbname={name} user={user} password={password} port={port}")
