@@ -27,11 +27,6 @@ def save_predict(pred):
     cursor.close()
 
 
-    
-    
-
-
-
 def create_table():
 
     cursor = CONNECTION.cursor()
