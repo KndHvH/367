@@ -1,11 +1,12 @@
 import os
 import time
+import winsound
 # sudo apt install sox
 
 
 def main():
-    small = [0.2,700] 
-    large = [2,400] 
+    small = [1,700] 
+    large = [3,400] 
     
     while True:
         for _ in range(4):
@@ -35,7 +36,8 @@ def intervalo(minutos,trabalho = True):
 
 
 def play_sound(duration,freq):
-    os.system(f'play -nq -t alsa synth {duration} sine {freq}')
+    winsound.Beep(freq, duration * 1000)
+    # os.system(f'play -nq -t alsa synth {duration} sine {freq}')
 
 
 if __name__ == '__main__':

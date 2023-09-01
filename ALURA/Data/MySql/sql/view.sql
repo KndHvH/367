@@ -1,0 +1,13 @@
+
+SELECT * FROM `tbClient`;
+
+
+SELECT CPF, NAME FROM `tbClient`;
+
+
+SELECT CPF, NAME , STATE FROM `tbClient` LIMIT 5;
+
+SELECT CPF, NAME AS NOME, STATE AS ESTADO FROM `tbClient` LIMIT 5;
+
+
+SELECT NAME, CPF FROM `tbClient`;
