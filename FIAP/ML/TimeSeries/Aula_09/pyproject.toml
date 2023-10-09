@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "aula-09"
+version = "0.1.0"
+description = ""
+authors = ["kndhvh <delend89@gmail.com>"]
+readme = "README.md"
+packages = [{include = "aula_09"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+prophet = "^1.1.4"
+plotly = "^5.17.0"
+seaborn = "^0.13.0"
+scikit-learn = "^1.3.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.25.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
