@@ -12,3 +12,5 @@ Eu queria aprender tambem como funcionam as camadas de uma rede neural, seria le
 Falou das disciplinas do curso, bem animado pois parece que vai direto ao ponto, ainda tem a base e nivelamento, porem nao tem preenchimento de linguica xd
 
 Parece que vamos ver muito do que ja vimos, e tambem coisa que nao vimos ainda, vai ser muito legal aprender a fazer todos esses conteudos...
+
+
