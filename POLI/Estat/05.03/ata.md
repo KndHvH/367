@@ -1,6 +1,11 @@
 primeira de Estatistica, Professora X (Alta Magra branca e coque)
 
+pilares do aprendizado de maquina nao e uma caixa preta
+
 O Conseito da algebra linear seria a manipulacao correta desses dados:
+
+Um tensor é uma estrutura matemática que generaliza números, listas e tabelas para representar dados em várias dimensões, sendo amplamente utilizado em áreas como aprendizado de máquina e processamento de imagem.
+
 
 Tensor de Dimensao 0 -> seria um valor unico, ex eu tenho 21 anos
 Tensor de Dimensao 1 -> seria uma lista de valore, ex minha lista de compras
