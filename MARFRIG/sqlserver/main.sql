@@ -6,6 +6,7 @@ CREATE TABLE produto (
     preco DECIMAL(10, 2)
 );
 
+
 -- DELETE TABLE produto
 DROP TABLE IF EXISTS produto;
 
@@ -82,13 +83,66 @@ BEGIN
     DEALLOCATE LowCostProductsCursor;
 END;
 
-
+CREATE PROCEDURE GetProdutosByName @Name VARCHAR(100)
+AS
+BEGIN
+    SELECT * FROM produto WHERE nome LIKE '%' + @Name + '%';
+END;
 
 
 EXEC GetProdutoById 9;
 EXEC GetProdutosBelowPrice 3.;
 EXEC UpdateProdutoPrice 9, 2.49;
 EXEC InsertProduto 'Água Tônica', 'Água Tônica Natural', 2.99;
-EXEC IncreasePriceForLowCostProducts 2.50, 10.00;
+EXEC IncreasePriceForLowCostProducts 3.00, 10.00;
+
+EXEC GetProdutosByName 'Fanta';
+SELECT * from produto;
 
 
+
+
+
+
+
+EXEC sp_configure 'show advanced options', 1;
+RECONFIGURE;
+EXEC sp_configure 'Agent XPs', 1;
+RECONFIGURE;
+
+
+
+
+EXEC xp_servicecontrol N'querystate',N'SQLSERVERAGENT'
+
+EXEC xp_servicecontrol N'start',N'SQLSERVERAGENT'
+
+
+EXEC msdb.dbo.sp_add_job
+    @job_name = N'IncreasePriceJob';
+
+
+EXEC msdb.dbo.sp_add_jobstep
+    @job_name = N'IncreasePriceJob',
+    @step_name = N'IncreasePrice',
+    @subsystem = N'TSQL',
+    @command = N'EXEC IncreasePriceForLowCostProducts 5.00, 5.00;',
+    @retry_attempts = 5,
+    @retry_interval = 1;
+
+EXEC msdb.dbo.sp_add_jobschedule
+    @job_name = N'IncreasePriceJob',
+    @name = N'EveryHalfHour',
+    @freq_type = 4,
+    @freq_interval = 1,
+    @freq_subday_type = 4,
+    @freq_subday_interval = 30,
+    @freq_relative_interval = 0,
+    @freq_recurrence_factor = 0,
+    @active_start_date = 20220101,
+    @active_start_time = 0;
+    
+    
+EXEC msdb.dbo.sp_add_jobserver
+    @job_name = N'IncreasePriceJob',
+    @server_name = N'(local)';
