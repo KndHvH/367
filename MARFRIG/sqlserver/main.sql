@@ -1,3 +1,5 @@
+# docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=' -e "MSSQL_AGENT_ENABLED=true" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2019-latest
+
 -- Active: 1711291963573@@127.0.0.1@1433@master
 CREATE TABLE produto (
     id INT IDENTITY(1,1) PRIMARY KEY,
@@ -11,8 +13,10 @@ CREATE TABLE produto (
 DROP TABLE IF EXISTS produto;
 
 
+
 INSERT INTO produto (nome, descricao, preco)
-VALUES ('Coca-Cola', 'Refrigerante Coca-Cola', 3.99),
+VALUES 
+    ('Coca-Cola', 'Refrigerante Coca-Cola', 3.99),
     ('Pepsi', 'Refrigerante Pepsi', 2.99),
     ('Sprite', 'Refrigerante Sprite', 2.49),
     ('Guaraná Antarctica', 'Refrigerante Guaraná Antarctica', 3.49),
@@ -21,7 +25,9 @@ VALUES ('Coca-Cola', 'Refrigerante Coca-Cola', 3.99),
     ('Schweppes Citrus', 'Refrigerante Schweppes Citrus', 3.49),
     ('Kuat', 'Refrigerante Kuat', 2.49),
     ('Soda', 'Refrigerante Soda', 1.99),
-    ('Água com Gás', 'Água com Gás', 1.49);
+    ('Água com Gás', 'Água com Gás', 1.49);   
+
+    
 
 
 CREATE PROCEDURE GetProdutoById @Id INT
@@ -101,10 +107,6 @@ SELECT * from produto;
 
 
 
-
-
-
-
 EXEC sp_configure 'show advanced options', 1;
 RECONFIGURE;
 EXEC sp_configure 'Agent XPs', 1;
@@ -126,7 +128,7 @@ EXEC msdb.dbo.sp_add_jobstep
     @job_name = N'IncreasePriceJob',
     @step_name = N'IncreasePrice',
     @subsystem = N'TSQL',
-    @command = N'EXEC IncreasePriceForLowCostProducts 5.00, 5.00;',
+    @command = N'EXEC IncreasePriceForLowCostProducts 100.00, 5.00;',
     @retry_attempts = 5,
     @retry_interval = 1;
 
@@ -136,7 +138,7 @@ EXEC msdb.dbo.sp_add_jobschedule
     @freq_type = 4,
     @freq_interval = 1,
     @freq_subday_type = 4,
-    @freq_subday_interval = 30,
+    @freq_subday_interval = 5,
     @freq_relative_interval = 0,
     @freq_recurrence_factor = 0,
     @active_start_date = 20220101,
