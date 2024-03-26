@@ -14,7 +14,7 @@
         {
           "foreground": "p:pink",
           "properties": {
-            "time_format": "15:04:05"
+            "time_format": "15:04:05 02/01"
           },
           "style": "plain",
           "template": " {{ .CurrentDate | date .Format }} ",
