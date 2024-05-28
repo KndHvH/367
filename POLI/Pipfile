@@ -9,6 +9,7 @@ google = "*"
 numpy = "*"
 pandas = "*"
 matplotlib = "*"
+scikit-learn = "*"
 
 [dev-packages]
 ipykernel = "*"
