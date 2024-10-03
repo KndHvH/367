@@ -15,6 +15,7 @@ cvxopt = "*"
 tensorflow = "*"
 minisom = "*"
 xlrd = "==1.2.0"
+opencv-python = "*"
 
 [dev-packages]
 ipykernel = "*"
